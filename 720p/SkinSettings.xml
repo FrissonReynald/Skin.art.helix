@@ -209,7 +209,7 @@
 					<!--fanart grabber-->
 					<control type="button" id="110">
 						<label>$LOCALIZE[31214]</label>
-						<onclick>ActivateWindow(65)</onclick>
+						<onclick>ActivateWindow(1110)</onclick>
 						<include>settings_Radiobutton</include>
 						<enable>System.HasAddon(script.grab.fanart)</enable>
 					</control>
