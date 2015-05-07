@@ -255,7 +255,7 @@
 				<control type="group">
 					<left>680</left>
 					<top>90</top>
-					 <visible>[[Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(view.listsmall.fanart) | [Container.Content(episodes) | Container.Content(artists)]</visible>
+					 <visible>[Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(view.listsmall.fanart) | [Container.Content(episodes) | Container.Content(artists)]</visible>
 					<control type="group">
 						<left>7</left>
 						<top>7</top>

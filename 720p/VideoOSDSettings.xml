@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>5</defaultcontrol>
 	<include>transition_Dialog</include>
@@ -22,10 +22,18 @@
 				<width>600</width>
 				<height>515</height>
 				<visible>Window.IsActive(osdaudiosettings)</visible>
-			</control>	
-			<control type="label" id="2">
+			</control>
+			<control type="label">
 				<width>592</width>
+				<label>$LOCALIZE[3] $LOCALIZE[5]</label>
 				<include>dialog_Windowtitle</include>
+				<visible>Window.IsVisible(123)</visible>
+			</control>
+			<control type="label">
+				<width>592</width>
+				<label>$LOCALIZE[292] $LOCALIZE[5]</label>
+				<include>dialog_Windowtitle</include>
+				<visible>Window.IsVisible(124)</visible>
 			</control>
 			<control type="group">
 				<left>4</left>
@@ -43,34 +51,22 @@
 					<onup>5</onup>
 					<ondown>5</ondown>
 					<include>global_ListScroll</include>
-					<visible>Window.IsActive(osdvideosettings)</visible>
-				</control>
-				<control type="grouplist" id="5">
-					<width>592</width>
-					<height>440</height>
-					<itemgap>0</itemgap>
-					<onleft>5</onleft>
-					<onright>5</onright>
-					<onup>5</onup>
-					<ondown>5</ondown>
-					<include>global_ListScroll</include>
-					<visible>Window.IsActive(osdaudiosettings)</visible>
 				</control>
 			</control>
 			<control type="sliderex" id="13">
-				<include>dialog_Slider</include>
 				<include>dialog_ControlCommons</include>
+				<include>dialog_Slider</include>
 			</control>
 			<control type="button" id="7">
 				<include>dialog_ControlCommons</include>
 			</control>
 			<control type="radiobutton" id="8">
-				<include>dialog_Radio</include>
 				<include>dialog_ControlCommons</include>
+				<include>dialog_Radio</include>
 			</control>
 			<control type="spincontrolex" id="9">
-				<include>dialog_Spin</include>
 				<include>dialog_ControlCommons</include>
+				<include>dialog_Spin</include>
 			</control>
 		</control>
 	</controls>

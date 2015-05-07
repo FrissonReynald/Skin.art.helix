@@ -45,8 +45,8 @@
 							<include>dialog_CommonListItem</include>
 						</control>
 						<control type="label">
-							<left>572</left>
-							<width>572</width>
+							<right>20</right>
+							<width>560</width>
 							<height>36</height>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
@@ -65,8 +65,8 @@
 							<include>dialog_CommonListItem</include>
 						</control>
 						<control type="label">
-							<left>572</left>
-							<width>572</width>
+							<right>20</right>
+							<width>560</width>
 							<height>36</height>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
@@ -85,7 +85,7 @@
 							<onclick>noop</onclick>
 						</item>
 						<item id="3">
-							<label>$LOCALIZE[142]</label>
+							<label>$LOCALIZE[555]</label>
 							<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label2>
 							<onclick>noop</onclick>
 						</item>
@@ -100,7 +100,7 @@
 							<onclick>noop</onclick>
 						</item>
 						<item id="5">
-							<label>$LOCALIZE[135]</label>
+							<label>$LOCALIZE[515]</label>
 							<label2>$INFO[ListItem.Genre]</label2>
 							<onclick>noop</onclick>
 						</item>
@@ -110,7 +110,7 @@
 				<control type="textbox" id="400">
 					<left>15</left>
 					<top>240</top>
-					<width>560</width>
+					<width>570</width>
 					<height>154</height>
 					<label fallback="416">$INFO[ListItem.Plot]</label>
 					<include>dialog_Text</include>
@@ -123,39 +123,26 @@
 			</control>
 		</control>
 	<!--dialog controls-->
-		<control type="group" id="9000">
+		<control type="grouplist" id="9000">
 			<top>475</top>
 			<left>42.5</left>
+			<itemgap>10</itemgap>
+			<orientation>horizontal</orientation>
 			<!--switch-->
 			<control type="button" id="5">
 				<label>$LOCALIZE[19165]</label>
-				<onleft>7</onleft>
-				<onright>6</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
 				<width>165</width>
 				<include>dialog_WindowButton</include>
 			</control>
 			<!--record-->
 			<control type="button" id="6">
-				<left>175</left>
 				<label>$LOCALIZE[264]</label>
-				<onleft>5</onleft>
-				<onright>7</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
 				<width>165</width>
 				<include>dialog_WindowButton</include>
 			</control>
 			<!--ok-->
 			<control type="button" id="7">
-				<description>No button</description>
-				<left>350</left>
 				<label>$LOCALIZE[186]</label>
-				<onleft>6</onleft>
-				<onright>5</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
 				<width>165</width>
 				<include>dialog_WindowButton</include>
 			</control>

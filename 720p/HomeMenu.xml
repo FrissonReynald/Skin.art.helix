@@ -233,8 +233,8 @@
 				<include>transition_Home-horizontal</include>
 				<control type="fixedlist" id="9110">
 				<top>-10</top>
-				<left>-70</left>
-					<width>1920</width>
+				<left>15</left>
+					<width>1182</width>
 					<height>70</height>
 					<onleft>9110</onleft>
 					<onright>9110</onright>
@@ -245,129 +245,56 @@
 					<orientation>horizontal</orientation>
 					<pagecontrol>80</pagecontrol>
 					<include>global_ListScroll</include>
-					<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9110).NumItems,2)">Conditional</animation>
-					<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9110).NumItems,4)">Conditional</animation>
-					<itemlayout width="270" height="70">						
-						<control type="label">
-							<left>118</left>
-							<width>236</width>
-							<height>60</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>condensed_Home</font>
-							<align>center</align>
-							<textcolor>Color3</textcolor>
-							<visible>Control.HasFocus(9110) + Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-							 <animation effect="fade" start="0" end="100" delay="100" time="300" condition="Control.HasFocus(9110)">conditional</animation>
-   					      	</control>
-						<control type="label">
-							<left>118</left>
-							<width>236</width>
-							<height>60</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>condensed_Home_Nocaps</font>
-							<align>center</align>
-							<textcolor>Color3</textcolor>
-							<visible>Control.HasFocus(9110) + !Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-								 <animation effect="fade" start="0" end="100" delay="100" time="300" condition="Control.HasFocus(9110)">conditional</animation>
-						</control>
-						<control type="label">
-							<left>118</left>
-							<width>236</width>
-							<height>60</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>black_huge</font>
-							<align>center</align>
-							<textcolor>Color3</textcolor>
-							<visible>Control.HasFocus(9110) + Skin.HasSetting(homeBlackHugeFont)</visible>
-								 <animation effect="fade" start="0" end="100" delay="100" time="300" condition="Control.HasFocus(9110)">conditional</animation>
-						</control>
-					</itemlayout>
-					<focusedlayout width="270" height="70">
-						<control type="group">
-							<visible>Control.HasFocus(9110)</visible>
-							<control type="image">
-							<left>-10</left>
-							<top>-4</top>
-								<width>260</width>
-								<height>75</height>
-								<texture>home\menuitemfo.png</texture>
-								<bordertexture colordiffuse="Color1"></bordertexture>
-								<bordersize>5</bordersize>
-								</control>							
-							<control type="label">							    
-								<left>118</left>
-								<width>236</width>
-								<height>60</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>condensed_Home</font>
-								<align>center</align>
-								<textcolor>Color3</textcolor>
-							<visible>Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-							</control>
-							<control type="label">							    
-								<left>118</left>
-								<width>236</width>
-								<height>60</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>condensed_Home_Nocaps</font>
-								<align>center</align>
-								<textcolor>Color3</textcolor>
-									<visible>!Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-							</control>
-							<control type="label">							    
-								<left>118</left>
-								<width>236</width>
-								<height>60</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>black_huge</font>
-								<align>center</align>
-								<textcolor>Color3</textcolor>
-								<visible>Skin.HasSetting(homeBlackHugeFont)</visible>					
-							</control>
-						</control>
-						<control type="group">	
-						<visible>!Control.HasFocus(9110)</visible>
-							<control type="image">
-							<left>-10</left>
-							<top>-4</top>
-								<width>260</width>
-								<height>75</height>
-								<texture>home\menuitemfo.png</texture>
-								<bordertexture colordiffuse="Color1"></bordertexture>
-								<bordersize>5</bordersize>
-								</control>	
+					<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9000).NumItems,2)">Conditional</animation>
+						<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9000).NumItems,4)">Conditional</animation>
+						<itemlayout width="236" height="70">						
 							<control type="label">
-								<left>118</left>
 								<width>236</width>
 								<height>60</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>condensed_Home</font>
 								<align>center</align>
-								<textcolor>Color3</textcolor>	
-								<visible>Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>								
-							</control>
-							<control type="label">							    
-								<left>118</left>
-								<width>236</width>
-								<height>60</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>condensed_Home_Nocaps</font>
-								<align>center</align>
 								<textcolor>Color3</textcolor>
-							<visible>!Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
 							</control>
-							<control type="label">							    
-								<left>118</left>
-								<width>236</width>
-								<height>60</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>black_Huge</font>
-								<align>center</align>
-								<textcolor>Color3</textcolor>
-							<visible>Skin.HasSetting(homeBlackHugeFont)</visible>
+						</itemlayout>
+						<focusedlayout width="236" height="70">
+							<control type="group">
+								<visible>Control.HasFocus(9000)</visible>
+								<control type="image">
+									<width>238</width>
+									<height>65</height>
+									<texture>home\menuitemfo.png</texture>
+								<bordertexture colordiffuse="Color1"></bordertexture>
+								<bordersize>5</bordersize>
+								</control>
+								<control type="label">
+									<width>236</width>
+									<height>60</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>condensed_Home</font>
+									<align>center</align>
+									<textcolor>Color5</textcolor>
+								</control>
 							</control>
-						</control>
-					</focusedlayout>
+							<control type="group">
+								<visible>!Control.HasFocus(9000)</visible>
+									<control type="image">
+								<width>238</width>
+								<height>65</height>
+								<texture>home\menuitemfo.png</texture>
+								<bordertexture colordiffuse="Color1"></bordertexture>
+								<bordersize>5</bordersize>
+							</control>
+								<control type="label">
+									<width>236</width>
+									<height>60</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>condensed_Home</font>
+									<align>center</align>
+									<textcolor>Color3</textcolor>
+								</control>
+							</control>
+							</focusedlayout>
 					<content>
 						 <include>skinshortcuts-mainmenu</include>
 					</content>
@@ -377,7 +304,7 @@
 			<control type="group">	
 			<control type="image">			
 			<top>64</top>
-			<left>-150</left>
+			<left>-150</left>			
 					<width>1920</width>
 					<height>57</height>
 					<aspectratio>stretch</aspectratio>				
@@ -389,10 +316,10 @@
 					<visible>ControlGroup(229).HasFocus() | Control.HasFocus(9110) | Control.HasFocus(9111)</visible>
 				 	</control>					
 			<include>transition_Home-horizontal2</include>
-				<control type="list" id="9111">
-				<left>0</left>
+				<control type="fixedlist" id="9111">
+				<left>25</left>
 					<top>68</top>
-					<width>1280</width>
+					<width>1182</width>
 					<height>80</height>
 					<onback>9110</onback>
 					<onleft>9111</onleft>
@@ -405,129 +332,52 @@
 					<pagecontrol>80</pagecontrol>
 					<include>global_ListScroll</include>
 					<orientation>horizontal</orientation>					
-					<animation effect="slide" start="0" end="470" condition="StringCompare(Container(9111).NumItems,1)">Conditional</animation>					
-					<animation effect="slide" start="0" end="345" condition="StringCompare(Container(9111).NumItems,2)">Conditional</animation>
-					<animation effect="slide" start="0" end="270" condition="StringCompare(Container(9111).NumItems,3)">Conditional</animation>
-					<animation effect="slide" start="0" end="118" condition="StringCompare(Container(9111).NumItems,4)">Conditional</animation>					
-					<animation effect="slide" start="0" end="auto" condition="StringCompare(Container(9111).NumItems,5)">Conditional</animation>
-					<itemlayout width="236" height="55">						
-						<control type="label">
-							<left>118</left>
-							<width>199</width>
-							<height>40</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>condensed_HomeSub</font>
-							<align>center</align>
-							<textcolor>Color3</textcolor>
-							<visible>Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
-						<control type="label">
-							<left>118</left>
-							<width>199</width>
-							<height>40</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>condensed_HomeSub_Nocaps</font>
-							<align>center</align>
-							<textcolor>Color3</textcolor>
-							<visible>!Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
-						<control type="label">
-							<left>118</left>
-							<width>199</width>
-							<height>40</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>regular_Bigger</font>
-							<align>center</align>
-							<textcolor>Color3</textcolor>
-							<visible>Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
-					</itemlayout>
-					<focusedlayout width="238" height="55">
-						<control type="group">
-							<visible>Control.HasFocus(9111)</visible>
-							<control type="image">
-							<left>2</left>
-							<top>2</top>
-								<width>238</width>
-								<height>42</height>
-								<texture colordiffuse="FocusSubmenu">white.png</texture>
-								<bordertexture colordiffuse="base_3">white.png</bordertexture>
+					<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9100).NumItems,2)">Conditional</animation>
+						<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9100).NumItems,4)">Conditional</animation>
+					<itemlayout width="236" height="50">							
+							<control type="label">
+								<width>230</width>
+								<height>40</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>condensed_HomeSub</font>
+								<align>center</align>
+								<textcolor>Color3</textcolor>
+							</control>
+						</itemlayout>
+						<focusedlayout width="238" height="50">
+							<control type="group">
+								<visible>!Control.HasFocus(9111)</visible>									
+							
+								<control type="label">
+									<width>230</width>
+									<height>40</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>condensed_HomeSub</font>
+									<align>center</align>
+									<textcolor>Color3</textcolor>
+								</control>
+							</control>
+							<control type="group">
+								<visible>Control.HasFocus(9111)</visible>
+								<control type="image">
+							<left>-10</left>
+							<top>0</top>
+								<width>240</width>
+								<height>41</height>
+								<texture colordiffuse="Color1">white.png</texture>
+								<bordertexture colordiffuse="base_3"></bordertexture>
 								<bordersize>0</bordersize>
 							</control>
 							<control type="label">							
-								<left>118</left>
-								<width>199</width>
-								<height>40</height>
+								<width>230</width>
+									<height>40</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>condensed_HomeSub</font>
 								<align>center</align>
-								<textcolor>base_8</textcolor>
-								<visible>Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
+								<textcolor>base_8</textcolor>							
 							</control>
-							<control type="label">							
-								<left>118</left>
-								<width>199</width>
-								<height>40</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>condensed_HomeSub_Nocaps</font>
-								<align>center</align>
-								<textcolor>base_8</textcolor>
-								<visible>!Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
 							</control>
-							<control type="label">							
-								<left>118</left>
-								<width>199</width>
-								<height>40</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>regular_Bigger</font>
-								<align>center</align>
-								<textcolor>base_8</textcolor>
-									<visible>Skin.HasSetting(homeBlackHugeFont)</visible>
-							</control>
-						</control>
-						<control type="group">
-							<visible>!Control.HasFocus(9111)</visible>
-							<control type="image">
-							<left>100</left>
-							<top>25</top>
-								<width>40</width>
-								<height>20</height>
-								<texture colordiffuse="Color1">home/frame_Gallery_sub.png</texture>
-								<bordertexture colordiffuse="base_3"></bordertexture>
-								<bordersize>2</bordersize>
-							</control>
-							<control type="label">							
-								<left>118</left>
-								<width>199</width>
-								<height>40</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>condensed_HomeSub</font>
-								<align>center</align>
-								<textcolor>Color3</textcolor>
-								<visible>Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-							</control>
-							<control type="label">							
-								<left>118</left>
-								<width>199</width>
-								<height>40</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>condensed_HomeSub_Nocaps</font>
-								<align>center</align>
-								<textcolor>Color3</textcolor>
-								<visible>!Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-							</control>
-							<control type="label">							
-								<left>118</left>
-								<width>199</width>
-								<height>40</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>regular_Bigger</font>
-								<align>center</align>
-								<textcolor>Color3</textcolor>
-									<visible>Skin.HasSetting(homeBlackHugeFont)</visible>
-							</control>
-						</control>
-					</focusedlayout>
+						</focusedlayout>
 					<content>
 						 <include>skinshortcuts-submenu</include>
 					</content>

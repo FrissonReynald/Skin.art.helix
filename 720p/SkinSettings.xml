@@ -863,18 +863,6 @@
 					    <selected>Skin.HasSetting(BlackFontTitle)</selected>
 					    <include>settings_Radiobutton</include>
 				   </control>
-				     <control type="radiobutton" id="734">
-					    <label>Enable CAPS Home Menu </label>
-					    <onclick>Skin.ToggleSetting(nocapsHome)</onclick>					   
-					    <selected>Skin.HasSetting(nocapsHome)</selected>
-						  <include>settings_Radiobutton</include>
-				   </control>
-				   <control type="radiobutton" id="735">
-					    <label>Prefer Black_Huge Font for Home Menu</label>
-						<onclick>Skin.ToggleSetting(homeBlackHugeFont)</onclick>					   				    
-					    <selected>Skin.HasSetting(homeBlackHugeFont)</selected>
-					    <include>settings_Radiobutton</include>
-				   </control>
 			 </control>		
 			<!--SKIN CREDITS-->			
 				<control type="grouplist" id="800">

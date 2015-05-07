@@ -1018,7 +1018,7 @@
 			<include>transition_Info</include>
 			<include>transition_Content</include>
 			<include>fadeinout</include>
-			<visible>[[Control.IsVisible(534)] + !IsEmpty(ListItem.Title)</visible>				
+			<visible>[Control.IsVisible(534)] + !IsEmpty(ListItem.Title)</visible>				
 				<control type="group">
 				<control type="image">
 				<left>-40</left>
@@ -1143,7 +1143,7 @@
 			<include>transition_Info</include>
 			<include>transition_Content</include>
 			<include>fadeinout</include>
-			<visible>[[Control.IsVisible(534)] + !IsEmpty(ListItem.Title)</visible>
+			<visible>[Control.IsVisible(534)] + !IsEmpty(ListItem.Title)</visible>
 		<left>90</left>
 		<top>100</top>
 		 <control type="image">			 
@@ -1218,7 +1218,7 @@
 			<include>transition_Info</include>
 			<include>transition_Content</include>
 			<include>fadeinout</include>
-			<visible>[[Control.IsVisible(534)] + !IsEmpty(ListItem.Title)</visible>
+			<visible>[Control.IsVisible(534)] + !IsEmpty(ListItem.Title)</visible>
 			 <left>650</left>
 				  <top>220</top>
                     <control type="grouplist"> 					

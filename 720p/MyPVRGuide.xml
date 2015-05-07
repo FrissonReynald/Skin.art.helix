@@ -5,21 +5,27 @@
 	<views>10,11,12,13</views>
 	<controls>
 		
-		<!--GLOBAL-->
+		<!--global includes-->
 		<include>global_Background</include>
 		<include>global_Clock</include>
 		<include>global_MenuGuide</include>
 		<include>global_Itemcount</include>
 		<include>windowTitle_PVR</include>
 		<include>PageControls</include>
-
-
+		
+		<!--view includes-->
 		<control type="group" id="50">
-			<include>PVRGuideViewTimeline</include>
-			<include>PVRGuideViewNow</include>
-			<include>PVRGuideViewNext</include>
-			<include>PVRGuideViewChannel</include>
+			<include>transition_Content</include>
+			<include>view_GuideTimeline</include>
+			<include>view_GuideNow</include>
+			<include>view_GuideNext</include>
+			<include>view_GuideChannels</include>
 		</control>
 
+		<!--info includes-->
+		<include>detail_PVR</include>
+		
+		<!--menu-->
+		<include>menu_TV</include>
 	</controls>
 </window>

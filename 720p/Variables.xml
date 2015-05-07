@@ -124,6 +124,12 @@
 		<value condition="StringCompare(Skin.String(menu.controls),player)">$LOCALIZE[31285]</value>
 		<value>$LOCALIZE[36502]</value>
 	</variable>
+	
+	<variable name="menu:ChannelSwitch">
+		<value condition="Window.IsActive(tvchannels)">$LOCALIZE[19020]$INFO[Container(50).FolderName,: ]</value>
+		<value condition="Window.IsActive(radiochannels)">$LOCALIZE[19021]$INFO[Container(50).FolderName,: ]</value>
+		<value>$LOCALIZE[19019]</value>
+	</variable>
 <!--TOAST-->
 	<variable name="toast_Top">
 		<value condition="SubString(System.Time,AM,right)">[B]$INFO[System.Time(h),,:]$INFO[System.Time(mm)][/B]AM</value>
@@ -717,21 +723,35 @@
        <value condition="Container.Content(Movies)">$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/movies/,.png]</value>
        <value condition="Container.Content(TVShows)">$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/TVShows/,.png]</value>
     </variable>
-<!--PVR-->	
+<!--PVR-->
+     <variable name="pvr:Title">
+     <value condition="!IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>	
 	<variable name="pvr:Status">
 		<value condition="![ListItem.HasTimer + ListItem.IsRecording]">pvr/status/none-nf.png</value>
 		<value condition="ListItem.HasTimer + !ListItem.IsRecording">pvr/status/timer.png</value>
 		<value condition="ListItem.IsRecording">pvr/status/recording.png</value>
 		<value>pvr/status/none-nf.png</value>
+	</variable>	
+	<variable name="pvr:DefaultIcon">
+		<value condition="Window.IsActive(tvchannels)">DefaultIconTV.png</value>
+		<value>DefaultIconRadio.png</value>
 	</variable>
-	<variable name="pvr_TVChannelGroup">
-		<value condition="Control.HasFocus(32)">$LOCALIZE[19180]$INFO[Container.FolderName,: ]</value>
-		<value>$LOCALIZE[19180]</value>
+	<variable name="pvr:Progress">
+		<value condition="IntegerGreaterThan(ListItem.Progress,90)">status/progress/90.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,80)">status/progress/80.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,70)">status/progress/70.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,60)">status/progress/60.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,50)">status/progress/50.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,40)">status/progress/40.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,30)">status/progress/30.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,20)">status/progress/20.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,10)">status/progress/10.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Progress,0)">status/progress/00.png</value>
+		<value>status/progress/none.png</value>
 	</variable>
-	<variable name="pvr_RadioChannelGroup">
-		<value condition="Control.HasFocus(33)">$LOCALIZE[19021]$INFO[Container.FolderName,: ]</value>
-		<value>$LOCALIZE[19021]</value>
-	</variable>
+	
 <!--WINDOW TITLES-->
 	<variable name="window_Title.Video">
 		<value condition="IsEmpty(Container.FolderPath)">$LOCALIZE[157]</value>
