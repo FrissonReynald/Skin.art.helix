@@ -236,7 +236,7 @@
 				<top>5</top>
 					<width>350</width>
 					<height>185</height>
-					<texture background="true">$VAR[art:Logo2]</texture>
+					<texture background="true">$VAR[art:Logo]</texture>
 					<visible>!Skin.HasSetting(PanelTextbox_Logo.movies.enable)</visible>
 				</control>				
 				<control type="label">

@@ -130,8 +130,7 @@
 		                <selected>Skin.HasSetting(PlotListRight)</selected>
 						<include>menu_Button2</include>
 					<include>menu_RadioButton2</include>					
-		          <visible>[Container.Content(movies)</visible>
-		           
+		          <visible>Container.Content(movies)</visible>		           
 				 </control>	
 		</control>
 	</controls>
