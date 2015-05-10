@@ -618,14 +618,7 @@
 						<selected>!Skin.HasSetting(Enable.videoextrasOverlays)</selected>						
 						<include>settings_Radiobutton</include>
 						<enable>System.HasAddon(script.videoextras)</enable>
-					</control>
-					<!--Metadata Actor-->
-					<control type="radiobutton" id="410">
-						<label>Enable  Metadata Actor</label>
-						<onclick>Skin.ToggleSetting(metadataactor.enable)</onclick>						
-						<selected>Skin.HasSetting(metadataactor.enable)</selected>						
-						<include>settings_Radiobutton</include>							
-					</control>
+					</control>				
 					<!--Library Editor-->
 					<control type="radiobutton" id="411">
 						<label>Enable  Library Editor</label>
