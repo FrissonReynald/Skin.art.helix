@@ -158,7 +158,7 @@
 					<control type="image">
 						<width>650</width>
 						<height>40</height>
-						<texture>views/focus.png</texture>
+						<texture>white.png</texture>
 					</control>
 					<control type="label">
 						<left>15</left>
@@ -248,7 +248,7 @@
 					<control type="image">
 						<width>620</width>
 						<height>67</height>
-						<texture>views/focus.png</texture>
+						<texture>white.png</texture>
 					</control>
 					<control type="label">
 						<left>15</left>

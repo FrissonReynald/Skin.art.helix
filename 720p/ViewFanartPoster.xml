@@ -74,9 +74,9 @@
 	 </control>
 		<control type="fixedlist" id="59">
 			<viewtype label="Poster & Fanart">Big</viewtype>           		
-            <left>600</left>
+            <left>350</left>
             <top>340</top>
-            <width>500</width>
+            <width>950</width>
             <height>300</height>
             <onup>6000</onup>
 			<ondown>71</ondown>
@@ -93,15 +93,7 @@
 			<itemlayout height="180" width="110">
 				<include>view_FanartPosterPortrait-ContainerCommons</include>
 			</itemlayout>											
-			    <focusedlayout height="180" width="110">
-			<control type="image">
-			    <left>0</left>
-			    <top>0</top>
-			    <width>105</width>
-			    <height>150</height>
-			    <include>art_Frame-fo</include>			
-			</control>			
-				<include>view_FanartPosterPortrait-ContainerCommons</include>			
+			    <focusedlayout height="180" width="110">					
 			</focusedlayout>
 		</control>
 	</include>
@@ -224,15 +216,26 @@
 			<!--title-->	
 			<control type="label">
 				   <label>$VAR[global_Title]</label>
-				   <left>365</left>
-				   <top>225</top>
-				   <width>700</width>
+				   <left>325</left>
+				   <top>190</top>
+				   <width>600</width>
 				   <include>detail_Title</include>
-				   <animation effect="zoom" start="120" end="120" time="0" condition="true">Conditional</animation>
+				  <scroll>true</scroll> 
+				  <animation effect="zoom" start="135" end="135" time="0" condition="true">Conditional</animation>
 				   <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) + !IsEmpty(ListItem.TVShowTitle)</visible>
 				   <visible>Control.IsVisible(59)</visible>
 			</control>					
-			<!--Big Poster-->	
+			<!--Big Poster-->
+			<control type="image">
+			       <left>22</left>
+			       <top>92</top>
+			       <width>408</width>
+				   <height>588</height>
+				   <include>art_Frame-nf</include>							
+				   <aspectratio align="center" aligny="top">stretch</aspectratio>
+				   <animation effect="zoom" start="100" end="173" time="200" center="352,205" tween="Cubic" condition="Control.HasFocus(8000) + !IsEmpty(ListItem.Title)">Conditional</animation>
+				   <visible>Control.IsVisible(59)</visible>
+			</control>	
 			<control type="image">
 			       <left>30</left>
 			       <top>100</top>
@@ -242,18 +245,9 @@
 				   <aspectratio align="center" aligny="top">stretch</aspectratio>
 				   <animation effect="zoom" start="100" end="173" time="200" center="352,205" tween="Cubic" condition="Control.HasFocus(8000) + !IsEmpty(ListItem.Title)">Conditional</animation>
 				   <visible>Control.IsVisible(59)</visible>
-			</control>	
+			</control>				
 			<control type="image">
-					<left>390</left>
-					<top>100</top>
-					<width>30</width>
-            <height>30</height>
-			<texture background="true" colordiffuse="videoextras_overlay.png">$VAR[VideoextrasOverlay]</texture>
-			<visible>Control.IsVisible(59) + System.HasAddon(script.videoextras) + Window.IsVisible(Videos) + Container.Content(Movies) + !Skin.HasSetting(Enable.videoextrasOverlays)</visible>
-		<colordiffuse>FFFFFFFF</colordiffuse>	
-		</control>			
-			<control type="image">
-					<left>345</left>
+					<left>50</left>
 					<top>530</top>
 					<width>150</width>
 					<height>150</height>
@@ -275,6 +269,7 @@
 					</animation>
 			</control>
 				<!--flags-->
+				<control type="group">
 			<control type="label">
 				<right>260</right>					
 				<top>300</top>
@@ -318,61 +313,9 @@
 			    <height>120</height>
 				<texture background="true">$VAR[logo_clearart]</texture>
 				<aspectratio>keep</aspectratio>	
-				<visible>Skin.HasSetting(LogoFanartPoster) + !Skin.HasSetting(FanartSupp)</visible>
-			</control>			
-             <control type="image">
-				<top>335</top>
-				<left>450</left>
-				<bottom>40</bottom>
-				<width>120</width>
-				<height>150</height>
-				<aspectratio align="left">keep</aspectratio>
-				<texture>$VAR[flag_Studio]</texture>
-			 </control>			
-			 <control type="image">
-				<right>47</right>
-				<top>290</top>
-				<width>90</width>
-				<height>44</height>
-				<include>detail_StarRating</include>
-				<aspectratio align="right" aligny="top">keep</aspectratio>
-				<visible>IntegerGreaterThan(ListItem.Rating,0)</visible>
-			 </control>				
-			 <control type="image">
-				<top>365</top>
-				<right>25</right>
-				<width>50</width>
-				<height>40</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture>$INFO[Listitem.AudioChannels,flags/audio/,.png]</texture>
-				<visible>!IsEmpty(Listitem.AudioChannels)</visible>
-			 </control>
-			 <control type="image">
-			    <top>367</top>
-				<right>80</right>
-				<width>96</width>
-				<height>34</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture>$INFO[Listitem.VideoResolution,flags/video/resolution/,.png]</texture>
-				<visible>!IsEmpty(Listitem.VideoResolution)</visible>
-			</control>
-			<control type="image">
-				<top>420</top>
-				<right>100</right>
-				<width>60</width>
-				<height>45</height>
-				<texture>$INFO[Listitem.AudioCodec,flags/codec/,.png]</texture>
-				<aspectratio align="center">keep</aspectratio>
-				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.AudioCodec)</visible>
-			</control>
-			<control type="image">
-				<top>425</top>
-			    <right>28</right>
-				<width>80</width>
-				<height>40</height>
-				<aspectratio align="right">keep</aspectratio>
-				<texture>$VAR[flag_VideoType-fo]</texture>				
-			</control>			
+				<visible>Skin.HasSetting(LogoFanartPoster)</visible>
+			</control>		
+             	</control>			
 				<control type="label">
 					<left>440</left>
 					<top>500</top>	
@@ -381,69 +324,71 @@
 					<textcolor>Color1</textcolor>
 					<include>detail_Title</include>	
 						<scroll>true</scroll>
-			    </control>
-			
-				<control type="group">                 				
-					<left>435</left>
-					<top>270</top>					
-				<control type="textbox" id="4">
-				  <top>255</top>
-			        <left>80</left>
-					<width>680</width>
-					<height>160</height>					
+			    </control> 		
+				<control type="textbox">	
+				<left>440</left>
+					<bottom>75</bottom>
+					<width>820</width>
+					<height>115</height>					
 					<textcolor>Color1</textcolor>
 					<align>justify</align>
 					<label>$VAR[global_Plot]</label>
-					<include>detail_Text</include>
-					<visible>!SubString(ListItem.Icon,default)</visible>					
-					</control>		
-					<visible>!Skin.HasSetting(FanartSupp) |  SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
-				</control>
-				<control type="group">                 				
-					<left>435</left>
-					<top>270</top>					
-				<control type="textbox" id="4">
-				  <top>-175</top>
-			        <left>165</left>
-					<width>600</width>
-					<height>160</height>					
-					<textcolor>Color1</textcolor>
-					<align>justify</align>
-					<label>$VAR[global_Plot]</label>
-					<include>detail_Text</include>
-					<visible>!SubString(ListItem.Icon,default)</visible>
+					<include>detail_Text</include>									
 					</control>	
-					<visible>Skin.HasSetting(FanartSupp) + !SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
-				</control>
-		</control>
-		<control type="group">  
-		 <top>450</top>
-		 <left>50</left>
-			<control type="image">			
-				<left>555</left>
-					<top>100</top>
-					<width>285</width>
-					<height>150</height>
-				<texture background="true">$VAR[thumb_Landscape]</texture>
-				<aspectratio align="center" aligny="top">scale</aspectratio>
+					 <visible>Control.IsVisible(59)</visible>
+					</control>	
+					
+				<control type="grouplist" id="100">
+				<left>520</left>
+				<bottom>5</bottom>
+				<width>900</width>
+				<height>64</height>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(59)</visible>
-			     </control>	
-				 <control type="multiimage">
-				 	<left>860</left>
-					<top>100</top>
-					<width>285</width>
-					<height>150</height>
-				   <imagepath>$VAR[extrafanart.path]</imagepath>
-				   <aspectratio scalediffuse="false">scale</aspectratio>
-				   <include>fadeinout</include>	
-				   <timeperimage>9000</timeperimage>
-                   <randomize>true</randomize>
-                   <fadetime>5</fadetime>					
-                   <loop>yes</loop>					             
-				   <visible>Control.IsVisible(59)</visible>				
+				<control type="image">
+					<width>128</width>
+					<height>64</height>
+					<texture>$INFO[ListItem.StarRating,rating/nf-,]</texture>
+					<aspectratio align="center">keep</aspectratio>
 				</control>
-				<visible>Skin.HasSetting(FanartSupp) + !SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
-		</control>			
+				<control type="image">
+					<width>96</width>
+					<height>64</height>
+					<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoResolution)</visible>
+				</control>
+				<control type="image">
+					<width>96</width>
+					<height>64</height>
+					<texture>$INFO[Listitem.VideoCodec,flags/codec/,.png]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoCodec)</visible>
+				</control>
+				<control type="image">
+					<width>96</width>
+					<height>64</height>
+					<texture>$INFO[Listitem.AudioCodec,flags/codec/,.png]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.AudioCodec)</visible>
+				</control>
+				<control type="image">
+					<width>96</width>
+					<height>64</height>
+					<texture>$INFO[Listitem.VideoAspect,flags/video/aspectratio/,.png]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoAspect)</visible>
+				</control>
+				<control type="image">
+					<width>96</width>
+					<height>64</height>
+					<texture colordiffuse="Color11">$VAR[flag_Studio]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+				</control>
+			</control>
 <!--view Landscape-->			
 			 <!--Big Landscape--> 
 			    <control type="image">

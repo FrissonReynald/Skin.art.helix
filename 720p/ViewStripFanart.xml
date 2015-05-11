@@ -184,34 +184,26 @@
 		</control>
 		<control type="group">
 				    <left>1080</left>
-				    <top>300</top>				
-			<control type="group">
-					<left>157</left>
-					<top>254</top>
-					<include>status_Info</include>
-					<visible>Skin.HasSetting(overlay_statu.disable)</visible>
-			</control>
-		    <control type="group">
-					<left>152</left>
-					<top>250</top>
-					<width>32</width>
-					<height>32</height>
-					<visible>Skin.HasSetting(watched.alternative)</visible>					
-				<control type="image">
-					<info>ListItem.Overlay</info>
-				</control>
-			</control>			
+				    <top>300</top>			
+		
+		   <control type="group">
+						<right>20</right>
+						<top>-195</top>
+						<width>28</width>
+						<height>28</height>						
+						<include>status_List-fo</include>
+					</control>	
 				<control type="label">
 					<label>$VAR[global_Title]</label>	
-					<left>180</left>
+					<left>-425</left>
 					<top>-195</top>
 					<align>right</align>
-					<width>600</width>
+					<width>550</width>
 					<include>detail_Title</include>
 				</control>			
 					
 				<control type="label">
-			            <left>180</left>
+			            <left>-600</left>
 						<top>290</top>
 						<align>right</align>						
 						<label>$VAR[gallery_Header]</label>

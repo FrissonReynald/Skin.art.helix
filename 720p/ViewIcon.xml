@@ -95,52 +95,24 @@
 				</control>
 			<visible>Control.IsVisible(57) + Skin.HasSetting(FullBackgroundIcon57)</visible>	
 			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
-		</control>
-	<control type="image">	
-	<include>transition_Content</include>
-			<include>toggle_Menu</include>
-			<include>transition_Info</include>
-				<top>615</top>
-				<left>-0</left>
-				<width>1280</width>
-				<height>110</height>
-               <texture background="true">frames/contentpanel.png</texture>
-			   <animation condition="true" effect="Fade" start="80" end="80" time="0">Conditional</animation>					 
-			  <aspectratio>stretch</aspectratio>			    
-			   <visible>Control.IsVisible(57)</visible> 			  		   
-			</control>	
+		</control>	
 		<control type="image">	
 		<include>transition_Content</include>
 			<include>toggle_Menu</include>
 			<include>transition_Info</include>
 				<top>80</top>
-				<left>850</left>
-				<width>420</width>
+				<left>750</left>
+				<width>700</width>
 				<height>535</height>
-               <texture background="true">frames/contentpanel.png</texture>
-			    <animation condition="true" effect="Fade" start="70" end="70" time="0">Conditional</animation>					 
-				 <aspectratio>stretch</aspectratio>			    
+               <texture background="true"colordiffuse="Black30">white.png</texture>
+			    <aspectratio>stretch</aspectratio>			    
 			   <visible>Control.IsVisible(57)</visible> 			  		   
-			</control>	
-			<control type="textbox" id="4">
-			<include>transition_Content</include>
-			<include>toggle_Menu</include>
-			<include>transition_Info</include>
-					    <top>85</top>
-						<left>875</left>
-						<width>370</width>
-						<height>480</height>
-						<align>justify</align>
-						<label>$VAR[global_Plot]</label>						
-						<include>detail_Text</include>
-						<visible>!SubString(ListItem.Icon,default)</visible>
-						<visible>Control.IsVisible(57)</visible> 
-					</control>
+			</control>				
 		<control type="panel" id="57">
 			<viewtype label="31113">bigicon</viewtype>	
-			<left>65</left>
-			<top>80</top>
-			<width>850</width>
+			<left>15</left>
+			<top>70</top>
+			<width>895</width>
 			<height>543</height>
 			<onleft>6000</onleft>
 			<onright>70</onright>
@@ -154,10 +126,10 @@
 			<include>toggle_Menu</include>
 			<include>transition_Info</include>
 			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(actors)</visible>
-			<itemlayout height="270" width="200">
+			<itemlayout height="270" width="180">
 				<include>viewIconPortrait-ContainerCommons</include>
 			</itemlayout>											
-			<focusedlayout height="270" width="200">
+			<focusedlayout height="270" width="180">
 				<control type="image">
 				<left>0</left>
 			<top>0</top>
@@ -272,7 +244,8 @@
 				<left>19</left>
 				<width>1280</width>
 				<height>570</height>
-              <texture background="true">frames/contentpanel.png</texture>  <aspectratio>stretch</aspectratio>
+             <texture background="true"colordiffuse="Black30">white.png</texture>
+			 <aspectratio>stretch</aspectratio>
 			  <visible>Control.IsVisible(571)</visible>
 			
 			</control>	
@@ -310,6 +283,7 @@
 	<!--POSTERSMALL ALT-->
 	<include name="view_IconPortraitSmallAlt-ContainerCommons">
 			<control type="group">
+			<visible>Control.IsVisible(573)</visible>
 			<left>7</left>
 			<top>7</top>
 			<control type="image">	
@@ -373,6 +347,7 @@
 			<include>toggle_Menu</include>
 			<include>transition_Content</include>
 			<include>transition_Info</include>	
+			<visible>Control.IsVisible(573)</visible>
 			<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true">thumbs/default_Landscape.png</texture>
@@ -410,7 +385,7 @@
 				<left>19</left>
 				<width>1280</width>
 				<height>570</height>
-              <texture background="true">frames/contentpanel.png</texture>  <aspectratio>stretch</aspectratio>
+              <texture background="true"colordiffuse="Black30">white.png</texture> <aspectratio>stretch</aspectratio>
 			  <visible>Control.IsVisible(573)</visible>
 		</control>			
 		<control type="panel" id="573">
@@ -563,8 +538,7 @@
 				<left>750</left>
 				<width>500</width>
 				<height>595</height>
-               <texture background="true">frames/contentpanel.png</texture>
-			   <animation condition="true" effect="Fade" start="70" end="70" time="0">Conditional</animation>					 
+               <texture background="true"colordiffuse="Black30">white.png</texture>					 
 			  <aspectratio>stretch</aspectratio>			    
 			   <visible>Control.IsVisible(576)</visible> 			  		   
 			</control>	
@@ -709,8 +683,7 @@
 				<left>-10</left>
 				<width>1920</width>
 				<height>70</height>
-               <texture background="true">frames/contentpanel.png</texture>
-			   <animation condition="true" effect="Fade" start="100" end="100" time="0">Conditional</animation>					 
+               <texture background="true"colordiffuse="Black30">white.png</texture>				 
 			  <aspectratio>stretch</aspectratio>			    
 			   <visible>Control.IsVisible(5761)</visible> 			  		   
 			</control>				
@@ -726,9 +699,8 @@
 				<left>887</left>
 				<width>400</width>
 				<height>666</height>
-               <texture background="true">frames/contentpanel.png</texture>
-			   <animation condition="true" effect="Fade" start="100" end="100" time="0">Conditional</animation>					 
-			  <aspectratio>stretch</aspectratio>			    
+               <texture background="true"colordiffuse="Black30">white.png</texture>
+			    <aspectratio>stretch</aspectratio>			    
 			   <visible>Control.IsVisible(5761) + Skin.HasSetting(useZoomIconFullOriginal) + Skin.HasSetting(FullBackgroundIcon5761)</visible> 			  		   
 			</control>
 		<control type="panel" id="5761">		
@@ -1243,8 +1215,7 @@
 		<top>-20</top>
 		<width>1920</width>
 			<height>1080</height>
-			<texture background="true">frames/contentpanel.png</texture> 
-			<colordiffuse>base_2</colordiffuse>
+			 <texture background="true"colordiffuse="Black30">white.png</texture>			
 			<aspectratio>stretch</aspectratio>
 			<visible>Control.IsVisible(578)</visible>	
 		</control>
@@ -1252,9 +1223,9 @@
 		<top>640</top>
 			<width>1920</width>
 			<height>100</height>
-			<texture background="true">frames/contentpanel.png</texture> 
-			 <animation condition="true" effect="Fade" start="70" end="70" time="0">Conditional</animation>					 
-			<colordiffuse>base_2</colordiffuse>
+			<texture background="true"colordiffuse="Black30">white.png</texture>
+			 <animation condition="true" effect="Fade" start="70" end="70" time="0">Conditional</animation>	 
+			
 			<aspectratio>stretch</aspectratio>
 			<visible>Control.IsVisible(578)</visible>	
 		</control>
@@ -1366,8 +1337,7 @@
 				<left>-0</left>
 				<width>1290</width>
 				<height>720</height>
-              <texture background="true">frames/contentpanel.png</texture>
-			   <colordiffuse>accent_5</colordiffuse>
+              <texture background="true"colordiffuse="Black30">white.png</texture>			   
 			   <aspectratio>stretch</aspectratio>
 			   <visible>Control.IsVisible(579)</visible> 			   
 			</control>
@@ -1827,7 +1797,7 @@
 				<left>500</left>
 				<width>780</width>
 				<height>700</height>
-              <texture background="true">frames/contentpanel.png</texture>
+             <texture background="true"colordiffuse="Black30">white.png</texture>
 			   <colordiffuse>accent_5</colordiffuse>
 			   <aspectratio>stretch</aspectratio>
 			   <visible>Control.IsVisible(542)</visible> 			   
@@ -2259,8 +2229,7 @@
 				<left>5</left>
 				<width>770</width>
 				<height>70</height>
-               <texture background="true">frames/contentpanel.png</texture>
-			    <animation condition="true" effect="Fade" start="85" end="85" time="0">Conditional</animation>					 
+               <texture background="true"colordiffuse="Black30">white.png</texture>				 
 				 <aspectratio>stretch</aspectratio>			    
 			   <visible>Control.IsVisible(574) + !Container.Content(songs) + !Container.Content(addons) + !Skin.HasSetting(useZoomIconMusic574)</visible> 			  		   
 			</control>
@@ -2272,7 +2241,7 @@
 				<left>-10</left>
 				<width>1920</width>
 				<height>70</height>
-               <texture background="true">frames/contentpanel.png</texture>
+               <texture background="true"colordiffuse="Black30">white.png</texture>
 			    <animation condition="true" effect="Fade" start="85" end="85" time="0">Conditional</animation>					 
 				 <aspectratio>stretch</aspectratio>			    
 			   <visible>Control.IsVisible(574) + !Container.Content(songs) + !Container.Content(addons) + Skin.HasSetting(useZoomIconMusic574)</visible> 			  		   
@@ -2285,7 +2254,7 @@
 				<left>770</left>
 				<width>495</width>
 				<height>700</height>
-               <texture background="true">frames/contentpanel.png</texture>
+               <texture background="true"colordiffuse="Black30">white.png</texture>
 			    <animation condition="true" effect="Fade" start="50" end="50" time="0">Conditional</animation>					 
 				 <aspectratio>stretch</aspectratio>			    
 			      <visible>Control.IsVisible(574) + !Container.Content(songs) + !Container.Content(addons) + !Skin.HasSetting(useZoomIconMusic574)</visible> 			  		   
@@ -2659,96 +2628,8 @@
 			<include>transition_Info</include>
 			<include>toggle_Menu</include>
 			<!--large grid-->
-			<control type="group">
-			<control type="grouplist" id="100">
-				<left>-30</left>
-				<bottom>-10</bottom>
-				<width>900</width>
-				<height>64</height>
-				<itemgap>15</itemgap>
-				<orientation>horizontal</orientation>
-				<control type="image">
-				<width>84</width>
-				<height>54</height>
-				<aspectratio align="right">keep</aspectratio>
-				<texture>$VAR[flag_VideoType-fo]</texture>
-			</control>
-				<control type="image">
-					<width>100</width>
-					<height>54</height>
-					<texture>$INFO[ListItem.StarRating,rating/nf-,]</texture>
-					<aspectratio align="center">keep</aspectratio>
-				</control>			
-				<control type="image">
-					<width>86</width>
-				<height>54</height>
-					<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoResolution)</visible>
-				</control>
-				<control type="image">
-					<width>86</width>
-				<height>54</height>
-					<texture>$INFO[Listitem.VideoCodec,flags/codec/,.png]</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoCodec)</visible>
-				</control>
-				<control type="image">
-					<width>86</width>
-				<height>54</height>
-					<texture>$INFO[Listitem.AudioCodec,flags/codec/,.png]</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.AudioCodec)</visible>
-				</control>
-				<control type="image">
-					<width>86</width>
-				<height>54</height>
-					<texture>$INFO[Listitem.VideoAspect,flags/video/aspectratio/,.png]</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoAspect)</visible>
-				</control>
-				<control type="image">
-					<width>86</width>
-				<height>54</height>
-					<texture>$VAR[flag_Studio]</texture>
-					<aspectratio align="center">keep</aspectratio>					
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
-					</control>					
-			</control>
-				<visible>Control.IsVisible(57)</visible>
-				<!--flags-->
-				<control type="image">
-					<right>77</right>
-					<top>640</top>
-					<include>detail_StarRating</include>
-					<aspectratio align="right" aligny="top">keep</aspectratio>
-					<visible>IntegerGreaterThan(ListItem.Rating,0)</visible>						
-				</control>				
-				<control type="group">
-					<left>70</left>
-					<top>620</top>
-					<control type="label">
-						<label>$VAR[global_Title]</label>
-						<width>500</width>
-						<include>detail_Title</include>
-						<visible>Control.IsVisible(57) | Control.IsVisible(576)</visible>						
-					</control>
-					<control type="label">
-						<top>25</top>
-						<label>$VAR[global_Info]</label>
-						<width>700</width>
-						<include>detail_Sub</include>
-						<visible>!SubString(Container.FolderPath,plugin) + !SubString(ListItem.Icon,default)</visible>
-					</control>
-					<control type="label">
-						<top>25</top>
-						<label>$VAR[global_Info.Addon]</label>
-						<width>450</width>
-						<include>detail_Sub</include>
-						<visible>SubString(Container.FolderPath,plugin) + !SubString(ListItem.Icon,default)</visible>
-					</control>
-				</control>
-			</control>
+			
+			
 			<!--small grid-->
 			<control type="group">
 			<control type="label">
@@ -2917,6 +2798,7 @@
 			</control>
 			<!--small Alt grid-->
 			<control type="group">
+			<visible>Control.IsVisible(573)</visible>
 			<control type="image">
 			<left>-708</left>
 			<top>163</top>
@@ -2950,7 +2832,8 @@
 					<height>200</height>
 				<texture background="true">$VAR[thumb_Landscape]</texture>
 				<aspectratio align="center" aligny="top">scale</aspectratio>
-				<visible>Container.Content(sets)</visible>				
+				<visible>Container.Content(sets)</visible>	
+				<visible>Control.IsVisible(573)</visible>
 			     </control>	
 					<!--Miniature Info 1-->
 					<control type="group">
@@ -2962,11 +2845,13 @@
 						<label>$VAR[global_Plot]</label>
 						<include>detail_Text</include>
 						<visible>!SubString(ListItem.Icon,default)</visible>
+						<visible>Control.IsVisible(573)</visible>
 					</control>					
 				<visible>!Skin.HasSetting(thumbnailaltinfo1.enable)</visible>		
 				</control>
 				<!--Miniature Info 2-->
-					<control type="group">					
+					<control type="group">
+					<visible>Control.IsVisible(573)</visible>
 				 <control type="image">
 				<left>-15</left>
 				<top>160</top>
@@ -2993,11 +2878,11 @@
 					<top>38</top>
 					<width>190</width>
 					<height>90</height>
-					<include>art_ClearLogo</include>					
+					<include>art_ClearLogo</include>
+					<visible>Control.IsVisible(573)</visible>
 				</control>					
 					<left>770</left>
 				    <top>93</top>								
-				<visible>Control.IsVisible(573) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 				<control type="label">
 						<top>95</top>
 						<left>-710</left>
@@ -3005,6 +2890,7 @@
 						<label>$VAR[global_Info]</label>
 						<include>detail_Sub</include>
 						<selectedcolor>color1</selectedcolor>
+						<visible>Control.IsVisible(573)</visible>
 					</control>	
 				<!--flags-->
 			<control type="grouplist" id="100">
@@ -3060,14 +2946,15 @@
 					<texture>$VAR[flag_Studio]</texture>
 					<aspectratio align="center">keep</aspectratio>					
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)</visible>
-				</control>					
+				</control>		
+				<visible>Control.IsVisible(573)</visible>
 			</control>
 				</control>
 				<!--small grid Original-->
 			<control type="group">
 				<left>770</left>
 				<top>100</top>
-				<visible>Control.IsVisible(576) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors)]</visible>
+				<visible>[Control.IsVisible(57) | Control.IsVisible(576)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors)]</visible>
 				<control type="grouplist" id="1000">
 					<itemgap>0</itemgap>
 					<control type="label">

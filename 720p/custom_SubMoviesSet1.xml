@@ -103,6 +103,8 @@
 		                <selected>Skin.HasSetting(MoviesSetsExtraThumbs.movies.enable)</selected>
 						<include>menu_Button2</include>
 					<include>menu_RadioButton2</include>
+					<visible>!Container.Content(sets)</visible>
+				
 		            </control>
 				
 				 <control type="radiobutton" id="154">					

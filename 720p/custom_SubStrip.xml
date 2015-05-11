@@ -113,12 +113,6 @@
 						<include>menu_Button2</include>
 		            <include>menu_RadioButton2</include>
 					 </control>
-                   
-
-
-					
-
-               
 		</control>
 	</controls>
 </window>

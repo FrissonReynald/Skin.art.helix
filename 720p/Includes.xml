@@ -255,7 +255,7 @@
 		<textcolor>Color1</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<autoscroll delay="autoscroll_Delay" time="autoscroll_Time" repeat="2000">true</autoscroll>
-		</include>
+		</include>	
 	<include name="detail_Title_Huge">
 		<height>35</height>
 		<aligny>center</aligny>
@@ -543,7 +543,7 @@
 		<aspectratio>stretch</aspectratio>
 	</include>
 	<include name="art_Frame-fo">
-		<texture border="0">frames/frame-fo.png</texture>
+		<texture border="0">white.png</texture>
 		<aspectratio>stretch</aspectratio>
 	</include>
 	<include name="art_FanartExtra">

@@ -886,7 +886,7 @@
 						<include>settings_Listbutton</include>
 					</control>
 					<control type="button" id="804">
-						<label>Reynald ( Update ART 1.1.0 Gotham 13.x )</label>
+						<label>Reynald ( Refocus ART V2.0 Isangard)</label>
 						<onclick>noop</onclick> 
 						<include>settings_Listbutton</include>
 					</control>					

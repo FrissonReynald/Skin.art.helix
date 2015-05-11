@@ -168,35 +168,7 @@
 			</itemlayout>
 			<focusedlayout width="850" height="300">
 			<!--Plot Option-->			
-			<control type="group">
-			<left>-80</left>
-		<include>Panel_Strip</include>		
-		<visible>!Control.HasFocus(8000)</visible>
-		<control type="group">		
-			<include>fadeinout</include>
-			<visible>[[Control.IsVisible(693)] + !IsEmpty(ListItem.Title)</visible>
-		<left>90</left>
-		<top>100</top>
-		 <control type="image">			 
-			    <visible>!StringCompare(ListItem.Label,..)</visible>				
-				    <width>825</width>
-				     <height>330</height>				
-                    <texture background="true"border="35">frames/contentpanel.png</texture>
-					<aspectratio>stretch</aspectratio>	
-					 <animation condition="true" effect="Fade" start="85" end="85" time="0">Conditional</animation>					 
-		 </control>	
-		<control type="textbox">	
-		<left>25</left>
-		<top>20</top>
-					<width>780</width>
-					<align>justify</align>
-					<height max="190">auto</height>
-					<label>$VAR[global_Plot]</label>
-					<include>detail_Text</include>
-				</control>		
-			</control>
-			<visible>Skin.HasSetting(PlotTextPanelStripFocus) + Skin.HasSetting(TextBox_PanelStrip)</visible>
-			 </control>				
+						
 			<control type="image">				
 					<width>840</width>
 					<height>308</height>
