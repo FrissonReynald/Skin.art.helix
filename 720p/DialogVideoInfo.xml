@@ -17,13 +17,22 @@
 				<texture background="true">$VAR[art:Container]</texture>
 				<aspectratio>scale</aspectratio>
 				<animation type="WindowOpen">
-					<effect type="Fade" colordiffuse="PanelWhite30" time="transition_Open" start="0" end="20" />
+					<effect type="Fade" colordiffuse="base_2" time="transition_Open" start="0" end="60" />
 				</animation>			
 				<animation type="WindowClose">
-					<effect type="Fade" colordiffuse="PanelWhite30" time="transition_Close" start="20" end="0" />
+					<effect type="Fade" colordiffuse="base_2" time="transition_Close" start="60" end="0" />
 				</animation>
-				 <visible>!Control.HasFocus(50)</visible>
-			</control>			
+				 <visible>!Control.HasFocus(50) + !Skin.HasSetting(fanart.global)</visible>
+			</control>
+			<control type="image">			
+				<top>5</top>
+				<left>8</left>
+				<width>1260</width>
+				<height>710</height>
+               <texture background="true"colordiffuse="Black30">white.png</texture>
+			    <aspectratio>stretch</aspectratio>			    
+			   <visible>!Control.HasFocus(50)</visible>			  		   
+			</control>		
              <control type="image">
                 <posx>25</posx>
                 <top>10</top>
@@ -32,15 +41,25 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
                 <texture diffuse="diffuse/pvrinfo.png">$VAR[FanartImage]</texture>
                 <visible>!Control.HasFocus(50)</visible>
-            </control>			
+            </control>	
+			<control type="image">
+			<top>90</top>
+			<left>100</left>
+			<width>250</width>
+            <height>150</height>
+			<include>art_ClearLogo</include>
+			<visible>!Control.HasFocus(50)</visible>
+			</control>
             <control type="grouplist">
-			<bottom>15</bottom>
-			<left>30</left>
+			<bottom>-10</bottom>
+			<left>780</left>
                 <width>470</width>
                 <height>50</height>
                 <orientation>horizontal</orientation>
-                <align>left</align>
-                <itemgap>9</itemgap> 
+                <align>right</align>
+				<aligny>right</aligny>
+                <itemgap>15</itemgap> 
+				<visible>Control.IsVisible(4)</visible>
 			<control type="image">
 					<width>66</width>
 					<height>40</height>
@@ -110,17 +129,17 @@
                 </control>
                 <control type="label">
                     <width>65%</width>
-                    <height>60</height>
+                    <height>40</height>
                     <font>semibold</font>
                     <aligny>top</aligny>
                     <label fallback="19055">$INFO[ListItem.MPAA]</label>
                 </control>
                 
                 <!-- Run Time -->
-                <control type="label">
+                <control type="label">				
                     <posy>-95</posy>
                     <width>100%</width>
-                    <height>25</height>
+                    <height>35</height>
                     <align>right</align>
                     <font>semibold_Big</font>
                     <label>2050</label>
@@ -129,7 +148,7 @@
                 <control type="label">
                     <right>0</right>
                     <width>35%</width>
-                    <height>60</height>
+                    <height>55</height>
                     <font>semibold</font>
                     <align>right</align>
                     <aligny>top</aligny>
@@ -146,7 +165,7 @@
                 </control>
                 <control type="label">
                     <width>65%</width>
-                    <height>60</height>
+                    <height>40</height>
                     <font>semibold</font>
                     <aligny>top</aligny>
                     <label fallback="19055">$INFO[ListItem.Director]</label>
@@ -156,7 +175,7 @@
                 <control type="label">
                     <posy>-95</posy>
                     <width>100%</width>
-                    <height>25</height>
+                    <height>35</height>
                     <align>right</align>
                     <font>semibold_Big</font>
                     <label>568</label>
@@ -165,7 +184,7 @@
                 <control type="label">
                     <right>0</right>
                     <width>35%</width>
-                    <height>60</height>
+                    <height>55</height>
                     <font>semibold_Big</font>
                     <align>right</align>
                     <aligny>top</aligny>
@@ -182,7 +201,7 @@
                 </control>
                 <control type="label">
                     <width>75%</width>
-                    <height>60</height>
+                    <height>40</height>
                     <font>semibold</font>
                     <aligny>top</aligny>
                     <label fallback="19055">$INFO[ListItem.Writer]</label>
@@ -202,7 +221,7 @@
                 <control type="label">
                     <right>0</right>
                     <width>35%</width>
-                    <height>60</height>
+                    <height>70</height>
                     <font>semibold</font>
                     <align>right</align>
                     <aligny>top</aligny>
@@ -220,7 +239,7 @@
                 </control>
                 <control type="label">
                     <width>75%</width>
-                    <height>60</height>
+                    <height>40</height>
                     <font>semibold</font>
                     <aligny>top</aligny>
                     <label fallback="19055">$INFO[ListItem.Genre]</label>
@@ -240,7 +259,7 @@
                 <control type="label">
                     <right>0</right>
                     <width>35%</width>
-                    <height>60</height>
+                    <height>55</height>
                     <font>semibold</font>
                     <align>right</align>
                     <aligny>top</aligny>
@@ -250,7 +269,7 @@
                 
                 <!-- Studio -->
                 <control type="label">
-				<bottom>20</bottom>
+				
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
@@ -259,7 +278,7 @@
                 </control>
                 <control type="label">
                     <width>100%</width>
-                    <height>60</height>
+                    <height>40</height>
                     <font>semibold</font>
                     <aligny>top</aligny>
                     <label fallback="19055">$INFO[ListItem.Studio]</label>
@@ -267,7 +286,7 @@
                 
                 <!-- Plot -->
                 <control type="label">
-				<bottom>0</bottom>
+				<top>-10</top>
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
@@ -290,7 +309,7 @@
                 <width>450</width>
                 <height>423</height>
                 <bottom>10</bottom>
-                <itemgap>0</itemgap>
+                <itemgap>5</itemgap>
                 <onup>9000</onup>
                 <ondown>9000</ondown>
                 <onright condition="!Control.IsVisible(50)">SendClick(2003,5)</onright>
@@ -301,7 +320,7 @@
                     <description>Plot/Cast</description>
                     <label>206</label>
                     <width>450</width>
-                    <height>50</height>
+                  <height>55</height>
 					<left>10</left>
                    <texturenofocus  colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
@@ -311,7 +330,7 @@
                     <description>Play</description>
                     <label>208</label>
                     <width>450</width>
-                    <height>50</height>
+                   <height>55</height>
 					<left>10</left>
                     <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
@@ -319,7 +338,7 @@
                 </control>                
                 <control type="button" id="53">
                     <width>450</width>
-                    <height>50</height>
+                    <height>55</height>
                     <texturenofocus colordiffuse="Black70"border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
@@ -339,7 +358,7 @@
                     <description>Trailer button</description>
                     <label>20410</label>
                     <width>450</width>
-                    <height>50</height>
+                   <height>55</height>
                     <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
@@ -350,7 +369,7 @@
                     <description>Home Theatre</description>
                     <label>31170</label>
                     <width>450</width>
-                    <height>50</height>
+                    <height>55</height>
                     <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
@@ -362,7 +381,7 @@
                 <control type="button" id="105">
                     <description>Extras</description>
                     <width>450</width>
-                    <height>50</height>
+                   <height>55</height>
                     <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
@@ -375,7 +394,7 @@
                     <description>Refresh</description>
                     <label>184</label>
                     <width>450</width>
-                    <height>50</height>
+                   <height>55</height>
                     <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
@@ -386,7 +405,7 @@
                     <description>Get Thumb</description>
                     <label>13405</label>
                     <width>450</width>
-                    <height>50</height>
+                    <height>55</height>
                     <texturenofocus colordiffuse="Black70"border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
@@ -400,7 +419,7 @@
                     <onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
                     <description>Get Artwork</description>
                     <width>450</width>
-                    <height>50</height>
+                   <height>55</height>
                     <texturenofocus colordiffuse="Black70"border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
@@ -413,8 +432,8 @@
                 <visible allowhiddenfocus="true">Control.IsVisible(50)</visible>
                 <top>240</top>
                 <height>50</height>
-				 <width>450</width>
-                <left>26</left>
+				 <width>455</width>
+                <left>23</left>
                 <right>30</right>
                 <ondown>51</ondown>
                 <label>$INFO[ListItem.Director,$LOCALIZE[31191] ,]</label>
@@ -430,9 +449,9 @@
             </control>
             <control type="list" id="50">
                 <description>Cast</description>                
-               <posx>750</posx>
+               <posx>485</posx>
                 <width>460</width>
-                <height>350</height>
+                <height>420</height>
                 <top>288</top>
                 <include condition="!IsEmpty(ListItem.Director)">DefVideoInfoCastWithDirector</include>
                 <include condition="IsEmpty(ListItem.Director)">DefVideoInfoCastWithoutDirector</include>
@@ -446,8 +465,8 @@
                 <itemlayout height="60" width="450">
                     <control type="image">
                         <width>100%</width>
-                        <height>60</height>
-                        <texture border="5" colordiffuse="Black70">common/box.png</texture>
+                        <height>55</height>
+                        <texture border="5" colordiffuse="Black30">common/box.png</texture>
 						<include>DefDialogButtons2</include>
                     </control>
                     <control type="label">
@@ -462,7 +481,7 @@
                         <visible>Control.HasFocus(50) | Control.HasFocus(51)</visible>
                         <control type="image">
                             <width>100%</width>
-                            <height>60</height>
+                            <height>55</height>
                             <texture border="5" colordiffuse="Highlight">common/box.png</texture>
 							<include>DefDialogButtons2</include>
                         </control>
@@ -479,7 +498,7 @@
                         <visible>!Control.HasFocus(50) + !Control.HasFocus(51)</visible>
                         <control type="image">
                             <width>100%</width>
-                            <height>60</height>
+                           <height>55</height>
                             <texture border="5" colordiffuse="Black70">common/box.png</texture>
 							<include>DefDialogButtons2</include>
                         </control>
@@ -493,20 +512,12 @@
                     </control>
                 </focusedlayout>
             </control>
-
+          
             <control type="image">
-                <left>475</left>
+                <left>950</left>
                 <top>286</top>
-                <width>275</width>
-                <bottom>33</bottom>
-                <texture colordiffuse="Black" border="10">diffuse/infocast.png</texture>
-                <visible>Control.HasFocus(50) | Control.HasFocus(51)</visible>
-            </control>
-            <control type="image">
-                <left>475</left>
-                <top>286</top>
-                <width>275</width>
-			<height>350</height>
+                <width>300</width>
+			<height>420</height>
                 <aspectratio scalediffuse="false">scale</aspectratio>
                 <texture diffuse="diffuse/infocast.png">$INFO[Container(50).ListItem.Thumb]</texture>
                 <visible>Control.HasFocus(51) | Control.HasFocus(50)</visible>
