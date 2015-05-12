@@ -282,7 +282,7 @@
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture>overlays/vignetteFullscreen.png</texture>
-			<colordiffuse>base_4</colordiffuse>
+			<colordiffuse>$VAR[ColorHome]</colordiffuse>
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="image">
@@ -672,7 +672,7 @@
 				<height>190</height>
 				<aspectratio align="center">stretch</aspectratio>
 				<texture border="5">frames/frame-fo.png</texture>
-				<colordiffuse>base_2</colordiffuse>
+				<colordiffuse>$VAR[ColorHome]</colordiffuse>
 			<aspectratio>stretch</aspectratio>
 			</control>			
 			      </control>
@@ -1027,7 +1027,7 @@
 				<height>200</height>
 				<aspectratio align="center">stretch</aspectratio>
 				<texture border="5">coverflow/coverflow_frame.png</texture>
-				<colordiffuse>base_2</colordiffuse>			
+				<colordiffuse>$VAR[ColorHome]</colordiffuse>			
 			<animation condition="true" effect="Fade" start="95" end="95" time="0">Conditional</animation>					 
 			</control>			
 			      </control>

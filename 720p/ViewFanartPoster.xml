@@ -74,9 +74,9 @@
 	 </control>
 		<control type="fixedlist" id="59">
 			<viewtype label="Poster & Fanart">Big</viewtype>           		
-            <left>350</left>
+            <left>330</left>
             <top>340</top>
-            <width>950</width>
+            <width>915</width>
             <height>300</height>
             <onup>6000</onup>
 			<ondown>71</ondown>

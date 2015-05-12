@@ -19,6 +19,7 @@
 	<include file="View_BigList2.xml" /><!--(511)-->
 	<include file="ViewSlide.xml" /><!--(52)-(521)-(523)-(525)-(526)-->
 	<include file="ViewsTV.xml" />
+	<include file="IncludesPVR.xml" />
 	<include file="ViewFanartPoster.xml" /><!--(59)-(591)-->
 	<include file="ViewIconWall.xml" /><!--(592)-(62)-->
 	<include file="ViewPosterLandscape.xml" />
@@ -84,7 +85,6 @@
 	</include>
 	
     <include name="GlobalOverlay">
-
         <control type="image">
             <include>Animation.FadeIn</include>
             <include condition="!Window.IsVisible(DialogButtonMenu.xml)">Animation.FadeOut</include>
@@ -105,7 +105,7 @@
             <right>-8</right>
             <top>-8</top>
             <bottom>-8</bottom>
-            <texture border="8" colordiffuse="base_1">common/rounded-shadow8.png</texture>
+            <texture border="8" colordiffuse="$VAR[ColorHome]">common/rounded-shadow8.png</texture>
         </control>
     </include>
 	<include name="DefDialogInfoHeader">
@@ -121,13 +121,15 @@
         <width>300</width>
         <font>light_Category</font>
         <textcolor>White100</textcolor>
-        <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>		
+		<focusedcolor>White100</focusedcolor>
+		<selectedcolor>White100</selectedcolor>
+        <texturefocus colordiffuse="White100" border="5">common/box.png</texturefocus>		
     </include>
 	 <include name="DefDialogButtons2">
         <width>400</width>
         <font>condensed_HomeSubSmall</font>
         <textcolor>White100</textcolor>
-        <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+        <texturefocus colordiffuse="White100" border="5">common/box.png</texturefocus>
     </include>
 	<include name="global_Clock">
 		<control type="group">
@@ -941,7 +943,7 @@
 				<width>1930</width>
 				<height>190</height>
 				<texture border="15">player/contentpanel_Osd.png</texture>					
-				<colordiffuse>base_1</colordiffuse>
+				<colordiffuse>$VAR[ColorHome]</colordiffuse>
 			</control>
 			<control type="image">
 			<visible>!VideoPlayer.Content(livetv)</visible>
@@ -950,16 +952,16 @@
 				<width>1930</width>
 					<height>2</height>
 					<texture>white.png</texture>
-					<colordiffuse>column3</colordiffuse>
+					<colordiffuse>white70</colordiffuse>
 				</control>
 				<control type="image">
 				<visible>!VideoPlayer.Content(livetv)</visible>
 					<left>200</left>			
 			<top>138</top>
 				<width>1100</width>
-					<height>1</height>
+					<height>2</height>
 					<texture>white.png</texture>
-					<colordiffuse>aaffffff</colordiffuse>
+					<colordiffuse>white70</colordiffuse>
 				</control>
 			<control type="group">
 			<visible>!VideoPlayer.Content(livetv)</visible>
@@ -1163,7 +1165,7 @@
 				<left>-10</left>			
 				<width>1930</width>
 				<texture border="15">player/contentpanel_Osd.png</texture>	
-				<colordiffuse>base_2</colordiffuse>				
+				<colordiffuse>$VAR[ColorHome]</colordiffuse>				
 			</control>
 			<control type="image">
 			<visible>VideoPlayer.Content(livetv)</visible>
@@ -1172,7 +1174,7 @@
 				<width>1930</width>
 					<height>2</height>
 					<texture>white.png</texture>
-					<colordiffuse>column3</colordiffuse>
+					<colordiffuse>White70</colordiffuse>
 				</control>
 			<control type="group">	
 			<visible>VideoPlayer.Content(LiveTV)</visible>

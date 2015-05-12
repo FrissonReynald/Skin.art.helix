@@ -12,7 +12,7 @@
 			<control type="image">
 				<width>340</width>
 				<height>screen_Height</height>
-				<texture background="true">white.png</texture>
+				 <texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
 					<animation effect="fade" start="100" end="60" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
 				<colordiffuse>base_33</colordiffuse>
 				<animation effect="fade" start="100" end="90" time="0" condition="!Skin.HasSetting(widgets.disable)">Conditional</animation>
@@ -26,7 +26,7 @@
 			<control type="image">
 				<width>340</width>
 				<height>10</height>
-				<texture background="true">white.png</texture>
+				<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
 				<colordiffuse>base_33</colordiffuse>				
 				<visible>Skin.HasSetting(homemenu.compact)</visible>
 			</control>
@@ -49,7 +49,7 @@
 					<control type="image">
 						<width>340</width>
 						<height>50</height>
-						<texture colordiffuse="base_33">white.png</texture>
+						<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
 						<animation effect="fade" start="100" end="90" time="0" condition="!Skin.HasSetting(widgets.disable)">Conditional</animation>
 				<animation type="Conditional" condition="Control.HasFocus(9110)" reversible="false">
 					</animation>
@@ -69,7 +69,7 @@
 						<control type="image">
 							<width>320</width>
 							<height>49</height>
-							<texture colordiffuse="base_333">white.png</texture>	
+							<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
 							<animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + Skin.HasSetting(homemenu.compact)">Conditional</animation>
 			                <animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + !Skin.HasSetting(homemenu.compact)">Conditional</animation>
 							<visible>!IsEmpty(ListItem.Property(isSubmenu))</visible>
@@ -126,13 +126,13 @@
 					<control type="image">
 						<width>340</width>
 						<height>60</height>
-						<texture colordiffuse="base_33">white.png</texture>
+						<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
 						<visible>Skin.HasSetting(homemenu.compact) + IsEmpty(Container(9110).ListItemNoWrap(1).Label) + Container(9110).HasFocus() + ![Window.IsActive(keyboard) | Window.IsActive(script-skinshortcuts.xml)]</visible>
 					</control>
 					<control type="image">
 						<width>340</width>
 						<height>50</height>
-						<texture colordiffuse="base_33">white.png</texture>
+						<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
 						<visible>Skin.HasSetting(homemenu.compact)</visible>
 					</control>
 					<control type="image">
@@ -218,8 +218,8 @@
 			<left>-150</left>
 					<width>1920</width>
 					<height>115</height>
-					<aspectratio>stretch</aspectratio>				
-					<texture colordiffuse="base_3">home/panel2.png</texture>
+					<aspectratio>stretch</aspectratio>						
+					<texture colordiffuse="$VAR[ColorHome]">home/panel2.png</texture>
 					<animation effect="fade" start="100" end="60" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
 					<visible>ControlGroup(229).HasFocus() | Control.HasFocus(9110) | Control.HasFocus(9111)</visible>
 			</control>
@@ -259,13 +259,13 @@
 						</itemlayout>
 						<focusedlayout width="236" height="70">
 							<control type="group">
-								<visible>Control.HasFocus(9000)</visible>
+								<visible>Control.HasFocus(9000)</visible>							
 								<control type="image">
-									<width>238</width>
-									<height>65</height>
-									<texture>home\menuitemfo.png</texture>
-								<bordertexture colordiffuse="Color1"></bordertexture>
-								<bordersize>5</bordersize>
+								<top>55</top>
+								<width>238</width>
+								<height>65</height>
+								<texture>white.png</texture>							
+								<bordersize>2</bordersize>
 								</control>
 								<control type="label">
 									<width>236</width>
@@ -279,11 +279,10 @@
 							<control type="group">
 								<visible>!Control.HasFocus(9000)</visible>
 									<control type="image">
+									<top>55</top>
 								<width>238</width>
-								<height>65</height>
-								<texture>home\menuitemfo.png</texture>
-								<bordertexture colordiffuse="Color1"></bordertexture>
-								<bordersize>5</bordersize>
+								<height>2</height>
+								<texture>white.png</texture>								
 							</control>
 								<control type="label">
 									<width>236</width>
@@ -306,15 +305,41 @@
 			<top>64</top>
 			<left>-150</left>			
 					<width>1920</width>
-					<height>57</height>
+					<height>58</height>
 					<aspectratio>stretch</aspectratio>				
-					<texture colordiffuse="base_5">home/panel.png</texture>
+					<texture colordiffuse="FF000000">home/panel.png</texture>
 						<animation effect="fade" start="100" end="60" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
 						<animation type="Conditional" condition="!IntegerGreaterThan(Container(9111).NumItems,0)" reversible="true">
 							<effect type="Slide" time="50" center="auto" start="0,0" end="-4000,0" easing="In" tween="Cubic"/>
 						</animation>
 					<visible>ControlGroup(229).HasFocus() | Control.HasFocus(9110) | Control.HasFocus(9111)</visible>
-				 	</control>					
+				 	</control>
+				<control type="image">			
+			<top>65</top>
+			<left>-150</left>			
+					<width>1920</width>
+					<height>1</height>
+					<aspectratio>stretch</aspectratio>				
+					<texture colordiffuse="white30">home/panel.png</texture>
+						<animation effect="fade" start="100" end="60" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
+						<animation type="Conditional" condition="!IntegerGreaterThan(Container(9111).NumItems,0)" reversible="true">
+							<effect type="Slide" time="50" center="auto" start="0,0" end="-4000,0" easing="In" tween="Cubic"/>
+						</animation>
+					<visible>ControlGroup(229).HasFocus() | Control.HasFocus(9110) | Control.HasFocus(9111)</visible>
+				 	</control>
+					<control type="image">			
+			<top>116</top>
+			<left>-150</left>			
+					<width>1920</width>
+					<height>1</height>
+					<aspectratio>stretch</aspectratio>				
+					<texture colordiffuse="white30">home/panel.png</texture>
+						<animation effect="fade" start="100" end="60" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
+						<animation type="Conditional" condition="!IntegerGreaterThan(Container(9111).NumItems,0)" reversible="true">
+							<effect type="Slide" time="50" center="auto" start="0,0" end="-4000,0" easing="In" tween="Cubic"/>
+						</animation>
+					<visible>ControlGroup(229).HasFocus() | Control.HasFocus(9110) | Control.HasFocus(9111)</visible>
+				 	</control>		
 			<include>transition_Home-horizontal2</include>
 				<control type="fixedlist" id="9111">
 				<left>25</left>
@@ -363,7 +388,7 @@
 							<left>-10</left>
 							<top>0</top>
 								<width>240</width>
-								<height>41</height>
+								<height>46</height>
 								<texture colordiffuse="Color1">white.png</texture>
 								<bordertexture colordiffuse="base_3"></bordertexture>
 								<bordersize>0</bordersize>
@@ -374,7 +399,7 @@
 								<label>$INFO[ListItem.Label]</label>
 								<font>condensed_HomeSub</font>
 								<align>center</align>
-								<textcolor>base_8</textcolor>							
+								<textcolor>FF000000</textcolor>							
 							</control>
 							</control>
 						</focusedlayout>

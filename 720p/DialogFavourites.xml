@@ -12,8 +12,7 @@
 	<controls>
 		<control type="image">
 					<include>screen_Dimensions</include>
-					<texture background="true">overlays/base_color.png</texture>
-					<colordiffuse>base_2</colordiffuse>
+					<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>					
 				</control>	
 		<control type="image">
 		<top>400</top>

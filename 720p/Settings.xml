@@ -60,7 +60,7 @@
 						<width>80</width>
 						<height>80</height>
 						<info>ListItem.Icon</info>
-						<colordiffuse>base_1</colordiffuse>
+						<colordiffuse>$VAR[ColorHome]</colordiffuse>
 					</control>
 					<control type="label">
 						<left>110</left>

@@ -15,7 +15,7 @@
 				<visible>Skin.String(HomeBackground,multi) | [Player.HasAudio + Skin.HasSetting(home.nowplaying) + !Skin.HasSetting(artistslideshow.disable)]</visible>
 			</control>			
 			<control type="image">
-				<texture>overlays/vignette2.png</texture>
+			<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>				
 				<include>screen_Dimensions</include>
 				<aspectratio>stretch</aspectratio>
 				<include>fadeinout</include>
@@ -156,8 +156,8 @@
 		<control type="group">
 		<control type="image">
 					 <top>520</top>	
-			<left>340</left>
-				     <width>950</width>
+			<left>0</left>
+				     <width>1280</width>
 				     <height>180</height>
 				     <texture background="true"colordiffuse="ff000000">frames/contentpanel.png</texture>
 			</control>		
@@ -464,15 +464,14 @@
 			<fadetime>fadetime_Fanart</fadetime>
 		</control>
 		<control type="image">
-			<texture>overlays/vignette2.png</texture>			
+			<texture border="5" colordiffuse="$VAR[ColorHome]">overlays/vignette2.png</texture>			
 			<include>screen_Dimensions</include>
 			<aspectratio>stretch</aspectratio>
 		<visible>Skin.HasSetting(overlaysrefocus)</visible>
 		</control>
 		
 		<control type="image">
-			<texture>overlays/vignette4.png</texture>
-			<colordiffuse>base_4</colordiffuse>
+		<texture border="5" colordiffuse="$VAR[ColorHome]">overlays/vignette4.png</texture>			
 			<include>screen_Dimensions</include>
 			<aspectratio>stretch</aspectratio>			
 			<visible>!Skin.HasSetting(overlaysglass)</visible>

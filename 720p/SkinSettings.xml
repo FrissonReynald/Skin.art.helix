@@ -738,7 +738,13 @@
 				   <onclick>Skin.ToggleSetting(base_color.40opacity.enable)</onclick>
                          <selected>Skin.HasSetting(base_color.40opacity.enable)</selected>
 		          <include>settings_Radiobutton</include>
-                </control>				
+                </control>	
+				 <control type="radiobutton" id="605">                      
+                       <onclick>ActivateWindow(1107)</onclick>                        
+                        <label>Set Custom Colour background </label>
+                        <label2>$INFO[Skin.String(BackgroundColor.name)]</label2> 
+						<include>settings_Radiobutton</include>
+                    </control>				
 				<control type="radiobutton" id="610">
 					    <label>overlays widget Refocus</label>					    
 					    <onclick>Skin.ToggleSetting(overlaysrefocus)</onclick>

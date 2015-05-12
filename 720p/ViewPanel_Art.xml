@@ -81,7 +81,7 @@
 			<left></left>
 			<width>screen_Dimensions</width>
 			<height>53</height>
-			<texture border="5" colordiffuse="Color_Art">overlays/white.png</texture>			
+			<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>			
 			<aspectratio>stretch</aspectratio>
 			<visible>Control.IsVisible(691) + !Control.HasFocus(8000)</visible>
 			</control>
@@ -495,7 +495,7 @@
 			<left></left>
 			<width>screen_Dimensions</width>
 			<height>53</height>
-			<texture border="5" colordiffuse="Color_Art">overlays/white.png</texture>			
+			<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>				
 			<aspectratio>stretch</aspectratio>
 			<visible>Control.IsVisible(692)</visible>
 			</control>
@@ -1190,7 +1190,7 @@
 			<texture>frames_PVR/floor.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-			<colordiffuse>base_1</colordiffuse>
+			<colordiffuse>$VAR[ColorHome]</colordiffuse>
 			<visible>Control.IsVisible(694)</visible>
 		</control>
 	<control type="image">
@@ -1830,7 +1830,7 @@
 			<texture>frames_PVR/floor.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-			<colordiffuse>base_1</colordiffuse>
+			<colordiffuse>$VAR[ColorHome]</colordiffuse>
 			<visible>Control.IsVisible(695)</visible>
 		</control>
 	<control type="image">
