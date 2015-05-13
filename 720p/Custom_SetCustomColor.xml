@@ -1,48 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window type="dialog" id="1107">
-    <defaultcontrol always="true">9500</defaultcontrol>
-   <include>transition_Background</include>      
-	<include>transition_Dialog</include>
-	<include>global_background</include>
+    <defaultcontrol always="true">9500</defaultcontrol>  	
 	<coordinates>
 		<system>1</system>
-		<left>0</left>
-		<top>0</top>
+		<left>290</left>
+		<top>104</top>
 	</coordinates>
 	<controls>
+	<include>transition_Dialog</include>	
+	<control type="image">
+	<texture border="5" colordiffuse="Black70">frames/contentpanel.png</texture>
+	<left>-40</left>
+			<height>560</height>
+				<width>785</width>
+			<include>dialog_Window</include>
+		</control>
 		<control type="image">
-					<include>screen_Dimensions</include>
-					<texture border="5" colordiffuse="ff000000">white.png</texture>					
-				</control>	
-		<control type="image">
-		<top>400</top>
-					<width>1280</width>
-					<height>100</height>
-					<texture background="true">black.png</texture>					
-				</control>	
+            <left>-25</left>
+			<top>310</top>
+            <width>16</width>
+            <height>16</height>
+            <texture flipx="true">common/arrow-small-right.png</texture>
+        </control>
+        <control type="image">
+             <left>715</left>
+			<top>310</top>
+            <width>16</width>
+            <height>16</height>
+            <texture flipx="false">common/arrow-small-right.png</texture>
+        </control>
+	
 			<control type="label" id="1">
 			<width>592</width>
-			<top>650</top>
-			<left>center</left>
+			<top>15</top>
+			<left>260</left>
 			<label>Choice a color</label>
 			<textcolor>ffffffff</textcolor>
-			<include>windowTitle</include>			
+			<include>detail_Sub</include>			
 		</control>	
         <control type="group"> <!--content -->
             <control type="panel" id="9500"> <!--colours -->
-                <left>SidePad</left>
-                <right>SidePad</right>
-                <top>PosterPad</top>
                 
-                <height>640</height>
+                <top>50</top>                
+                <height>500</height>
+				<width>700</width>
                 <onup>9500</onup>
                 <ondown>9500</ondown>
                 <onleft>9500</onleft>
                 <onright>9500</onright>
                 <orientation>horizontal</orientation>
                 <scrolltime>200</scrolltime>
-                <itemlayout height="80" width="120">
+                <itemlayout height="70" width="70">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -61,7 +70,7 @@
                         <texture colordiffuse="Black">indicator/checkmark.png</texture>
                     </control>
                 </itemlayout>
-                <focusedlayout height="80" width="120">               
+                <focusedlayout height="70" width="70">               
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -222,6 +231,12 @@
                         <thumb>special://skin/extras/colours/FFf14416.png</thumb>
                         <label>FFf14416</label>
                     </item>
+					<item id="90"> <!--Red -->
+                         <onclick>Skin.SetString(BackgroundColor.name,FF94050c)</onclick>
+                        <onclick>Close</onclick>
+                        <thumb>special://skin/extras/colours/FF94050c.png</thumb>
+                        <label>FF94050c</label>
+                    </item>	
                     <item id="25"> <!--red 1 -->
                          <onclick>Skin.SetString(BackgroundColor.name,FFe95d4e)</onclick>
                         <onclick>Close</onclick>
@@ -389,25 +404,7 @@
                         <onclick>Close</onclick>
                         <thumb>special://skin/extras/colours/FF4b82de.png</thumb>
                         <label>FF4b82de</label>
-                    </item>
-					<item id="73"> <!--black-->
-                        <onclick>Skin.SetString(BackgroundColor.name,FF000000)</onclick>
-                        <onclick>Close</onclick>
-                        <thumb>special://skin/extras/colours/FF000000.png</thumb>
-                        <label>FF000000</label>
-                    </item>
-					 <item id="72"> <!--blue 8 -->
-                        <onclick>Skin.SetString(BackgroundColor.name,FF163b77)</onclick>
-                        <onclick>Close</onclick>
-                        <thumb>special://skin/extras/colours/FF163b77.png</thumb>
-                        <label>FF163b77</label>
-                    </item>
-					 <item id="74"> <!--blue 9 -->
-                         <onclick>Skin.SetString(BackgroundColor.name,FF004470)</onclick>
-                        <onclick>Close</onclick>
-                        <thumb>special://skin/extras/colours/FF004470.png</thumb>
-                        <label>FF004470</label>
-                    </item>					
+                    </item>									
                     <item id="53"> <!--blue 1 -->
                         <onclick>Skin.SetString(BackgroundColor.name,FF87cbf6)</onclick>
                         <onclick>Close</onclick>
@@ -432,6 +429,18 @@
                         <thumb>special://skin/extras/colours/FF3ea6e8.png</thumb>
                         <label>FF3ea6e8</label>
                     </item>
+					 <item id="72"> <!--blue 8 -->
+                        <onclick>Skin.SetString(BackgroundColor.name,FF163b77)</onclick>
+                        <onclick>Close</onclick>
+                        <thumb>special://skin/extras/colours/FF163b77.png</thumb>
+                        <label>FF163b77</label>
+                    </item>
+					 <item id="74"> <!--blue 9 -->
+                         <onclick>Skin.SetString(BackgroundColor.name,FF004470)</onclick>
+                        <onclick>Close</onclick>
+                        <thumb>special://skin/extras/colours/FF004470.png</thumb>
+                        <label>FF004470</label>
+                    </item>	
                     <item id="57"> <!--blue 5 -->
                         <onclick>Skin.SetString(BackgroundColor.name,FF2d95d7)</onclick>
                         <onclick>Close</onclick>
@@ -516,12 +525,30 @@
                         <thumb>special://skin/extras/colours/FF6a6a69.png</thumb>
                         <label>FF6a6a69</label>
                     </item>
-					<item id="80"> <!--Grey 2 -->
+					<item id="81"> <!--Grey 2 -->
                          <onclick>Skin.SetString(BackgroundColor.name,FF46463f)</onclick>
                         <onclick>Close</onclick>
                         <thumb>special://skin/extras/colours/FF46463f.png</thumb>
                         <label>FF46463f</label>
-                    </item>					
+                    </item>						
+					<item id="91"> <!--Grey Dark -->
+                         <onclick>Skin.SetString(BackgroundColor.name,FF2b2b2e)</onclick>
+                        <onclick>Close</onclick>
+                        <thumb>special://skin/extras/colours/FF2b2b2e.png</thumb>
+                        <label>FF2b2b2e</label>
+                    </item>	
+					<item id="73"> <!--black-->
+                        <onclick>Skin.SetString(BackgroundColor.name,FF000000)</onclick>
+                        <onclick>Close</onclick>
+                        <thumb>special://skin/extras/colours/FF000000.png</thumb>
+                        <label>FF000000</label>
+                    </item>	
+					<item id="82"> <!--blue-->
+                        <onclick>Skin.SetString(BackgroundColor.name,FF1152e4)</onclick>
+                        <onclick>Close</onclick>
+                        <thumb>special://skin/extras/colours/FF1152e4.png</thumb>
+                        <label>FF1152e4</label>
+                    </item>	
                 </content>
             </control>
         </control>
