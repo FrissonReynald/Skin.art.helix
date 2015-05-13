@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
 <!--main colors-->
-	<color name="base_1">ff004470</color><!--main background color-->
-	<color name="base_2">ff003957</color><!--primary overlay / menu color-->
-	<color name="base_3">ff000000</color><!--secondary overlay / menu color (home menu)-->
-	<color name="base_33">ff004470</color><!--main color menu vertical-->-->
-	<color name="base_333">ff003957</color><!--main color menu vertical-->-->
-	<color name="base_4">bb134782</color><!--vignette2-->
+
+	<color name="base_2">ff003957</color><!--primary overlay / menu color-->	
 	<color name="accent_1">ff0c2c40</color><!--primary accent color (seekbar)-->
 	<color name="accent_2">ff245678</color><!--secondary accent color (home submenu)-->
 	<color name="accent_3">ff7e94a4</color><!--color  top title windows-->
 	<color name="accent_4">ff09233f</color><!--color supp -->
 	<color name="accent_5">aa000000</color><!--color overlays strip -->
-	<color name="base_5">ff185982</color><!--main color menu horizontal-->
-	<color name="base_6">ff081e2b</color><!--main color menu vertical-->
-	<color name="base_7">ff295079</color><!--main color menu vertical-->
-	<color name="base_8">ff000000</color><!--Submenu Horizontal-->
-	<color name="base_9">faa5a5a5</color><!--view panel textbox layou color-->
-		
+	
 <!--text-->
     <color name="Color1">FFebebeb</color><!--Home textcolor-->	
 	<color name="Color2">ff9ec83e</color><!--secondary textcolor-->
@@ -43,10 +34,10 @@
 	<color name="column1">ffffffff</color><!--main columns text color-->
 	<color name="column2">ff185982</color><!--primary columns base color-->
 	<color name="column3">ff003957</color><!--secondary columns base color-->
-	
-<!--Views-->
-    <color name="Color_Art">ff003957</color><!--frames Panel ART-->
-	
+	<!--pvr-->
+	<color name="rec1">ffFF1744</color><!--textcolor for unfocused recording items-->
+	<color name="rec2">ffB71C1C</color><!--textcolor for focused recording items-->
+<!--Views--> 	
 	<color name="Black">FF000000</color>
     <color name="White">FFFFFFFF</color>
     <color name="Red">FFFF0000</color>

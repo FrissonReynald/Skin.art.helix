@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
 <!--main colors-->
-	<color name="base_2">ee2d2d2d</color><!--primary overlay / menu color-->
 
-	<color name="accent_1">ff232323</color><!--primary accent color (seekbar)-->
-	<color name="accent_2">ff494949</color><!--secondary accent color (home submenu)-->
-	<color name="accent_3">ff7e94a4</color><!--color  top title windows-->
-	<color name="accent_4">ff2d2d2d</color><!--color supp -->
-	<color name="accent_5">aa000000</color><!--color overlays strip -->
-
+	<color name="base_2">ff00603d</color><!--primary overlay / menu color-->
+	<color name="base_3">ff0c402e</color><!--secondary overlay / menu color (home menu)-->
+	<color name="accent_1">ff0c402e</color><!--primary accent color (seekbar)-->
+	<color name="accent_2">ff247844</color><!--secondary accent color (home submenu)-->
+	
 <!--text-->
 	<color name="Color1">ffffffff</color><!--main textcolor-->
-	<color name="Color2">ffffc40d</color><!--secondary textcolor-->
-	<color name="Color3">ffffffff</color><!--tertiary textcolor-->
+	<color name="Color2">ffd0cd65</color><!--secondary textcolor-->
+	<color name="Color3">ffcacaca</color><!--tertiary textcolor-->
 	<color name="Color4">FF696a6c</color><!--primary dialog textcolor-->
 	<color name="Color5">FF000000</color><!--extra dark dialog textcolor-->
 	<color name="Color7">FFebebeb</color><!--description / plot textcolor-->
 	<color name="Color13">ffffffff</color>
-	<color name="Color16">aaffc40d</color><!-- Setting focus-->
-	<color name="FocusSubmenu">ffffffff</color><!--Home textcolor-->
+	<color name="Color16">ee117647</color><!-- Setting focus-->
 
 <!--buttons / control states-->
 	<color name="Focused">FF111111</color>
@@ -28,13 +25,19 @@
 
 <!--columns / lists-->
 	<color name="column1">ffffffff</color><!--main columns text color-->
-	<color name="column2">aaffc40f</color><!--primary columns base color-->
-	<color name="column3">ff505050</color><!--secondary columns base color-->
+	<color name="column2">ff000000</color><!--primary columns base color-->
+	<color name="column3">ff2d8346</color><!--secondary columns base color-->
 	<!--pvr-->
 	<color name="rec1">ffFF1744</color><!--textcolor for unfocused recording items-->
 	<color name="rec2">ffB71C1C</color><!--textcolor for focused recording items-->
-<!--Views-->	
-	<color name="Black">FF000000</color>
+	
+<!--dialogs-->
+	<color name="glyph_nf">ff7d7d7d</color>
+	<color name="glyph_fo">ffffffff</color>
+	<color name="Color4">FF696a6c</color><!--primary dialog textcolor-->
+	<color name="Color5">FF000000</color><!--extra dark dialog textcolor-->
+<!--Views-->
+   <color name="Black">FF000000</color>
     <color name="White">FFFFFFFF</color>
     <color name="Red">FFFF0000</color>
     <color name="Blue">FF0000FF</color>
@@ -73,6 +76,5 @@
     <color name="Black100">FF000000</color>
     <color name="Black70">F3000000</color>
     <color name="Black30">4D000000</color>
-    <color name="Black12">2F000000</color>
-	
+    <color name="Black12">2F000000</color>	
 </colors>

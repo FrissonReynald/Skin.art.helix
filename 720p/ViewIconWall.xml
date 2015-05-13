@@ -242,28 +242,20 @@
 				<visible>!Container().Scrolling</visible>
             <animation effect="fade" start="0" end="100" time="800" delay="2500">Visible</animation>
 				</control>	
-		<control type="image">
-		<top>50</top>
-			<width>1290</width>
-			<height>700</height>
-			<texture>overlays/vignetteFullscreen.png</texture>
-			<colordiffuse>base_2</colordiffuse>
-			<aspectratio>stretch</aspectratio>
-			<visible>Control.IsVisible(62)</visible>	
-		</control>
+	
 		</control>
 		 <control type="group">
 			<include>toggle_Menu</include>
 			<include>transition_Content</include>
 			<include>transition_Info</include>	
 			    <control type="image">
-				     <top>648</top>
+				     <top>660</top>
 				     <left>0</left>
 				     <width>1290</width>
-				     <height>100</height>				
-                    <texture background="true">frames/contentpanel.png</texture>
+				     <height>80</height>				
+                    <texture background="true"colordiffuse="$VAR[ColorHome]">white.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<colordiffuse>base_2</colordiffuse>
+					
 			         <visible>Control.IsVisible(62)</visible>					 
 			    </control>				
 			</control>
@@ -581,7 +573,7 @@
 			<left>2%</left>
 				 <width>701</width>
             <height>45</height>
-			<texture border="5" colordiffuse="Color_Art">overlays/white.png</texture>			
+			<texture border="5" colordiffuse="$VAR[ColorHome]">overlays/white.png</texture>			
 			<aspectratio>stretch</aspectratio>
 			<visible>Control.IsVisible(621)</visible>
 			</control>
@@ -1459,9 +1451,9 @@
 				     <left>0</left>
 				     <width>1290</width>
 				     <height>100</height>				
-                    <texture background="true">frames/contentpanel.png</texture>
+                    <texture background="true"colordiffuse="$VAR[ColorHome]">white.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<colordiffuse>base_2</colordiffuse>
+					
 			         <visible>Control.IsVisible(623)</visible>					 
 			    </control>				
 			</control>
