@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
 	<include name="detail_Slide">
 	<control type="group">
 	<control type="image">       
@@ -37,10 +38,10 @@
 				<texture>$VAR[art_Logo.Condition]</texture>
 				<visible>Container.Content(artists) | Container.Content(albums)</visible>
 			</control>	
-			<!--flags-->
+			<!--flags-->			
 			<control type="grouplist" id="100">
 				<left>635</left>
-				<bottom>35</bottom>
+				<bottom>2</bottom>
 				<width>900</width>
 				<height>50</height>
 				<itemgap>10</itemgap>
@@ -98,12 +99,12 @@
 				<visible>Control.IsVisible(52)</visible> 
 			</control>
 			<control type="group">
-				<left>192</left>
-				<top>140</top>
+				<left>490</left>
+				<top>520</top>
 				<control type="group">
 					<control type="label">
 					<left>-2</left>
-						<width>1000</width>
+						<width>705</width>
 						<label>$VAR[global_Title]</label>						
 						<include>detail_Title</include>							
 					</control>					
@@ -118,7 +119,7 @@
 							<visible>![Container.Content(addons) | Container.Content(programs)]</visible>
 						</control>
 						<control type="label">
-							<width>700</width>
+							<width>550</width>
 							<label>$LOCALIZE[19114] $INFO[ListItem.Property(Addon.Version),, • ]$LOCALIZE[31144] $INFO[ListItem.Property(Addon.Creator)]</label>
 							<include>detail_Sub</include>
 							<visible>[Container.Content(addons) | Container.Content(programs)]</visible>
@@ -126,7 +127,7 @@
 					</control>
 					<control type="textbox">
 						<top>60</top>
-						<width>940</width>
+						<width>700</width>
 						<height>88</height>
 						<align>justify</align>
 						<label>$VAR[global_Plot]</label>
@@ -135,32 +136,44 @@
 				</control>							
 			</control>
 			 <visible>!Skin.HasSetting(SlidePosterInfo)</visible>
+		</control>		
+		<control type="image">
+		<include>transition_Info</include>
+			<include>toggle_Menu</include>
+			<include>transition_Content</include>
+		<bottom>0</bottom>
+			<width>screen_Dimensions</width>
+			<height>50</height>
+			<texture background="true"colordiffuse="Black100">white.png</texture>
+			<aspectratio align="center">scale</aspectratio>
+			 <visible>Control.IsVisible(52) + Skin.HasSetting(SlidePosterInfo) + !Control.HasFocus(8000)</visible>
 		</control>
 		<control type="label">
 		<include>transition_Info</include>
 			<include>toggle_Menu</include>
 			<include>transition_Content</include>
-					<left>550</left>
-					<top>635</top>
-						<width>600</width>
+					<left>50</left>
+					<top>680</top>
+						<width>1050</width>
 						<label>$VAR[global_Title]</label>						
 						<include>detail_Title</include>	
+						<align>left</align>
 						 <visible>Control.IsVisible(52) + !Skin.HasSetting(useZoomPoster) + Skin.HasSetting(SlidePosterInfo) + !Control.HasFocus(8000)</visible>
 					<scroll>true</scroll>
 					</control>
 			<control type="label">
-			 <animation effect="zoom" start="100" end="140" center="270,750" time="240" reversible="false" tween="cubic" condition="Skin.HasSetting(useZoomPoster) + Skin.HasSetting(SlidePosterInfo)">Conditional</animation>
+			 <animation effect="zoom" start="100" end="140" center="1450,520" time="240" reversible="false" tween="cubic" condition="Skin.HasSetting(useZoomPoster) + Skin.HasSetting(SlidePosterInfo)">Conditional</animation>
           
 		<include>transition_Info</include>
 			<include>toggle_Menu</include>
 			<include>transition_Content</include>
-					<left>480</left>
+					<left>470</left>
 					<top>625</top>
-						<width>490</width>
+						<width>1000</width>
 						<hight>40</hight>
 						<label>$VAR[global_Title]</label>						
 						<include>detail_Title</include>	
-						<shadowcolor>ff000000</shadowcolor>
+						<align>left</align>						
 						<scroll>true</scroll>
 						 <visible>Control.IsVisible(52) + Skin.HasSetting(useZoomPoster) + Skin.HasSetting(SlidePosterInfo) + !Control.HasFocus(8000)</visible>
 					
@@ -172,10 +185,10 @@
 			<visible>[Control.IsVisible(521)] + !Control.HasFocus(8000)</visible>
 			<!--flags-->
 			<control type="grouplist" id="100">
-				<left>210</left>
-				<bottom>8</bottom>
+				<left>190</left>
+				<bottom>40</bottom>
 				<width>940</width>
-				<height>55</height>
+				<height>40</height>
 				<itemgap>5</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="image">
@@ -189,41 +202,41 @@
 		</control>
 				<control type="image">
 					<width>100</width>
-					<height>50</height>
+					<height>45</height>
 					<texture>$INFO[ListItem.StarRating,rating/nf-,]</texture>
 					<aspectratio align="center">keep</aspectratio>					
 				</control>
 				<control type="image">
 					<width>86</width>
-					<height>50</height>
+					<height>45</height>
 					<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoResolution)</visible>
 				</control>
 				<control type="image">
 					<width>86</width>
-					<height>50</height>
+					<height>45</height>
 					<texture>$INFO[Listitem.VideoCodec,flags/codec/,.png]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoCodec)</visible>
 				</control>
 				<control type="image">
 					<width>86</width>
-					<height>50</height>
+					<height>45</height>
 					<texture>$INFO[Listitem.AudioCodec,flags/codec/,.png]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.AudioCodec)</visible>
 				</control>
 				<control type="image">
 					<width>86</width>
-					<height>50</height>
+					<height>45</height>
 					<texture>$INFO[Listitem.VideoAspect,flags/video/aspectratio/,.png]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoAspect)</visible>
 				</control>
 				<control type="image">
 					<width>86</width>
-					<height>50</height>
+					<height>45</height>
 					<texture>$VAR[flag_Studio]</texture>
 					<aspectratio align="center">keep</aspectratio>					
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
@@ -232,7 +245,7 @@
 			</control>
 			<control type="group">
 				<left>192</left>
-				<top>140</top>
+				<top>490</top>
 					<control type="group">
 					<control type="label">
 					<left>-2</left>
@@ -268,24 +281,34 @@
 				</control>							
 			 <visible>!Skin.HasSetting(SlideLandscapeInfo)</visible>
 		</control>
+		<control type="image">		
+		<bottom>0</bottom>
+			<width>screen_Dimensions</width>
+			<height>50</height>
+			<texture background="true"colordiffuse="Black100">white.png</texture>
+				<aspectratio align="center">scale</aspectratio>
+			 <visible>Control.IsVisible(521) + Skin.HasSetting(SlideLandscapeInfo) + !Control.HasFocus(8000)</visible>
+			
+		</control>
 		<control type="label">		
-					<left>200</left>
-					<top>648</top>
-						<width>580</width>
+					<left>50</left>
+					<top>680</top>
+						<width>1050</width>
 						<label>$VAR[global_Title]</label>						
 						<include>detail_Title</include>	
+						<align>left</align>
 						 <visible>Control.IsVisible(521) + !Skin.HasSetting(useZoomLandscape) + Skin.HasSetting(SlideLandscapeInfo) + !Control.HasFocus(8000)</visible>
 					<scroll>true</scroll>
 					</control>
 				<control type="label">
-			 <animation effect="zoom" start="100" end="140" center="270,750" time="240" reversible="false" tween="cubic" condition="Skin.HasSetting(useZoomLandscape) + Skin.HasSetting(SlideLandscapeInfo)">Conditional</animation>
-          			<left>200</left>
-					<top>645</top>
-						<width>490</width>
+			 <animation effect="zoom" start="100" end="140" center="1450,520" time="240" reversible="false" tween="cubic" condition="Skin.HasSetting(useZoomLandscape) + Skin.HasSetting(SlideLandscapeInfo)">Conditional</animation>
+          				<left>470</left>
+					<top>625</top>
+						<width>1000</width>
 						<hight>40</hight>
 						<label>$VAR[global_Title]</label>						
 						<include>detail_Title</include>	
-						<shadowcolor>ff000000</shadowcolor>
+						<align>left</align>						
 						<scroll>true</scroll>
 						 <visible>Control.IsVisible(521) + Skin.HasSetting(useZoomLandscape) + Skin.HasSetting(SlideLandscapeInfo) + !Control.HasFocus(8000)</visible>
 					
@@ -439,6 +462,7 @@
 				<visible>!Container().Scrolling</visible>
             <animation effect="fade" start="0" end="100" time="800" delay="2500">Visible</animation>
 				</control>	
+				
 			 <control type="label" id="9900">
 			<left>34</left>
 			<top>14</top>
@@ -465,11 +489,11 @@
 		<include>transition_Content</include>
 			<include>toggle_Menu</include>
 			<include>transition_Info</include>
-				<top>115</top>
-				<left>150</left>
-				<width>1070</width>
-				<height>450</height>
-               <texture background="true">frames/contentpanel.png</texture>
+				<top>190</top>
+				<left>0</left>
+				<width>screen_Width</width>
+				<height>550</height>
+               <texture background="true"colordiffuse="FF000000">black.png</texture>
 			    <animation condition="true" effect="Fade" start="70" end="70" time="0">Conditional</animation>					 
 				 <aspectratio>stretch</aspectratio>			    
 			   <visible>Control.IsVisible(52) + !Skin.HasSetting(SlidePosterInfo)</visible>
@@ -477,7 +501,7 @@
 		<control type="fixedlist" id="52">		
 			<viewtype label="31112">wrap</viewtype>			
 			<left>8</left>
-			<top>335</top>
+			<top>220</top>
 			<width>1272</width>
 			<height>425</height>
 			<onup>6000</onup>
@@ -493,7 +517,7 @@
 			<include>transition_Info</include>
 			<include>toggle_Menu</include>
 			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
-			 <animation effect="zoom" start="100" end="140" center="270,750" time="240" reversible="false" tween="cubic" condition="Skin.HasSetting(useZoomPoster) + Skin.HasSetting(SlidePosterInfo)">Conditional</animation>
+			 <animation effect="zoom" start="100" end="140" center="150,350" time="240" reversible="false" tween="cubic" condition="Skin.HasSetting(useZoomPoster) + Skin.HasSetting(SlidePosterInfo)">Conditional</animation>
            
 			<itemlayout width="205" height="300">
 			  
@@ -639,19 +663,21 @@
 		<include>transition_Content</include>
 			<include>toggle_Menu</include>
 			<include>transition_Info</include>
-				<top>115</top>
-				<left>150</left>
-				<width>1070</width>
-				<height>450</height>
-               <texture background="true">frames/contentpanel.png</texture>
+				<top>485</top>
+				<left>0</left>
+				<width>screen_Width</width>
+				<height>200</height>
+               <texture background="true"colordiffuse="FF000000">black.png</texture>
 			    <animation condition="true" effect="Fade" start="70" end="70" time="0">Conditional</animation>					 
+							    
+			
 				 <aspectratio>stretch</aspectratio>			    
 			   <visible>Control.IsVisible(521) + !Skin.HasSetting(SlideLandscapeInfo)</visible>
 			   </control>
 		<control type="fixedlist" id="521">
 			<viewtype label="31112">bigwrap</viewtype>
-			<left>-177</left>
-			<top>345</top>
+			<left>-185</left>
+			<top>165</top>
 			<width>2200</width>
 			<height>430</height>
 			<onleft>521</onleft>
@@ -668,7 +694,7 @@
 			<include>transition_Info</include>
 			<include>toggle_Menu</include>
 			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | [Container.Content(files) + Container.HasFiles + !SubString(Container.FolderPath,plugin://plugin)]</visible>
-			 <animation effect="zoom" start="100" end="140" center="270,750" time="240" reversible="false" tween="cubic" condition="Skin.HasSetting(useZoomLandscape) + Skin.HasSetting(SlideLandscapeInfo)">Conditional</animation>
+			 <animation effect="zoom" start="100" end="140" center="270,220" time="240" reversible="false" tween="cubic" condition="Skin.HasSetting(useZoomLandscape) + Skin.HasSetting(SlideLandscapeInfo)">Conditional</animation>
           
 			<itemlayout width="445" height="259">
 				<include>view_SlideLandscape-ContainerCommons</include>

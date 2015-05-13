@@ -315,7 +315,7 @@
 					<visible>ControlGroup(229).HasFocus() | Control.HasFocus(9110) | Control.HasFocus(9111)</visible>
 				 	</control>
 				<control type="image">			
-			<top>65</top>
+			<top>66</top>
 			<left>-150</left>			
 					<width>1920</width>
 					<height>1</height>

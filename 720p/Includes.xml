@@ -561,11 +561,6 @@
 		<texture>$INFO[ListItem.ActualIcon]</texture>
 		<aspectratio>keep</aspectratio>
 		<visible>IsEmpty(ListItem.Art(thumb)) + ![Container.Content(actors) + !SubString(ListItem.Icon,DefaultFolderBack)]</visible>
-	</include>
-	<include name="glass">
-		<texture>frames/Glass.png</texture>
-        <visible>Skin.HasSetting(Enable.Glass)</visible>
-      <aspectratio align="center" aligny="top">scale</aspectratio>	
 	</include>	
 	<include name="art_Frame-white">
 		<texture border="0">frames/frame-white.png</texture>		
@@ -1540,30 +1535,7 @@
 		<disabledcolor>Disabled</disabledcolor>
 	</include>
 
-<!--PAGECONTROLS-->
-	<include name="PageControls">
-		<!--vertical-->
-		<control type="scrollbar" id="70">
-			<left>1272</left>
-			<height>screen_Height</height>
-			<onleft condition="Window.IsActive(SettingsCategory.xml)">5</onleft>
-			<onleft condition="[Window.IsActive(videoplaylist) | Window.IsActive(tvchannels)] + Player.HasVideo">99</onleft>
-			<onleft condition="[Window.IsActive(videoplaylist) | Window.IsActive(tvchannels)] + !Player.HasVideo">50</onleft>
-			<onleft>50</onleft>
-			<visible>![Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522) | Control.IsVisible(53) | Control.IsVisible(531) | Control.IsVisible(58)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)] + ![Window.IsActive(tvguide) + Control.IsVisible(10)]</visible>
-		</control>
-		<!--horizontal-->
-		<control type="scrollbar" id="71">
-			<top>712</top>
-			<width>screen_Width</width>
-			<onup condition="Control.IsVisible(58)">58</onup>
-			<onup condition="Control.IsVisible(52) | Control.IsVisible(521)">52</onup>
-			<onup condition="Control.IsVisible(522)">522</onup>
-			<onup condition="Control.IsVisible(53) | Control.IsVisible(531)">53</onup>
-			<orientation>horizontal</orientation>
-			<visible>[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522) | Control.IsVisible(53) | Control.IsVisible(531) | Control.IsVisible(58)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
-		</control>
-	</include>
+<!--PAGECONTROLS-->	
 
 <!--ART-->
 	<include name="art_Logo">
