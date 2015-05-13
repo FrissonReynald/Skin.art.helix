@@ -111,9 +111,9 @@
 		<control type="panel" id="57">
 			<viewtype label="31113">bigicon</viewtype>	
 			<left>15</left>
-			<top>70</top>
+			<top>81</top>
 			<width>895</width>
-			<height>543</height>
+			<height>538</height>
 			<onleft>6000</onleft>
 			<onright>70</onright>
 			<onup>57</onup>

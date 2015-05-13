@@ -61,7 +61,7 @@
 				     <left>620</left>
 				     <width>630</width>
 				     <height>610</height>				
-                    <texture background="true">frames/contentpanel.png</texture>
+                    <texture background="true"colordiffuse="$VAR[ColorHome]">frames/contentpanel.png</texture>
 					 <animation condition="true" effect="Fade" start="70" end="70" time="0">Conditional</animation>					 
 					<aspectratio>stretch</aspectratio>					
 			         <visible>Control.IsVisible(54)</visible>					 
@@ -510,7 +510,7 @@
 				     <left>40</left>
 				     <width>1225</width>
 				     <height>625</height>				
-                    <texture background="true">frames/contentpanel.png</texture>
+                    <texture background="true"colordiffuse="$VAR[ColorHome]">frames/contentpanel.png</texture>
 					 <animation condition="true" effect="Fade" start="60" end="60" time="0">Conditional</animation>					 
 					<aspectratio>stretch</aspectratio>					
 			         <visible>Control.IsVisible(543)</visible>					 
@@ -571,12 +571,22 @@
 			<top>105</top>
 				<width>415</width>
 					<align>justify</align>
-							<height max="593">auto</height>
+							<height max="270">auto</height>
 							<label>$VAR[global_Plot]</label>
 							<include>detail_Text</include>
 						
 					<visible>Control.IsVisible(543)</visible>
 				</control>	
+		<control type="image">
+					<left>830</left>
+			<top>387</top>
+				          
+							<width>417</width>
+							<height>190</height>
+					<texture background="true">$VAR[thumb_Landscape]</texture>
+							<fadetime>fadetime_Thumb</fadetime>
+							<aspectratio align="center" aligny="top">scale</aspectratio>
+						</control>		
 		<visible>Skin.HasSetting(Text_Box)</visible>		
 		</control>		
 		<control type="group">
@@ -949,44 +959,24 @@
 			<include>toggle_Menu</include>
 				<control type="textbox">			
 				<top>180</top>
-				<left>326</left>
-				    <width>285</width>
+				<left>350</left>
+				    <width>760</width>
 					<height>290</height>
 					<align>justify</align>
 					<label>$VAR[global_Plot]</label>
 					<include>detail_Text</include>
 					<visible>!Skin.HasSetting(Text_Landscape_BannerFanart)</visible>
-					</control>
-					<control type="textbox">			
-				<top>180</top>
-				<left>870</left>
-				    <width>285</width>
-					<height>290</height>
-					<align>justify</align>
-					<label>$VAR[global_Plot]</label>
-					<include>detail_Text</include>
-					<visible>Skin.HasSetting(Text_Landscape_BannerFanart)</visible>
-					</control>	
+					</control>				
 				<control type="image">
 				<left>100</left>
 				            <top>185</top>
-							<width>218</width>
+							<width>225</width>
 							<height>290</height>
 							<texture background="true">$VAR[thumb_Portrait]</texture>
 							<fadetime>fadetime_Thumb</fadetime>
 							<aspectratio>scale</aspectratio>
-						</control>	
-					<control type="image">
-					<left>625</left>
-				            <top>185</top>
-							<width>535</width>
-							<height>290</height>
-							<texture background="true">$VAR[view_Extra.Thumb2]</texture>
-							<fadetime>fadetime_Thumb</fadetime>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
-							
 							<visible>!Skin.HasSetting(Text_Landscape_BannerFanart)</visible>
-						</control>
+						</control>					
 						<control type="image">
 					<left>625</left>
 				            <top>185</top>
@@ -999,13 +989,13 @@
 							<visible>Container.Content(seasons) + !Skin.HasSetting(Text_Landscape_BannerFanart)</visible>
 						</control>
 							<control type="image">
-					<left>325</left>
+					<left>90</left>
 				            <top>185</top>
-							<width>535</width>
+							<width>1077</width>
 							<height>290</height>
-					<texture background="true">$VAR[view_Extra.Thumb2]</texture>
+					<texture background="false">$VAR[thumb_Landscape]</texture>
 							<fadetime>fadetime_Thumb</fadetime>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
 					<visible>Skin.HasSetting(Text_Landscape_BannerFanart)</visible>
 					</control>
 						<control type="image">

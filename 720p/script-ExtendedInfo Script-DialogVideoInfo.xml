@@ -246,7 +246,7 @@
                             <right>10</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <texture border="5" colordiffuse="Highlight">common/box.png</texture>
+                            <texture border="5" colordiffuse="White100">common/box.png</texture>
                             <visible>Control.HasFocus(1000)</visible>
                         </control>
                         <control type="image">
@@ -299,7 +299,7 @@
                             <right>10</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <texture border="5" colordiffuse="Highlight">common/box.png</texture>
+                            <texture border="5" colordiffuse="White100">common/box.png</texture>
                             <visible>Control.HasFocus(350)</visible>
                         </control>
                         <control type="image">
