@@ -369,13 +369,13 @@
 				<!--SUB MENU-->					
 			<control type="group">	
 			<control type="image">			
-			<top>64</top>
+			<top>65</top>
 			<left>-150</left>			
 					<width>1920</width>
-					<height>58</height>
+					<height>50</height>
 					<aspectratio>stretch</aspectratio>				
-					<texture colordiffuse="FF000000">home/panel.png</texture>
-						<animation effect="fade" start="100" end="60" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
+					<texture colordiffuse="Black100">white.png</texture>
+						<animation effect="fade" start="100" end="50" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
 						<animation type="Conditional" condition="!IntegerGreaterThan(Container(9111).NumItems,0)" reversible="true">
 							<effect type="Slide" time="50" center="auto" start="0,0" end="-4000,0" easing="In" tween="Cubic"/>
 						</animation>
@@ -443,6 +443,9 @@
 							<texture colordiffuse="">black.png</texture>
 								<bordertexture colordiffuse="Dark3">white.png</bordertexture>
 								<bordersize>1</bordersize>
+								
+								<animation effect="fade" start="100" end="40" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
+						
 							</control>
 							<control type="label">
 								<width>230</width>
@@ -455,8 +458,19 @@
 						</itemlayout>
 						<focusedlayout width="236" height="50">
 							<control type="group">
-								<visible>!Control.HasFocus(9111)</visible>									
-							
+								<visible>!Control.HasFocus(9111)</visible>								
+							<control type="image">
+							<left>-10</left>
+								<width>238</width>
+								<height>46</height>
+							<texture colordiffuse="Dark3">white.png</texture>
+								<bordertexture colordiffuse="Dark3">white.png</bordertexture>
+								<bordersize>1</bordersize>
+								
+								<animation effect="fade" start="100" end="40" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
+						
+							</control>
+						
 								<control type="label">
 									<width>230</width>
 									<height>40</height>

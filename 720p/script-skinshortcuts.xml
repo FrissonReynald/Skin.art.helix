@@ -189,6 +189,13 @@
 						<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
 						<include>dialog_ControlCommons</include>
 					</control>
+					<!--Browse for Thumb-->
+					 <control type="button" id="311" description="Browse for Thumb">
+                    <width>492</width> 
+					<label>Browse for Thumb</label>                 
+                    <include>dialog_ControlCommons</include>
+                    <visible>stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub)</visible>
+                </control>
 					<!--edit sub-menu-->
 					<control type="button" id="405">
 						<width>492</width>
@@ -197,7 +204,8 @@
 						<visible>StringCompare(Window.Property("groupname"),mainmenu)</visible>
 						 <visible>!stringcompare(Container(211).ListItem.Label2,MovieHub) + !stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
               			</control>
-					<!--edit MoviesHUB-->
+						
+					<!--Edit MoviesHUB-->
 					  <control type="button" id="9301" description="Set Movie Hub">
                    <width>492</width>
                     <label>Set Movie Hub</label>
@@ -206,6 +214,7 @@
                     <visible>stringcompare(Container(211).ListItem.Label2,MovieHub)</visible>
                     <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=movieshub)</onclick>
                 </control>
+				<!--Edit TV HUB-->
 				<control type="button" id="9302" description="Set TV Hub">
                     <width>492</width>
                     <label>Set TV HuB</label>

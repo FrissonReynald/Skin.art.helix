@@ -502,7 +502,16 @@
 					<aspectratio align="right">keep</aspectratio>
 					<include>detail_StarRating</include>
 					<visible>!SubString(ListItem.Icon,default)</visible>
-				</control>							
+				</control>			
+				<control type="image">
+				<left>1205</left>
+				<top>20</top>
+			<width>25</width>
+					<height>25</height>
+			<texture>navigation/down.png</texture>
+			<colordiffuse>White100</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+		</control>
 			</control>
 			<control type="group">			
 			<visible>Control.HasFocus(8000)</visible>

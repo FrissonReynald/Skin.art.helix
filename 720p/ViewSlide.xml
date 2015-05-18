@@ -549,6 +549,18 @@
 				 <aspectratio>stretch</aspectratio>			    
 			   <visible>Control.IsVisible(52) + !Skin.HasSetting(SlidePosterInfo)</visible>
 			   </control>	
+			 <control type="image">
+			 <include>transition_Content</include>
+			<include>toggle_Menu</include>
+			<include>transition_Info</include>
+					<left>240</left>
+					<top>610</top>
+					<width>165</width>
+					<height>64</height>
+					<include>art_ClearLogo</include>
+				   <visible>Control.IsVisible(52) + !Skin.HasSetting(SlidePosterInfo)</visible>
+				
+				</control>   
 		<control type="fixedlist" id="52">		
 			<viewtype label="31112">wrap</viewtype>			
 			<left>8</left>

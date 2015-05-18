@@ -4,14 +4,14 @@
     <defaultcontrol always="true">9501</defaultcontrol>
     <allowoverlay>false</allowoverlay>
     <controls>
-	 <include>Global_Background</include>
-	  <control type="image">
+	 <include>global_background</include>
+	  
+			<control type="image">
+			<aspectratio>scale</aspectratio>
 			<include>screen_Dimensions</include>
-			<texture background="true" colordiffuse="$VAR[ColorHome]">overlays/base_color.png</texture>
-			<include>fadeinout</include>
-		</control>	
-	
-		
+			<texture border="5" colordiffuse="$VAR[ColorHome]">overlays/base_color-1.png</texture>		
+			<animation effect="fade" start="100" end="70" condition="Skin.HasSetting(base_color.40opacity.enable)">Conditional</animation>			
+				</control>
         <control type="group">		  
             <include>Animation.Common</include>
             <control type="group">

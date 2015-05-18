@@ -3232,8 +3232,8 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<left>37</left>
-				<top>78</top>
+				<left>30%</left>
+				<top>45</top>
 				<width>96</width>
 				<height>96</height>
 				<include>art_DefaultIcon</include>

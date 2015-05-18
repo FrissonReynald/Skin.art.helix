@@ -37,7 +37,7 @@
                 <posx>25</posx>
                 <top>10</top>
                 <width>450</width>
-                <height>285</height>
+                <height>260</height>
                 <aspectratio scalediffuse="false">scale</aspectratio>
                 <texture diffuse="diffuse/pvrinfo.png">$VAR[FanartImage]</texture>
                 <visible>!Control.HasFocus(50)</visible>
@@ -51,8 +51,8 @@
 			<visible>!Control.HasFocus(50)</visible>
 			</control>
             <control type="grouplist">
-			<bottom>-10</bottom>
-			<left>780</left>
+			<bottom>10</bottom>
+			<left>840</left>
                 <width>470</width>
                 <height>50</height>
                 <orientation>horizontal</orientation>
@@ -101,7 +101,21 @@
 					<aspectratio align="center">keep</aspectratio>					
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 				</control>				
-			</control>			
+			</control>	
+			<!--path-->
+					<control type="group">
+					<top>690</top>
+			<left>25</left>
+                <width>700</width>               
+					
+						<control type="label">
+							
+							<label>$LOCALIZE[573] : $INFO[ListItem.Path]</label>
+							<textcolor>FFFFFFFF</textcolor>
+							<include>detail_Sub</include>
+							<include>autoscroll_Line</include>
+						</control>
+					</control>
              <control type="grouplist">			
                 <left>510</left>
                 <right>30</right>
@@ -121,6 +135,7 @@
 				 
                 <!-- MPAA -->
                 <control type="label">
+				<top>-10</top>
                     <width>100%</width>
                     <height>25</height>
                    <font>semibold_Big</font>
@@ -128,6 +143,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="label">
+				<top>-10</top>
                     <width>65%</width>
                     <height>40</height>
                     <font>semibold</font>
@@ -136,8 +152,9 @@
                 </control>
                 
                 <!-- Run Time -->
-                <control type="label">				
-                    <posy>-95</posy>
+                <control type="label">	
+				<top>-75</top>
+                   
                     <width>100%</width>
                     <height>35</height>
                     <align>right</align>
@@ -146,6 +163,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="label">
+				<top>-15</top>
                     <right>0</right>
                     <width>35%</width>
                     <height>55</height>
@@ -157,6 +175,7 @@
                 
                 <!-- Director -->
                 <control type="label">
+				<top>-10</top>
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
@@ -164,6 +183,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="label">
+				<top>-10</top>
                     <width>65%</width>
                     <height>40</height>
                     <font>semibold</font>
@@ -173,7 +193,7 @@
                 
                 <!-- Last Played -->
                 <control type="label">
-                    <posy>-95</posy>
+                   <top>-75</top>
                     <width>100%</width>
                     <height>35</height>
                     <align>right</align>
@@ -182,6 +202,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="label">
+				<top>-15</top>
                     <right>0</right>
                     <width>35%</width>
                     <height>55</height>
@@ -193,6 +214,7 @@
                 
                 <!-- Writer -->
                 <control type="label">
+				<top>-10</top>
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
@@ -200,6 +222,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="label">
+				<top>-10</top>
                     <width>75%</width>
                     <height>40</height>
                     <font>semibold</font>
@@ -209,7 +232,7 @@
                 
                 <!-- Languages -->
                 <control type="label">
-                    <posy>-95</posy>
+                    <top>-75</top>
                     <width>100%</width>
                     <height>25</height>
                     <align>right</align>
@@ -219,6 +242,7 @@
                     <visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1))</visible>
                 </control>
                 <control type="label">
+				<top>-15</top>
                     <right>0</right>
                     <width>35%</width>
                     <height>70</height>
@@ -231,6 +255,7 @@
                 
                 <!-- Genre -->
                 <control type="label">
+				<top>-15</top>
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
@@ -238,6 +263,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="label">
+				<top>-10</top>
                     <width>75%</width>
                     <height>40</height>
                     <font>semibold</font>
@@ -247,7 +273,7 @@
                 
                 <!-- Subs -->
                 <control type="label">
-                    <posy>-95</posy>
+                   <top>-75</top>
                     <width>100%</width>
                     <height>25</height>
                     <align>right</align>
@@ -257,6 +283,7 @@
                     <visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.1))</visible>
                 </control>
                 <control type="label">
+				<top>-15</top>
                     <right>0</right>
                     <width>35%</width>
                     <height>55</height>
@@ -269,7 +296,7 @@
                 
                 <!-- Studio -->
                 <control type="label">
-				
+				<top>-15</top>
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
@@ -277,6 +304,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="label">
+				<top>-10</top>
                     <width>100%</width>
                     <height>40</height>
                     <font>semibold</font>
@@ -295,7 +323,7 @@
                 </control>
                 <control type="textbox" id="4">
                     <width>100%</width>
-                    <height>115</height>
+                    <height>160</height>
                     <font>semibold</font>
                     <align>justify</align>
 					<autoscroll delay="autoscroll_Delay" time="autoscroll_Time" repeat="2000">true</autoscroll>
@@ -305,8 +333,8 @@
             <control type="grouplist" id="9000">				
                <posx>25</posx>
                 <width>450</width>
-                <height>423</height>
-                <bottom>10</bottom>
+                <height>420</height>
+                <bottom>30</bottom>
                 <itemgap>5</itemgap>
                 <onup>9000</onup>
                 <ondown>9000</ondown>
@@ -374,6 +402,7 @@
                     <onclick>Dialog.Close(MovieInformation)</onclick>
                     <onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
                     <visible>system.hasaddon(script.cinema.experience) + Container.Content(movies)</visible>
+					 <visible>!Skin.HasSetting(script.cinema.experience)</visible>
                 </control>
 
                 <control type="button" id="105">
@@ -428,29 +457,30 @@
 
             <control type="button" id="52">
                 <visible allowhiddenfocus="true">Control.IsVisible(50)</visible>
-                <top>230</top>
+                <top>210</top>
                 <height>55</height>
 				 <width>450</width>
                 <left>485</left>
                 <right>30</right>
                 <ondown>51</ondown>
                 <label>$INFO[ListItem.Director,$LOCALIZE[31191] ,]</label>
-                <align>left</align>
+                <align>center</align>
+				<textcolor>FFFFFFFF</textcolor>
                 <onleft condition="Control.IsVisible(50)">SendClick(2003,5)</onleft>
                 <onleft>9000</onleft>
                 <onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[ListItem.Director])</onclick>
-                <onclick>Dialog.Close(2003)</onclick>
+                <onclick>Dialog.Close(2003)</onclick>				
                 <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
                 <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>				
                 <visible>!IsEmpty(ListItem.Director)</visible>
-				<include>DefDialogButtons2</include>
+				<include>DefDialogButtons</include>
             </control>
             <control type="list" id="50">
                 <description>Cast</description>                
                <posx>485</posx>
                 <width>460</width>
                 <height>420</height>
-                <top>288</top>
+                <top>270</top>
                 <include condition="!IsEmpty(ListItem.Director)">DefVideoInfoCastWithDirector</include>
                 <include condition="IsEmpty(ListItem.Director)">DefVideoInfoCastWithoutDirector</include>
                 <onup>50</onup>
@@ -515,7 +545,7 @@
           
             <control type="image">
                 <left>950</left>
-                <top>286</top>
+                <top>270</top>
                 <width>300</width>
 			<height>420</height>
                 <aspectratio scalediffuse="false">scale</aspectratio>

@@ -87,6 +87,8 @@
 		<include>global_Itemcount</include>	
 	</include>
 	
+	
+	
 
     <include name="GlobalOverlay">
         <control type="image">
