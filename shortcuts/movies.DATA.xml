@@ -21,7 +21,7 @@
 		<defaultID>16101</defaultID>
 		<icon>DefaultMovies.png</icon>
 		<thumb />
-		<action>ActivateWindow(Videos,/Users/Jeroen/Library/Application Support/XBMC/addons/skin.refocus.dev/playlists/video/movies-unwatched.xsp,return))</action>
+		<action>ActivateWindow(Videos,plugin://script.watchlist?type=movies,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>$SKIN[31015|skin.refocus|Trailers]</label>

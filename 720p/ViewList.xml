@@ -146,7 +146,7 @@
 				<control type="label">
 					<left>15</left>
 					<width>595</width>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[global_Title]</label>
 					<include>container_Single</include>
 				</control>
 			</itemlayout>
@@ -163,14 +163,14 @@
 					<control type="label">
 						<left>15</left>
 						<width>595</width>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[global_Title]</label>
 						<include>container_Single-focus</include>
 					</control>
 				</control>
 				<control type="label">
 					<left>15</left>
 					<width>595</width>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[global_Title]</label>
 					<include>container_Single</include>
 					<include>container_Unfocus</include>
 				</control>
@@ -181,7 +181,7 @@
 					<top>6</top>
 					<width>550</width>
 					<height>27</height>
-					<label>$VAR[media:Title]</label>
+					<label>$VAR[global_Title]</label>
 					<include>container_Title</include>
 				</control>
 				<control type="label">
@@ -221,7 +221,7 @@
 					<control type="label">
 						<width>490</width>
 						<height>27</height>
-						<label>$VAR[media:Title]</label>
+						<label>$VAR[global_Title]</label>
 						<include>container_Title</include>
 					</control>
 					<control type="label">
@@ -255,7 +255,7 @@
 						<top>6</top>
 						<width>550</width>
 						<height>27</height>
-						<label>$VAR[media:Title]</label>
+						<label>$VAR[global_Title]</label>
 						<include>container_Title-focus</include>
 					</control>
 					<control type="label">
@@ -282,7 +282,7 @@
 						<top>6</top>
 						<width>550</width>
 						<height>27</height>
-						<label>$VAR[media:Title]</label>
+						<label>$VAR[global_Title]</label>
 						<include>container_Title</include>
 					</control>
 					<control type="label">
@@ -332,7 +332,7 @@
 						<control type="label">
 							<width>490</width>
 							<height>27</height>
-							<label>$VAR[media:Title]</label>
+							<label>$VAR[global_Title]</label>
 							<include>container_Title-focus</include>
 						</control>
 						<control type="label">
@@ -374,7 +374,7 @@
 						<control type="label">
 							<width>490</width>
 							<height>27</height>
-							<label>$VAR[media:Title]</label>
+							<label>$VAR[global_Title]</label>
 							<include>container_Title</include>
 						</control>
 						<control type="label">
@@ -538,7 +538,7 @@
 						<top>4</top>
 						<control type="label">
 							<width>920</width>
-							<label>$VAR[media:Title]</label>
+							<label>$VAR[global_Title]</label>
 							<include>container_Title</include>
 						</control>
 						<control type="label">
@@ -574,7 +574,7 @@
 							<include>container_Focus</include>
 							<control type="label">
 								<width>920</width>
-								<label>$VAR[media:Title]</label>
+								<label>$VAR[global_Title]</label>
 								<include>container_Title-focus</include>
 							</control>
 							<control type="label">
@@ -604,7 +604,7 @@
 							<include>container_Unfocus</include>
 							<control type="label">
 								<width>920</width>
-								<label>$VAR[media:Title]</label>
+								<label>$VAR[global_Title]</label>
 								<include>container_Title</include>
 							</control>
 							<control type="label">
@@ -641,7 +641,7 @@
 						<top>4</top>
 						<control type="label">	
 							<width>775</width>
-							<label>$VAR[media:Title]</label>
+							<label>$VAR[global_Title]</label>
 							<include>container_Title</include>
 						</control>
 						<control type="label">
@@ -686,7 +686,7 @@
 							<include>container_Focus</include>
 							<control type="label">
 								<width>775</width>
-								<label>$VAR[media:Title]</label>
+								<label>$VAR[global_Title]</label>
 								<include>container_Title-focus</include>
 							</control>
 							<control type="label">
@@ -725,7 +725,7 @@
 							<include>container_Unfocus</include>
 							<control type="label">
 								<width>775</width>
-								<label>$VAR[media:Title]</label>
+								<label>$VAR[global_Title]</label>
 								<include>container_Title</include>
 							</control>
 							<control type="label">

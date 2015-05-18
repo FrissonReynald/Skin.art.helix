@@ -95,25 +95,8 @@
 			<top>250</top>
 			<width>275</width>
 			<height min="40" max="720">auto</height>
-			<itemgap>0</itemgap>
-			
-			 <control type="radiobutton" id="152">					
-                        <label>Glass</label>
-						<width>260</width>
-		                <onclick>Skin.ToggleSetting(Icon1.Glass)</onclick>
-		                <selected>Skin.HasSetting(Icon1.Glass)</selected>
-						 <include>menu_Button2</include>
-		            <include>menu_RadioButton2</include>						
-		            </control>	
-					
-				<control type="radiobutton" id="153">					
-                        <label>Case</label>
-						<width>260</width>
-		               <onclick>Skin.ToggleSetting(Icon1.case)</onclick>
-		                <selected>Skin.HasSetting(Icon1.case)</selected>
-						<include>menu_Button2</include>
-		            <include>menu_RadioButton2</include>	
-		         </control>	
+			<itemgap>0</itemgap>			
+			 
 		</control>
 	</controls>
 </window>

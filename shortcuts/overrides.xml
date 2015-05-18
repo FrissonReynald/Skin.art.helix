@@ -445,6 +445,7 @@
     <thumbnail label="youtube.png">special://skin/extras/icons/youtube.png</thumbnail>
 
 <!--WIDGETS-->
+	<!--WIDGETS-->
 	<widget label="31029" type="movies">WatchlistMovies</widget>
 	<widget label="31030" type="episodes">WatchlistEpisodes</widget>
 	<widget label="31031" type="mixed">RecentVideos</widget>

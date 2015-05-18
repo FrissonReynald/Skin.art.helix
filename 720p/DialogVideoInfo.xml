@@ -52,7 +52,7 @@
 			</control>
             <control type="grouplist">
 			<bottom>10</bottom>
-			<left>840</left>
+			<left>790</left>
                 <width>470</width>
                 <height>50</height>
                 <orientation>horizontal</orientation>

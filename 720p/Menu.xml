@@ -345,7 +345,8 @@
 			<label>Setting</label>
 			<onclick>ActivateWindow(682)</onclick>
 				<include>menu_Button</include>
-				<visible>Control.IsVisible(57)</visible>		
+				<visible>Control.IsVisible(57)</visible>
+				<visible>!Container.Content(sets)</visible>
 		</control>
 		<control type="button" id="303">
 			<label>Setting</label>

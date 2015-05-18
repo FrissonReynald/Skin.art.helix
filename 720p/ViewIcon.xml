@@ -2940,12 +2940,12 @@
 			<control type="group">
 				<left>770</left>
 				<top>100</top>
-				<visible>[Control.IsVisible(57) | Control.IsVisible(576)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors)]</visible>
+				<visible>[Control.IsVisible(57) | Control.IsVisible(576)] + [Container.Content(movies) | Container.Content(sets)  | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors)]</visible>
 				<control type="grouplist" id="1000">
 					<itemgap>0</itemgap>
 					<control type="label">
 						<width>460</width>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[global_Title]</label>
 						<include>detail_Title</include>
 					</control>
 					<control type="label">
@@ -2992,8 +2992,7 @@
 						<height>355</height>
 						<label>$VAR[global_Plot]</label>
 						<align>justify</align>
-						<include>detail_Text</include>
-						<visible>!SubString(ListItem.Icon,default)</visible>
+						<include>detail_Text</include>						
 					</control>					
 				</control>
 				<control type="image">
@@ -3427,7 +3426,7 @@
 					<itemgap>0</itemgap>
 					<control type="label">
 						<width>400</width>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[global_Title]</label>
 						<include>detail_Title</include>
 					</control>
 					<control type="label">

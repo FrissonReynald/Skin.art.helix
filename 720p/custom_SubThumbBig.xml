@@ -103,6 +103,7 @@
 		                <selected>Skin.HasSetting(FullBackgroundIcon57)</selected>					
 						<include>menu_Button2</include>
 					<include>menu_RadioButton2</include>
+					<visible>!Container.Content(sets)</visible>
 				</control>	
 		</control>
 	</controls>
