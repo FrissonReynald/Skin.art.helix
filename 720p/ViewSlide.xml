@@ -14,6 +14,19 @@
 			<texture background="true"colordiffuse="50ff111111">overlays\vignetteFullScreen.png</texture>
 			<aspectratio align="center" aligny="top">scale</aspectratio>				
 		</control>	
+			<control type="image">			
+		<include>transition_Info</include>
+			<include>toggle_Menu</include>
+			<include>transition_Content</include>
+		
+						<top>60</top>
+			<width>screen_Dimensions</width>
+			<height>670</height>
+			<texture background="true"colordiffuse="AB000000">white.png</texture>
+			<aspectratio align="center">scale</aspectratio>
+			<visible>Control.IsVisible(52) + Control.HasFocus(8000)</visible>
+			<visible>Container.Content(sets)</visible>
+			</control>	
 		<control type="label">
 				<left>20</left>
 			<top>680</top>
@@ -176,8 +189,46 @@
 						<align>left</align>						
 						<scroll>true</scroll>
 						 <visible>Control.IsVisible(52) + Skin.HasSetting(useZoomPoster) + Skin.HasSetting(SlidePosterInfo) + !Control.HasFocus(8000)</visible>
-					
-					</control>		
+						</control>	
+			<control type="label">
+			   
+		<include>transition_Info</include>
+			<include>toggle_Menu</include>
+			<include>transition_Content</include>
+					<left>1160</left>
+					<top>670</top>
+						<width>100</width>
+						<hight>40</hight>
+						<label>more</label>	
+						<align>left</align>						
+						<scroll>true</scroll>
+						<visible>Control.IsVisible(52)</visible>
+			<visible>Container.Content(sets)</visible>	</control>				
+					<control type="image">
+					<include>transition_Info</include>
+			<include>toggle_Menu</include>
+			<include>transition_Content</include>
+				<left>1225</left>
+				<top>675</top>
+			<width>25</width>
+					<height>25</height>
+			<texture>navigation/down.png</texture>
+			<colordiffuse>White100</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+			<visible>Control.IsVisible(52)</visible>
+			<visible>Container.Content(sets)</visible>
+		</control>	
+			<control type="textbox">
+			<left>130</left>
+						<top>60</top>
+						<width>1100</width>
+						<height>595</height>
+						<align>justify</align>
+						<label>$VAR[global_Plot]</label>
+						<include>detail_Text</include>
+				<visible>Control.IsVisible(52) + Control.HasFocus(8000)</visible>
+				<visible>Container.Content(sets)</visible>
+				</control>		
 		<control type="group">
 			<include>transition_Info</include>
 			<include>toggle_Menu</include>
@@ -851,16 +902,8 @@
 					<height>260</height>
 					<texture background="true">thumbs/default_Square.png</texture>
 					<aspectratio align="center">stretch</aspectratio>
-						<visible>!Skin.HasSetting(square522_rounded)</visible>
-				</control>
-				<control type="image">
-					<width>260</width>
-					<height>260</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture  diffuse="view/cdcover_mask.png" background="false">thumbs/default_Square.png</texture>
-					
-						<visible>Skin.HasSetting(square_rounded)</visible>
-				</control>				
+							</control>
+						
 				<control type="image">
 					<centerleft>130</centerleft>
 					<centertop>130</centertop>
@@ -873,16 +916,7 @@
 					<height>260</height>
 					<texture background="true">$VAR[thumb_Square]</texture>
 					<aspectratio align="center">stretch</aspectratio>
-						<visible>!Skin.HasSetting(square522_rounded)</visible>
-				</control>
-				<control type="image">
-					<width>260</width>
-					<height>260</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture  diffuse="view/cdcover_mask.png" background="false">$VAR[thumb_Square]</texture>
-					
-						<visible>Skin.HasSetting(square_rounded)</visible>
-				</control>
+				</control>				
 			</control>			
 		</control>
 	</include>	

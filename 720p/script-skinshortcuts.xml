@@ -68,6 +68,7 @@
 						<control type="image">
 							<width>400</width>
 							<include>dialog_CommonList</include>
+							
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -79,8 +80,8 @@
 						<control type="label">
 							<left>15</left>
 							<width>260</width>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>Selected</textcolor>
+							<label>-> $INFO[ListItem.Label]</label>
+							<textcolor>Black100</textcolor>
 							<include>dialog_CommonListItem</include>
 							<visible>!Control.HasFocus(211)</visible>
 						</control>
@@ -109,6 +110,10 @@
 					<animation effect="slide" end="0,720" time="0" condition="Container(211).Row(18)">Conditional</animation>
 					<animation effect="slide" end="0,760" time="0" condition="Container(211).Row(19)">Conditional</animation>
 					<animation effect="slide" end="0,800" time="0" condition="Container(211).Row(20)">Conditional</animation>
+					<animation effect="slide" end="0,860" time="0" condition="Container(211).Row(21)">Conditional</animation>
+					<animation effect="slide" end="0,920" time="0" condition="Container(211).Row(22)">Conditional</animation>
+					<animation effect="slide" end="0,980" time="0" condition="Container(211).Row(23)">Conditional</animation>
+					
 					<control type="image">
 						<height>40</height>
 						<include>dialog_Separator-y</include>
@@ -190,7 +195,25 @@
 						<label>$ADDON[script.skinshortcuts 32072]</label>
 						<include>dialog_ControlCommons</include>
 						<visible>StringCompare(Window.Property("groupname"),mainmenu)</visible>
-					</control>
+						 <visible>!stringcompare(Container(211).ListItem.Label2,MovieHub) + !stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
+              			</control>
+					<!--edit MoviesHUB-->
+					  <control type="button" id="9301" description="Set Movie Hub">
+                   <width>492</width>
+                    <label>Set Movie Hub</label>
+					 <include>dialog_ControlCommons</include>
+                  <visible>StringCompare(Window.Property("groupname"),mainmenu)</visible> 
+                    <visible>stringcompare(Container(211).ListItem.Label2,MovieHub)</visible>
+                    <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=movieshub)</onclick>
+                </control>
+				<control type="button" id="9302" description="Set TV Hub">
+                    <width>492</width>
+                    <label>Set TV HuB</label>
+					  <include>dialog_ControlCommons</include>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible> 
+                    <visible>stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
+                    <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=episodeshub)</onclick>
+                </control>
 					<!--set widget-->
 					<control type="button" id="309">
 						<width>492</width>
@@ -229,8 +252,8 @@
 				<onleft>308</onleft>
 				<onright>-</onright>
 				<ondown>401</ondown>
-				<onback>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9110)</onback>
-				<onclick>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9110)</onclick>
+				<onback>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9110&amp;group=mainmenu|movieshub|episodeshub)</onback>
+				<onclick>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9110&amp;group=mainmenu|movieshub|episodeshub)</onclick>
 				<onclick>Close</onclick>
 				<include>dialog_WindowButton</include>
 				<visible>StringCompare(Window.Property("groupname"),mainmenu)</visible>

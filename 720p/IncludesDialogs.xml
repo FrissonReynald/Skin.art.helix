@@ -112,7 +112,7 @@
 		<texturenofocus>dialogs/key-nf.png</texturenofocus>
 		<texturefocus>dialogs/button-fo.png</texturefocus>
 		<textcolor>Color4</textcolor>
-		<focusedcolor>Color1</focusedcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
 		<width>48</width>
 		<height>48</height>
 		<align>center</align>

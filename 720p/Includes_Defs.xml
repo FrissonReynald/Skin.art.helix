@@ -240,40 +240,6 @@
         <texturefocus>noop</texturefocus>
     </include>
     
-    <include name="DefDialogButtons">
-        <width>300</width>
-        <font>Button</font>
-        <textcolor>Black70</textcolor>
-        <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
-    </include>
-    
-    <include name="DefDialogInfoPanel">
-        <include>Animation.FadeIn.Slide</include>
-        <include>Animation.FadeOut</include>
-        <centerleft>50%</centerleft>
-        <posy>120</posy>
-        <width>1320</width>
-        <height>840</height>
-        <control type="image">
-            <left>-8</left>
-            <right>-8</right>
-            <top>-8</top>
-            <bottom>-8</bottom>
-            <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-        </control>
-    </include>
-    
-    <include name="DefDialogInfoHeader">
-        <left>30</left>
-        <right>320</right>
-        <posy>18</posy>
-        <font>MediumBold</font>
-        <align>left</align>
-        <textcolor>Black70</textcolor>
-        <textureradiofocus colordiffuse="Black70">buttons/radio-on.png</textureradiofocus>
-        <textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
-    </include>
-    
     <include name="DefDialogHeader">
         <description>header label</description>
         <centerleft>50%</centerleft>
@@ -284,18 +250,7 @@
         <textcolor>Black70</textcolor>
     </include>
     
-    <include name="DefDialogBackground">
-        <include>Animation.ZoomIn</include>
-        <centerleft>50%</centerleft>
-        <centertop>50%</centertop>
-        <height>900</height>
-        <width>1080</width>
-        <control type="image">
-            <width>1080</width>
-            <height>900</height>
-            <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-        </control>
-    </include>
+ 
     
     <include name="DefDialogOK">
         <centerleft>50%</centerleft>

@@ -136,11 +136,12 @@
 					<top>50</top>
 					<itemgap>2</itemgap>
 					<!--shift-->
-					<control type="radiobutton" id="302">	
+					<control type="button" id="302">	
 						<label>$LOCALIZE[20178]</label>
+						<width>200</width>
 						<onup>309</onup>
 						<ondown>303</ondown>
-						<include>dialog_KeyboardRadio</include>
+						<include>dialog_KeyboardButton</include>
 					</control>
 					<!--(1,0) key button-->
 					<control type="button" id="120">
@@ -221,11 +222,12 @@
 					<orientation>horizontal</orientation>
 					<itemgap>2</itemgap>
 					<!--CAPS-->
-					<control type="radiobutton" id="303">
+					<control type="button" id="303">
+					<width>200</width>
 						<label>$LOCALIZE[20179]</label>
 						<onup>302</onup>
 						<ondown>304</ondown>
-						<include>dialog_KeyboardRadio</include>
+						<include>dialog_KeyboardButton</include>
 					</control>
 					<!--(2,0) key button-->
 					<control type="button" id="140">
@@ -305,21 +307,22 @@
 				<control type="grouplist">
 					<top>150</top>
 					<itemgap>2</itemgap>
-					<orientation>horizontal</orientation>
-					<!-- IP
+					<orientation>horizontal</orientation>					
 					<control type="button" id="307">
+					<width>50</width>
 						<onup>303</onup>
 						<ondown>300</ondown>
 						<label>IP</label>
-						<include>dialog_KeyboardRadio</include>
+						<include>dialog_KeyboardButton</include>
 					</control>
-					-->
+					
 					<!--symbols-->
-					<control type="radiobutton" id="304">
+					<control type="button" id="304">
 						<label>$LOCALIZE[20180]</label>
+						<width>150</width>
 						<onup>303</onup>
 						<ondown>300</ondown>
-						<include>dialog_KeyboardRadio</include>
+						<include>dialog_KeyboardButton</include>
 					</control>
 					<!--(4,0) key button-->
 					<control type="button" id="160">

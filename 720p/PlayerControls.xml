@@ -15,7 +15,7 @@
 			<control type="grouplist" id="600">
 				<top>60</top>
 				<width>322</width>
-				<height>720</height>
+				<height>screen_Height</height>
 				<onleft>700</onleft>
 				<onright>700</onright>
 				<onup>700</onup>
@@ -55,8 +55,9 @@
 					<width>322</width>
 					<label>$LOCALIZE[12005]</label>
 					<onback>SetFocus(700)</onback>
+					<onclick>Close</onclick>				
+					<onclick>FullScreen</onclick>	
 					<include>dialog_MenuButton</include>
-					<onclick>ActivateWindow(fullscreenvideo)</onclick>
 					<visible>Player.HasVideo</visible>
 				</control>
 				<!--video playlist-->

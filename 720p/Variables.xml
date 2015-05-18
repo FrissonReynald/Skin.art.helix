@@ -50,7 +50,7 @@
 		<value condition="StringCompare(Container(9110).ListItem.Property(widget),NowPlaying)">$INFO[ListItem.Label]</value>
 		<value condition="StringCompare(Container(9110).ListItem.Property(widgetType),music)">[COLOR=Color3]$INFO[ListItem.Artist][/COLOR]$INFO[ListItem.Title, : ]</value>
 		<value condition="StringCompare(Container(9110).ListItem.Property(widgetType),episodes)">[COLOR=Color3]$INFO[ListItem.TVShowTitle,,: ][/COLOR]$INFO[ListItem.Title]</value>
-		<value>$INFO[ListItem.Title]</value>
+		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="widget_ItemInfo">
 		<value condition="StringCompare(Container(9110).ListItem.Property(Widget),RecommendedAlbums) | StringCompare(Container(9110).ListItem.Property(Widget),RecentAlbums)">$INFO[ListItem.Genre]$INFO[ListItem.Year, • ]</value>
@@ -93,6 +93,7 @@
 		<value condition="Control.IsVisible(574)">$LOCALIZE[31120]: $LOCALIZE[31124]</value>
 		<value condition="Control.IsVisible(576)">$LOCALIZE[31120]: Original</value>
 		<value condition="Control.IsVisible(5761)">$LOCALIZE[31120]: Original Full</value>
+		<value condition="Control.IsVisible(5762)">$LOCALIZE[31120]: Icon Fanart</value>
 		<value condition="Control.IsVisible(578)">$LOCALIZE[31120]: Full</value>		
 		<value condition="Control.IsVisible(581)">$LOCALIZE[31120]: Small 2</value>
 		<value condition="Control.IsVisible(59)">$LOCALIZE[31120]:  Poster Big</value>
@@ -120,6 +121,7 @@
 		<value condition="Control.IsVisible(693)">$LOCALIZE[31120]: Strip</value>
 		<value condition="Control.IsVisible(694)">$LOCALIZE[31120]: Tri Panel</value>
 		<value condition="Control.IsVisible(695)">$LOCALIZE[31120]: Trip Panel 2</value>
+		
 	</variable>		
 		<variable name="playing_Title">
 		<value condition="Player.HasVideo">$LOCALIZE[31125]</value>

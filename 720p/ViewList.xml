@@ -802,8 +802,8 @@
 				<include>art_Logo</include>
 			</control>
 			<control type="group">
-				<left>189</left>
-				<bottom>17</bottom>
+				<left>202</left>
+				<bottom>2</bottom>
 				<width>42</width>
 				<height>42</height>
 				<include>status_Info</include>
@@ -840,8 +840,8 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="group">
-				<left>48</left>
-				<bottom>17</bottom>
+				<left>63</left>
+				<bottom>3</bottom>
 				<width>42</width>
 				<height>42</height>
 				<include>status_Info</include>

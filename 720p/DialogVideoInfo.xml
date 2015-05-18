@@ -365,7 +365,7 @@
                 
                 <control type="button" id="49">
                     <description>Home Theatre</description>
-                    <label>31170</label>
+                    <label>Home Theatre</label>
                     <width>450</width>
                     <height>55</height>
                     <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
@@ -396,7 +396,7 @@
                     <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
                 <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
                     <include>DefDialogButtons</include>
-                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
+                    <visible>!Skin.HasSetting(global.kiosk)</visible>
                 </control>
 
                 <control type="button" id ="10">
@@ -407,7 +407,7 @@
                     <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
                 <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
                     <include>DefDialogButtons</include>
-                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
+                    <visible>!Skin.HasSetting(global.kiosk)</visible>
                 </control>
 
                 <control type="button" id="9001">
@@ -421,7 +421,7 @@
                     <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
                 <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
                     <include>DefDialogButtons</include>
-                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
+                    <visible>!Skin.HasSetting(global.kiosk)</visible>
                     <visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)] + system.hasaddon(script.artwork.downloader)</visible>
                 </control>
             </control>

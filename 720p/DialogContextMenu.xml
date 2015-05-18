@@ -6,12 +6,12 @@
 		<system>1</system>
 		<left>0</left>
 		<top>0</top>
-		<origin x="485" y="100" />
+		<origin x="465" y="100" />
 	</coordinates>
 	<controls>
 		<control type="image" id="995">
 			<width>310</width>
-			<height>500</height>
+			<height>550</height>
 			<include>dialog_Menu</include>
 		</control>
 		<control type="image">
@@ -42,11 +42,12 @@
     </control>
 	<control type="button" id="9980">
 			<width>302</width>
-        <label>Library Editor</label>
-        <onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
-        <include>dialog_ControlCommons</include>
-		<visible>Skin.HasSetting(libraryeditor.enable) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(music) | Container.Content(albums) | Container.Content(songs)]</visible>
-    </control>
+        <label>Library Editor</label>       
+        <include>dialog_ControlCommons</include>		
+    <onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
+	        <visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+		<visible>Skin.HasSetting(libraryeditor.enable)</visible>
+   </control>
 	</control>
 		<!--default button-->
 		<control type="button" id="1000">

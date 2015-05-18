@@ -482,15 +482,7 @@
                         <onclick condition="Skin.HasSetting(watched.alternative)">Skin.ToggleSetting(watched.alternative)</onclick>
                         <selected>!Skin.HasSetting(overlay_statu.disable)</selected>
 		                <include>settings_Radiobutton</include>
-					 </control>						 
-					 <control type="radiobutton" id="309">
-					    <label>Enable alternative overlays ( watched  & unwatched)</label>
-                        <onclick>Skin.ToggleSetting(watched.alternative)</onclick>
-                        <onclick condition="!Skin.HasSetting(overlay_statu.disable)">Skin.ToggleSetting(overlay_statu.disable)</onclick>
-                        <onclick condition="Skin.HasSetting(watched.original)">Skin.ToggleSetting(watched.original)</onclick>
-		                <selected>Skin.HasSetting(watched.alternative)</selected> 
-		                <include>settings_Radiobutton</include>		
-                      </control>	
+					 </control>	
 	                  <control type="radiobutton" id="310">
 					    <label>Option Unwatched</label>	
                         <onclick>Skin.ToggleSetting(watched.original)</onclick>
@@ -551,7 +543,33 @@
 						<selected>Skin.HasSetting(overlay.pvr)</selected>
 						<include>settings_Radiobutton</include>
 					</control>
-					
+					 <!-- Hubs Movies-->
+                    <control type="button" id="325"> 
+                       <include>settings_Listbutton</include>
+                        <label>Movie Hub Widget</label>
+                        <label2>$INFO[Skin.String(MovieHubWidget)]</label2>
+                        <onclick condition="IsEmpty(Skin.String(MovieHubWidget))">Skin.SetFile(MovieHubWidget,.xsp|.m3u,special://profile/playlists/video/)</onclick>
+                        <onclick condition="!IsEmpty(Skin.String(MovieHubWidget))">Skin.Reset(MovieHubWidget)</onclick>
+                    </control>					
+                    <control type="button" id="326"> 
+                        	<include>settings_Listbutton</include>
+                        <label>$LOCALIZE[20342] [LOWERCASE]$LOCALIZE[31178][/LOWERCASE]</label>
+                        <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=movieshub)</onclick>					
+                    </control> 
+					<!--Hub TV-->
+					   <control type="button" id="327" description="Select TV Shows Hub Widget">
+                       <include>settings_Listbutton</include>
+                        <label>TV Hub Widget</label>
+                        <label>31183</label>
+                        <label2>$INFO[Skin.String(TVHubWidget)]</label2>
+                        <onclick condition="IsEmpty(Skin.String(TVHubWidget))">Skin.SetFile(TVHubWidget,.xsp|.m3u,special://profile/playlists/video/)</onclick>
+                        <onclick condition="!IsEmpty(Skin.String(TVHubWidget))">Skin.Reset(TVHubWidget)</onclick>
+                    </control>
+                    <control type="button" id="928" description="Select Movies Hub Items">                     
+                   <include>settings_Radiobutton</include>
+                        <label>$LOCALIZE[20343] [LOWERCASE]$LOCALIZE[31178][/LOWERCASE]</label>
+                        <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=episodeshub)</onclick>
+                    </control>
 			</control>
 			<!--ADDONS-->
 				<control type="grouplist" id="400">
@@ -703,10 +721,10 @@
 					<control type="button" id="510">
 						<label>[COLOR=Warning]$LOCALIZE[31713][/COLOR]</label>
 						<!--ask confirmation-->
-						<onclick>SetProperty(ConfirmDialog,ResetSettings,200)</onclick>
-						<onclick>ActivateWindow(200)</onclick>
+						<onclick>SetProperty(ConfirmDialog,ResetSettings,1100)</onclick>
+						<onclick>ActivateWindow(1100)</onclick>
 						<include>settings_Listbutton</include>
-					</control>					
+					</control>				
 				</control>
 				
 				<!--Background Opacity-->

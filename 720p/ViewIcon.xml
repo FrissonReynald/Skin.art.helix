@@ -11,6 +11,13 @@
 				<texture background="true">thumbs/default_Portrait.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
+				<control type="image">
+			<left>-6</left>
+			<top>-8</top>
+			<width>182</width>
+			<height>265</height>
+			<include>art_Frame-nf</include>
+			</control>
 			<control type="image">
 				<left>37</left>
 				<top>78</top>
@@ -48,14 +55,7 @@
 					<control type="image">
 						<info>ListItem.Overlay</info>
 					</control>
-				</control>
-			<control type="image">
-			<left>-6</left>
-			<top>-8</top>
-			<width>182</width>
-			<height>265</height>
-			<include>art_Frame-nf</include>
-			</control>		
+				</control>				
 			</control>
 	</include>
 	<include name="view_IconPortrait">
@@ -151,7 +151,14 @@
 				<height>170</height>
 				<texture background="true">thumbs/default_Portrait.png</texture>
 				<aspectratio>stretch</aspectratio>
-			</control>			
+			</control>	
+				<control type="image">
+                <left>-8</left>
+                <top>-7</top>
+                <width>128</width>
+                <height>185</height>
+                <include>art_Frame-nf</include>
+                </control>	
 			<control type="image">
 				<left>25</left>
 				<top>53</top>
@@ -191,14 +198,7 @@
 					<control type="image">
 						<info>ListItem.Overlay</info>
 					</control>
-				</control>
-			<control type="image">
-                <left>-8</left>
-                <top>-7</top>
-                <width>128</width>
-                <height>185</height>
-                <include>art_Frame-nf</include>
-                </control>				
+				</control>					
 		</control>
 	</include>
 	<include name="view_IconPortraitSmall">
@@ -291,7 +291,14 @@
 				<height>170</height>
 				<texture background="true">thumbs/default_Portrait.png</texture>
 				<aspectratio>stretch</aspectratio>
-			</control>			
+			</control>	
+				<control type="image">
+                <left>-8</left>
+                <top>-7</top>
+                <width>128</width>
+                <height>185</height>
+                <include>art_Frame-nf</include>
+                </control>
 			<control type="image">
 				<left>25</left>
 				<top>53</top>
@@ -331,14 +338,7 @@
 					<control type="image">
 						<info>ListItem.Overlay</info>
 					</control>
-				</control>
-			<control type="image">
-                <left>-8</left>
-                <top>-7</top>
-                <width>128</width>
-                <height>185</height>
-                <include>art_Frame-nf</include>
-                </control>
+				</control>		
 		</control>
 	</include>
 	<include name="view_IconPortraitSmallAlt">
@@ -481,14 +481,7 @@
 					<control type="image">
 						<info>ListItem.Overlay</info>
 					</control>
-				</control>
-			<control type="image">
-                <left>-8</left>
-                <top>-7</top>
-                <width>128</width>
-                <height>185</height>
-                <include>art_Frame-nf</include>
-                </control>				
+				</control>						
 		</control>
 	</include>
 	<include name="view_IconPortraitSmallOriginal">
@@ -630,14 +623,7 @@
 					<control type="image">
 						<info>ListItem.Overlay</info>
 					</control>
-				</control>
-			<control type="image">
-                <left>-8</left>
-                <top>-7</top>
-                <width>128</width>
-                <height>185</height>
-                <include>art_Frame-nf</include>
-                </control>
+				</control>			
 		</control>
 	</include>
 	<include name="view_IconPortraitSmallOriginalFull">
@@ -2444,6 +2430,13 @@
 							<height>160</height>
 							<texture>thumbs/default_Square.png</texture>
 						</control>
+							<control type="image">
+						<left>-6</left>
+			            <top>-5</top>
+						<width>171</width>
+						<height>171</height>
+						<include>art_Frame-nf</include>
+					</control>	
 						<control type="image">
 							<centerleft>80</centerleft>
 							<centertop>80</centertop>
@@ -2456,14 +2449,7 @@
 							<height>160</height>
 							<texture background="true">$VAR[thumb_Square]</texture>
 							<aspectratio>scale</aspectratio>
-						</control>
-						<control type="image">
-						<left>-6</left>
-			            <top>-5</top>
-						<width>171</width>
-						<height>171</height>
-						<include>art_Frame-nf</include>
-					</control>				
+						</control>								
 					</control>
 				</itemlayout>											
 				<focusedlayout height="184" width="184">
@@ -3227,5 +3213,272 @@
 			<height>175</height>
 			<include>art_Frame-nf</include>
 		</control>
-	</include>			
+	</include>	
+
+
+
+
+<!--Icon Fanart-->	
+<!--POSTER--> 
+	<include name="viewIconFanart-ContainerCommons">	
+		<control type="group">
+			<left>7</left>
+			<top>7</top>
+			<control type="image">	
+				<width>252</width>
+				<height>170</height>
+				<texture background="true">thumbs/default_Landscape.png</texture>
+				<visible>!Skin.HasSetting(IconFanar5762NoLandscape)</visible>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<left>37</left>
+				<top>78</top>
+				<width>96</width>
+				<height>96</height>
+				<include>art_DefaultIcon</include>
+			</control>
+				<control type="image">
+			<left>-6</left>
+			<top>-8</top>
+			<width>265</width>
+			<height>185</height>
+			<include>art_Frame-nf</include>
+			<colordiffuse>White100</colordiffuse>
+				</control>	
+			<control type="image">
+				<width>252</width>
+				<height>170</height>
+				<texture background="true">$VAR[thumb_Landscape]</texture>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+				<visible>!Skin.HasSetting(IconFanar5762NoLandscape)</visible>	
+			</control>
+			<control type="image">
+			<top>-50</top>
+				<width>252</width>
+				<height>170</height>
+				<include>art_ClearLogo</include>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+				<visible>Skin.HasSetting(IconFanar5762NoLandscape)</visible>	
+			</control>
+			<control type="image">
+			<centerleft>125</centerleft>
+			<top>110</top>
+			<width>300</width>
+			<height>50</height>
+			<include>art_ClearLogo</include>
+			<visible>Skin.HasSetting(IconFanar5762Logo) + !Skin.HasSetting(IconFanar5762NoLandscape)</visible>
+		</control>
+		<control type="group">		
+			<control type="group">
+				<left>226</left>
+				<top>144</top>
+				<include>status_Info</include>
+				<visible>Skin.HasSetting(overlay_statu.disable)</visible>
+			</control>
+			<control type="group">
+					<left>221</left>
+					<top>140</top>
+					<width>32</width>
+					<height>32</height>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<info>ListItem.Overlay</info>
+					</control>
+				</control>
+			<visible>!Skin.HasSetting(IconFanar5762NoLandscape)</visible>	
+			</control>			
+			</control>
+	</include>
+	<include name="view_IconFanart">
+	<control type="group">
+				<include>global_ListScroll</include>
+			<include>toggle_Menu</include>
+			<include>transition_Content</include>
+			<include>transition_Info</include>	
+			<control type="image">
+			<include>screen_Dimensions</include>
+			<texture background="true">thumbs/default_Landscape.png</texture>
+			<aspectratio align="center">scale</aspectratio>
+			<visible>Control.IsVisible(5762)</visible>
+		</control>
+			 <control type="image">
+			 <fadetime>fadetime_Fanart</fadetime>
+			<include>screen_Dimensions</include>
+			<texture background="true">$VAR[global_Fanart]</texture>
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+			<visible>Control.IsVisible(5762)</visible>	
+		</control>
+		<control type="group">	
+				<control type="multiimage">	
+				 <fadetime>fadetime_Fanart</fadetime>
+				<include>screen_Dimensions</include>
+				<include>fadeinout</include>
+				<imagepath>$INFO[ListItem.Path,,extrafanart]</imagepath>
+					<aspectratio align="center" aligny="top">scale</aspectratio>								
+				<timeperimage>7000</timeperimage>				 
+                    <randomize>true</randomize> 
+                    <loop>yes</loop>
+					<visible>!Container.Content(sets)</visible>
+					</control>					
+				<visible>Control.IsVisible(5762) + Skin.HasSetting(gallery.extrafanart)</visible>
+				<visible>!Container().Scrolling</visible>
+            <animation effect="fade" start="0" end="100" time="800" delay="2500">Visible</animation>
+				</control>
+			<visible>Control.IsVisible(5762) + Skin.HasSetting(FullBackgroundIcon5762)</visible>	
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + !SubString(Container.FolderPath,plugin://)</visible>
+		</control>	
+		<control type="image">	
+		<include>transition_Content</include>
+			<include>toggle_Menu</include>
+			<include>transition_Info</include>
+				<top>110</top>
+				<left>835</left>
+				<width>420</width>
+				<height>565</height>
+               <texture background="true"colordiffuse="Black30">white.png</texture>
+			    <aspectratio>stretch</aspectratio>			    
+			   <visible>Control.IsVisible(5762)</visible> 			  		   
+			</control>				
+		<control type="panel" id="5762">
+			<viewtype label="31113">Icon Fanart</viewtype>	
+			<left>15</left>
+			<top>110</top>
+			<width>895</width>
+			<height>555</height>
+			<onleft>6000</onleft>
+			<onright>70</onright>
+			<onup>5762</onup>
+			<ondown>5762</ondown>
+			<pagecontrol>70</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<orientation>vertical</orientation>
+			<include>global_ListScroll</include>
+			<include>transition_Content</include>
+			<include>toggle_Menu</include>
+			<include>transition_Info</include>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
+			<itemlayout height="185" width="270">
+				<include>viewIconFanart-ContainerCommons</include>
+			</itemlayout>											
+			<focusedlayout height="185" width="270" condition="!Skin.HasSetting(IconFanar5762NoLandscape)">
+				<control type="image">
+				<left>0</left>
+			<top>0</top>
+			<width>265</width>
+			<height>185</height>
+					 <texture>white.png</texture>
+					 
+					</control>
+				<include>viewIconFanart-ContainerCommons</include>				
+			</focusedlayout>
+			<focusedlayout height="185" width="270" condition="Skin.HasSetting(IconFanar5762NoLandscape)">
+				<control type="image">
+				<left>0</left>
+			<top>0</top>
+			<width>265</width>
+			<height>185</height>
+					 <texture>white.png</texture>
+					 <colordiffuse>Black100</colordiffuse>
+					 <bordertexture colordiffuse="White100">white.png</bordertexture>
+								<bordersize>2</bordersize>
+					</control>
+				<include>viewIconFanart-ContainerCommons</include>				
+			</focusedlayout>
+		</control>		
+	</include>
+	
+	<include name="detail_ThumbnailsFanart">		
+		<control type="group">
+			<include>transition_Content</include>
+			<include>transition_Info</include>
+			<include>toggle_Menu</include>
+			<!--large grid-->
+			 		
+				<!--Icon Fanart -->
+				<control type="group">
+				<left>1000</left>
+					<top>500</top>
+			<control type="group">
+				<left>226</left>
+				<top>144</top>
+				<include>status_Info</include>
+				<visible>Skin.HasSetting(overlay_statu.disable)</visible>
+			</control>
+			<control type="group">
+					<left>221</left>
+					<top>140</top>
+					<width>32</width>
+					<height>32</height>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<info>ListItem.Overlay</info>
+					</control>
+				</control>
+			<visible>Skin.HasSetting(IconFanar5762NoLandscape)</visible>	
+			<visible>Control.IsVisible(5762)</visible>
+			</control>
+			<control type="group">
+				<left>850</left>
+				<top>115</top>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
+				<visible>Control.IsVisible(5762)</visible>
+				<control type="grouplist" id="1000">
+					<itemgap>0</itemgap>
+					<control type="label">
+						<width>400</width>
+						<label>$INFO[ListItem.Label]</label>
+						<include>detail_Title</include>
+					</control>
+					<control type="label">
+						<width>400</width>
+						<label>$INFO[ListItem.Genre]</label>
+						<include>detail_Sub</include>
+						<visible>Container.Content(movies)</visible>
+					</control>
+					<control type="label">
+						<width>400</width>
+						<label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</label>
+						<include>detail_Sub</include>
+						<visible>Container.Content(tvshows) + !IsEmpty(ListItem.TVShowTitle)</visible>
+					</control>
+					<control type="label">
+						<width>400</width>
+						<label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[31701]]</label>
+						<include>detail_Sub</include>
+						<visible>Container.Content(movies)</visible>
+					</control>
+					<control type="label">
+						<width>400</width>
+						<label>$VAR[nextaired_Info]</label>
+						<include>detail_Sub</include>
+						<visible>Container.Content(tvshows) + !IsEmpty(ListItem.TVShowTitle)</visible>
+					</control>
+					<control type="image">
+						<width>112</width>
+						<height>40</height>
+						<include>detail_StarRating</include>
+						<aspectratio align="left" aligny="center">keep</aspectratio>
+					</control>
+				
+					<control type="textbox" id="4">
+						<width>400</width>
+						<height>355</height>
+						<label>$VAR[global_Plot]</label>
+						<align>justify</align>
+						<include>detail_Text</include>
+						<visible>!SubString(ListItem.Icon,default)</visible>
+					</control>					
+				</control>
+				<control type="image">
+					<bottom>50</bottom>
+					<width>128</width>
+					<height>48</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture>$VAR[flag_Studio]</texture>
+				</control>
+			</control>			
+		</control>
+	</include>	
+
 </includes>

@@ -13,8 +13,7 @@
 				<width>340</width>
 				<height>screen_Height</height>
 				 <texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
-					<animation effect="fade" start="100" end="60" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
-				<colordiffuse>base_33</colordiffuse>
+					<animation effect="fade" start="100" end="60" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>				
 				<animation effect="fade" start="100" end="90" time="0" condition="!Skin.HasSetting(widgets.disable)">Conditional</animation>
 				<animation effect="fade" start="100" end="90" time="0" condition="!Skin.HasSetting(widgets.disable)">Conditional</animation>
 				<animation type="Conditional" condition="Control.HasFocus(9110)" reversible="false">
@@ -39,8 +38,7 @@
 				<onup>9110</onup>
 				<ondown>9110</ondown>
 				<onright condition="Skin.HasSetting(widgets.disable) + !IsEmpty(Container(9110).ListItem.Property(Widget))">9210</onright>
-				<onleft>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9110)</onleft>
-				<onback>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9110)</onback>
+				<onleft>9115</onleft>
 				<itemgap>0</itemgap>
 				<pagecontrol>80</pagecontrol>
 				<include>global_ListScroll</include>
@@ -59,13 +57,7 @@
 						<visible>Skin.HasSetting(homemenu.compact)</visible>
 					</control>
 					<control type="group">
-						<left>10</left>
-						<control type="image">
-							<width>320</width>
-							<height>49</height>
-							<texture colordiffuse="base_333"></texture>
-							<visible>IsEmpty(ListItem.Property(isSubmenu))</visible>
-						</control>
+						<left>10</left>						
 						<control type="image">
 							<width>320</width>
 							<height>49</height>
@@ -83,32 +75,7 @@
 							<font>condensed_Home</font>
 							<textcolor>Color3</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
-						<control type="label">
-							<width>280</width>
-							<height>46</height>
-							<font>condensed_Home_Nocaps</font>
-							<textcolor>Color3</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>!Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
-						<control type="label">
-							<width>280</width>
-							<height>46</height>
-							<font>black_Title</font>
-							<textcolor>Color3</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>Skin.HasSetting(nocapsHome) + Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
-						<control type="label">
-							<width>280</width>
-							<height>46</height>
-							<font>black_Title_Lowercase</font>
-							<textcolor>Color3</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>!Skin.HasSetting(nocapsHome) + Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
+							</control>						
 						<control type="label">
 							<right>5</right>
 							<width>20</width>
@@ -151,32 +118,7 @@
 							<font>condensed_Home</font>						
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>Color3</textcolor>
-							<visible>Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>	
-						<control type="label">
-							<height>46</height>
-							<width>280</width>
-							<font>condensed_Home_Nocaps</font>						
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>Color3</textcolor>
-							<visible>!Skin.HasSetting(nocapsHome) + !Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
-						<control type="label">
-							<height>46</height>
-							<width>280</width>
-							<font>black_Title</font>						
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>Color3</textcolor>
-							<visible>Skin.HasSetting(nocapsHome) + Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
-						<control type="label">
-							<height>46</height>
-							<width>280</width>
-							<font>black_Title_Lowercase</font>						
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>Color3</textcolor>
-							<visible>!Skin.HasSetting(nocapsHome) + Skin.HasSetting(homeBlackHugeFont)</visible>
-						</control>
+							</control>						
 						<control type="label">
 							<right>5</right>
 							<width>20</width>
@@ -191,7 +133,132 @@
 					</control>
 				</focusedlayout>
 				<content>
-					 <include>skinshortcuts-allmenus</include>
+					 <include>skinshortcuts-mainmenu</include>
+				</content>
+				</control>
+				</control>	
+				<!--Submenu Vertical-->
+				
+				<control type="group" id="9113">
+				<left>-340</left>
+			<width>340</width>
+			<animation type="Conditional" condition="Control.HasFocus(9115)">
+				<effect type="Slide" time="300" center="auto" start="-0" end="670" easing="In" tween="Quadratic"/>
+			</animation>
+			
+			
+			<control type="image">
+				<width>340</width>
+				<height>10</height>
+				<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
+				<colordiffuse>base_33</colordiffuse>				
+				<visible>Skin.HasSetting(homemenu.compact)</visible>
+			</control>
+				<control type="list" id="9115">
+				<left></left>
+				<top>0</top>
+				<width>340</width>
+				<height min="50" max="screen_Height">auto</height>
+				<onback>9110</onback>
+				<onup>9115</onup>
+				<ondown>9115</ondown>
+				<onleft>9109</onleft>
+				<onright>9110</onright>
+				<itemgap>0</itemgap>
+				<pagecontrol>80</pagecontrol>
+				<include>global_ListScroll</include>
+				<orientation>vertical</orientation>
+				<itemlayout width="340" height="50">
+					<control type="image">
+						<width>340</width>
+						<height>50</height>
+						<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
+						<animation effect="fade" start="100" end="90" time="0" condition="!Skin.HasSetting(widgets.disable)">Conditional</animation>
+				<animation type="Conditional" condition="Control.HasFocus(9110)" reversible="false">
+					</animation>
+			<animation type="Conditional" condition="!Control.HasFocus(9110)" reversible="false">
+				</animation>
+			<animation effect="fade" start="100" end="80" time="0" condition="Skin.HasSetting(opacitymenu.disable) + Skin.HasSetting(homemenu.compact)">Conditional</animation>
+						<visible>Skin.HasSetting(homemenu.compact)</visible>
+					</control>
+					<control type="group">
+						<left>10</left>						
+						<control type="image">
+							<width>320</width>
+							<height>49</height>
+							<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
+							<animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + Skin.HasSetting(homemenu.compact)">Conditional</animation>
+			                <animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + !Skin.HasSetting(homemenu.compact)">Conditional</animation>
+							<visible>!IsEmpty(ListItem.Property(isSubmenu))</visible>
+						</control>
+					</control>
+					<control type="group">
+						<left>25</left>
+						<control type="label">
+							<width>280</width>
+							<height>46</height>
+							<font>condensed_Home</font>
+							<textcolor>Color3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							</control>						
+						<control type="label">
+							<right>5</right>
+							<width>20</width>
+							<height>43</height>
+							<label>›</label>
+							<font>regular</font>
+							<align>right</align>
+							<visible>!IsEmpty(ListItem.Property(hasSubmenu))</visible>
+							<visible>!StringCompare(ListItem.Property("submenuVisibility"),Window(10000).Property("submenuVisibility") )</visible>
+						<textcolor>Color3</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="340" height="50">
+					<control type="image">
+							<width>330</width>
+							<height>50</height>
+							<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
+							<animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + Skin.HasSetting(homemenu.compact)">Conditional</animation>
+			                <animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + !Skin.HasSetting(homemenu.compact)">Conditional</animation>
+							<visible>!IsEmpty(ListItem.Property(isSubmenu))</visible>
+						</control>
+					
+					<control type="image">						
+						<top>0</top>
+						<width>330</width>
+						<height>49</height>
+						<texture colordiffuse="ffffffff">home/menuitemfo.png</texture>
+						<bordertexture colordiffuse="ffffffff"></bordertexture>
+					</control>
+					<control type="group">
+						<left>25</left>
+						
+						<control type="label">
+							<height>46</height>
+							<width>280</width>
+							<font>condensed_Home</font>						
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>Color3</textcolor>
+							</control>	
+						
+					
+					
+						<control type="label">
+							<right>5</right>
+							<width>20</width>
+							<height>43</height>
+							<label>›</label>
+							<font>regular</font>
+							<align>right</align>
+							<textcolor>Color2</textcolor>
+							<visible>!IsEmpty(ListItem.Property(hasSubmenu))</visible>
+							<visible>!StringCompare(ListItem.Property("submenuVisibility"),Window(10000).Property("submenuVisibility") )</visible>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					 <include>skinshortcuts-submenu</include>
 				</content>
 			</control>			
 		</control>
@@ -315,7 +382,7 @@
 					<visible>ControlGroup(229).HasFocus() | Control.HasFocus(9110) | Control.HasFocus(9111)</visible>
 				 	</control>
 				<control type="image">			
-			<top>66</top>
+			<top>67</top>
 			<left>-150</left>			
 					<width>1920</width>
 					<height>1</height>
@@ -328,7 +395,7 @@
 					<visible>ControlGroup(229).HasFocus() | Control.HasFocus(9110) | Control.HasFocus(9111)</visible>
 				 	</control>
 					<control type="image">			
-			<top>116</top>
+			<top>114</top>
 			<left>-150</left>			
 					<width>1920</width>
 					<height>1</height>
@@ -341,25 +408,42 @@
 					<visible>ControlGroup(229).HasFocus() | Control.HasFocus(9110) | Control.HasFocus(9111)</visible>
 				 	</control>		
 			<include>transition_Home-horizontal2</include>
-				<control type="fixedlist" id="9111">
-				<left>25</left>
+				<control type="list" id="9111">
+				<left>-10</left>
 					<top>68</top>
-					<width>1182</width>
+					<width>1180</width>
 					<height>80</height>
 					<onback>9110</onback>
 					<onleft>9111</onleft>
 					<onright>9111</onright>					
 					<onup>9110</onup>
 					<ondown>229</ondown>
-					<focusposition>2</focusposition>
+				<focusposition>1</focusposition>
 					<movement>0</movement>
 					<preloaditems>4</preloaditems>
+					<orientation>horizontal</orientation>
 					<pagecontrol>80</pagecontrol>
 					<include>global_ListScroll</include>
-					<orientation>horizontal</orientation>					
-					<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9100).NumItems,2)">Conditional</animation>
-						<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9100).NumItems,4)">Conditional</animation>
-					<itemlayout width="236" height="50">							
+						<animation effect="slide" start="0" end="500" condition="StringCompare(Container(9111).NumItems,1)">Conditional</animation>					
+					<animation effect="slide" start="0" end="345" condition="StringCompare(Container(9111).NumItems,2)">Conditional</animation>
+					<animation effect="slide" start="0" end="270" condition="StringCompare(Container(9111).NumItems,3)">Conditional</animation>
+					<animation effect="slide" start="0" end="145" condition="StringCompare(Container(9111).NumItems,4)">Conditional</animation>					
+					<animation effect="slide" start="0" end="35" condition="StringCompare(Container(9111).NumItems,5)">Conditional</animation>
+					<animation effect="slide" start="0" end="35" condition="StringCompare(Container(9111).NumItems,6)">Conditional</animation>
+					<animation effect="slide" start="0" end="35" condition="StringCompare(Container(9111).NumItems,7)">Conditional</animation>
+					<animation effect="slide" start="0" end="35" condition="StringCompare(Container(9111).NumItems,8)">Conditional</animation>
+					<animation effect="slide" start="0" end="35" condition="StringCompare(Container(9111).NumItems,9)">Conditional</animation>
+					<animation effect="slide" start="0" end="35" condition="StringCompare(Container(9111).NumItems,10)">Conditional</animation>
+						
+						<itemlayout width="236" height="50">	
+							<control type="image">
+							<left>-10</left>
+								<width>238</width>
+								<height>46</height>
+							<texture colordiffuse="">black.png</texture>
+								<bordertexture colordiffuse="Dark3">white.png</bordertexture>
+								<bordersize>1</bordersize>
+							</control>
 							<control type="label">
 								<width>230</width>
 								<height>40</height>
@@ -369,7 +453,7 @@
 								<textcolor>Color3</textcolor>
 							</control>
 						</itemlayout>
-						<focusedlayout width="238" height="50">
+						<focusedlayout width="236" height="50">
 							<control type="group">
 								<visible>!Control.HasFocus(9111)</visible>									
 							
@@ -389,7 +473,7 @@
 							<top>0</top>
 								<width>240</width>
 								<height>46</height>
-								<texture colordiffuse="Color1">white.png</texture>
+								<texture colordiffuse="White100">white.png</texture>
 								<bordertexture colordiffuse="base_3"></bordertexture>
 								<bordersize>0</bordersize>
 							</control>

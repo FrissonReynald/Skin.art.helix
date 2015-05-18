@@ -280,6 +280,7 @@
 			<aspectratio align="center" aligny="top">scale</aspectratio>
 		</control>
 		<control type="image">
+		<top>50</top>
 			<include>screen_Dimensions</include>
 			<texture>overlays/vignetteFullscreen.png</texture>
 			<colordiffuse>$VAR[ColorHome]</colordiffuse>
@@ -457,6 +458,15 @@
 					<include>detail_StarRating</include>
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
+				<control type="image">
+				<left>1205</left>
+				<top>143</top>
+			<width>25</width>
+					<height>25</height>
+			<texture>navigation/down.png</texture>
+			<colordiffuse>White100</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+		</control>
 				<control type="textbox">
 					<top>55</top>
 					<width>1200</width>
@@ -520,6 +530,15 @@
 					<include>detail_StarRating</include>
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
+					<control type="image">
+				<left>1005</left>
+				<top>234</top>
+			<width>25</width>
+					<height>25</height>
+			<texture>navigation/up.png</texture>
+			<colordiffuse>White100</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+		</control>
 				<control type="textbox">
 					<top>55</top>
 					<width>1000</width>
@@ -528,7 +547,7 @@
 					<label>$VAR[global_Plot]</label>	
 					<include>detail_Text</include>	
 					<visible>!SubString(ListItem.Icon,default)</visible>
-				</control>					
+				</control>				
 			</control>
 			<control type="grouplist" id="100">
 		<include>toggle_Menu</include>
@@ -609,10 +628,20 @@
 			<aspectratio align="center">scale</aspectratio>
 		</control>
 		<control type="image">
+		
 			<include>screen_Dimensions</include>
 			<texture background="true">$VAR[thumb_Landscape]</texture>
-			<aspectratio align="center" aligny="top">scale</aspectratio>
+			<aspectratio align="center" aligny="">scale</aspectratio>
 			<fadetime>fadetime_Fanart</fadetime>
+			<visible>Skin.HasSetting(galleryInfo1.enable)</visible>
+		</control>
+		<control type="image">
+		<top>170</top>
+			<include>screen_Dimensions</include>
+			<texture background="true">$VAR[thumb_Landscape]</texture>
+			<aspectratio align="center" aligny="">scale</aspectratio>
+			<fadetime>fadetime_Fanart</fadetime>
+			<visible>!Skin.HasSetting(galleryInfo1.enable)</visible>
 		</control>
 		<control type="image">
 			<centerleft>640</centerleft>
@@ -663,7 +692,23 @@
 				<visible>Control.IsVisible(532) + Skin.HasSetting(gallery.extrafanart)</visible>
 				<visible>!Container().Scrolling</visible>
             <animation effect="fade" start="0" end="100" time="800" delay="2500">Visible</animation>
-				</control>			
+			<visible>Skin.HasSetting(galleryInfo1.enable)</visible>
+				</control>	
+				<control type="group">	
+				<top>170</top>
+				<control type="multiimage">
+				<include>screen_Dimensions</include>
+				<imagepath>$INFO[ListItem.Path,,extrafanart]</imagepath>
+					<aspectratio align="center" aligny="top">scale</aspectratio>								
+				<timeperimage>9000</timeperimage>				 
+                    <randomize>true</randomize> 
+                    <loop>yes</loop>
+					</control>					
+				<visible>Control.IsVisible(532) + Skin.HasSetting(gallery.extrafanart)</visible>
+				<visible>!Container().Scrolling</visible>
+            <animation effect="fade" start="0" end="100" time="800" delay="2500">Visible</animation>
+			<visible>!Skin.HasSetting(galleryInfo1.enable)</visible>
+				</control>	
 				<control type="group">
 				<control type="image">
 				<left>-40</left>
@@ -771,39 +816,40 @@
 				<left>-210</left>				
 				<visible>Control.IsVisible(532)</visible>				
 				<control type="image">
-					 <left>825</left>
-				<top>-89</top>
-				<width>380</width>
-				<height>223</height>
-				     <texture background="true">frames/frame-landscape-back-alt.png</texture>
-					 <colordiffuse>base_2</colordiffuse>
+					 <left>-80</left>
+				<top>-145</top>
+				<width>1920</width>
+				<height>190</height>
+				     <texture background="true"colordiffuse="Black100">frames/contentpanel.png</texture>					
 					 <visible>Control.IsVisible(532)</visible>
 					 </control>
+			
 				<control type="image">
-					  <left>825</left>
-				<top>130</top>
-				<width>380</width>
-				<height>223</height>
-				     <texture background="true">frames/frame-landscape-back-alt.png</texture>
-					 <colordiffuse>base_2</colordiffuse>
-					 <visible>Control.IsVisible(532)</visible>
-					 </control>
-				<control type="image">
-				<left>850</left>
-				<top>-70</top>
+				<left>5</left>
+				<top>-140</top>
 				<width>330</width>
 				<height>180</height>
-				<texture background="true">$VAR[view_Extra.Thumb]</texture>
+				<texture background="true">$VAR[view_Extra.Thumb4]</texture>
 				<aspectratio>stretch</aspectratio>				
 			</control>			
 				<control type="image">
-				<left>850</left>
-				<top>150</top>
+				<left>410</left>
+				<top>-140</top>
+				<width>330</width>
+				<height>180</height>
+				<texture background="true">$VAR[view_Extra.Thumb3]</texture>
+				<aspectratio>stretch</aspectratio>				
+			</control>
+						
+				<control type="image">
+				<left>820</left>
+				<top>-140</top>
 				<width>330</width>
 				<height>180</height>
 				<texture background="true">$VAR[view_Extra.Thumb2]</texture>
 				<aspectratio>stretch</aspectratio>				
-			</control>						
+			</control>	
+			
 			<control type="group">	
 				<top>-20</top>
 				<left>300</left>						
@@ -855,7 +901,7 @@
 		</control>
 		<control type="group">
 		<control type="image">
-		<animation effect="slide" start="0,0" end="-990,0" condition="!Skin.HasSetting(galleryInfo1.enable)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-90,310" condition="!Skin.HasSetting(galleryInfo1.enable)">Conditional</animation>
 			<right>15</right>
 			<top>-500</top>
 			<width>256</width>
@@ -1051,6 +1097,12 @@
 							<include>detail_Title_Huge</include>
 							<visible>Control.IsVisible(534) + skin.HasSetting(GalleryLogo)</visible>
 							</control>
+				<control type="image">
+				<left>1010</left>
+					<top>675</top>
+					<texture colordiffuse="Color1">$VAR[status_List]</texture>
+					<include>status_List</include>					
+				</control>		
 				<control type="fadelabel">	
 				<left>280</left>
 					<bottom>12</bottom>
@@ -1109,8 +1161,8 @@
 				</control>
 					<control type="grouplist" id="100">
 			<visible>Control.IsVisible(534)</visible>	
-				<left>1055</left>
-				<bottom>15</bottom>
+				<left>1060</left>
+				<bottom>10</bottom>
 				<width>900</width>
 				<height>55</height>
 				<itemgap>25</itemgap>
@@ -1124,10 +1176,10 @@
 				</control>				
 			</control>
 					<control type="image">	
-					<top>660</top>
+					<top>665</top>
 					<left>1170</left>
-				<width>96</width>
-				<height>44</height>
+				<width>90</width>
+				<height>40</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>$INFO[Listitem.AudioChannels,flags/audio/,.png]</texture>
 				<visible>!IsEmpty(Listitem.AudioChannels)</visible>
@@ -1224,7 +1276,7 @@
                     <control type="grouplist"> 					
 					 <top>85</top>
                         <orientation>horizontal</orientation>
-                        <itemgap>10</itemgap>
+                        <itemgap>55</itemgap>
                         <control type="label">						
                             <width>400</width>
 							<top>2</top>
@@ -1244,7 +1296,7 @@
                     <control type="grouplist">
 					 <top>120</top>                       
                         <orientation>horizontal</orientation>
-                        <itemgap>15</itemgap>
+                        <itemgap>25</itemgap>
                         <control type="label">
                             <width>400</width>
 							<top>1</top>
@@ -1264,12 +1316,12 @@
                      <top>155</top>
                         <width>700</width>
                         <orientation>horizontal</orientation>
-                        <itemgap>38</itemgap>
+                        <itemgap>120</itemgap>
                         <control type="label">
 						<top>2</top>
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
-                            <label>$LOCALIZE[20074, ,] :</label>
+                            <label>$LOCALIZE[20074, ,] </label>
 							<include>detail_Sub</include>
                         </control>
                         <control type="fadelabel">
