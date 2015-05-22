@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window type="window" id="1102">
-   <defaultcontrol always="true">9501</defaultcontrol>
+    <defaultcontrol always="true">9501</defaultcontrol>
     <allowoverlay>false</allowoverlay>
     <controls>
-	 <include>Global_Background</include>
-	  <control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true" colordiffuse="$VAR[ColorHome]">overlays/base_color.png</texture>
-			<include>fadeinout</include>
-		</control>	
-	
+	 <include>global_background</include>
+	      
+        <include>Furniture_Header</include>
+        <include>Furniture_NowPlaying</include>
+        <include>Furniture_Clock</include>
+        <include>Furniture_Hub_Flags</include>
 		
         <control type="group">		  
             <include>Animation.Common</include>
@@ -20,7 +19,29 @@
                 <right>SidePad</right>
                 <height>640</height>
                 <control type="group">
-              
+				  <control type="image">
+				  <left>-5</left>
+				  <top>-5</top>
+                        
+                        <include>screen_Dimensions</include>
+                     
+                        <texture border="15" colordiffuse="$VAR[FrameHubColor]">common/rounded-shadow8.png</texture>
+                    </control>
+                  <control type="image">
+                        <left>-8</left>
+                        <width>1138</width>
+                        <top>-8</top>
+                        <bottom>-8</bottom>
+                        <texture border="15" colordiffuse="$VAR[ColorHome]">common/rounded-shadow8.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <width>1122</width>
+                        <top>0</top>
+                        <bottom>0</bottom>
+                        <texture background="true" diffuse="diffuse/home-fanart.png">pvr/background.jpg</texture>
+                        <visible>!IntegerGreaterThan(Container(9500).NumItems,0)</visible>
+                    </control>
                     <control type="list" id="9500">
                         <description>Widget</description>
                         <left>50</left>

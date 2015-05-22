@@ -48,7 +48,7 @@
     <!-- Additional Common Items -->
     <shortcut label="TVHub" type="TVHub" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
     <shortcut label="MovieHub" type="MovieHub" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
-     
+    
     <!-- Override Actions Because Im A Dummy Who Doesnt Know The Correct Window IDs To Use -->
     <override action="ActivateWindow(3201)">
         <condition>true</condition>

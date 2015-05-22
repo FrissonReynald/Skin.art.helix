@@ -37,6 +37,7 @@
                         <width>100%</width>
                         <height>25</height>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label>$ADDON[script.extendedinfo 32016]</label>
                         <aligny>center</aligny>
                     </control>
@@ -54,6 +55,7 @@
                         <height>25</height>
                         <align>right</align>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label>$ADDON[script.extendedinfo 32012]</label>
                         <aligny>center</aligny>
                     </control>
@@ -71,6 +73,7 @@
                         <width>100%</width>
                         <height>25</height>
                         <font>semibold_Big</font>
+						<include>detail_Sub</include>
                         <label>$ADDON[script.extendedinfo 32014]</label>
                         <aligny>center</aligny>
                     </control>
@@ -88,6 +91,7 @@
                         <height>25</height>
                         <align>right</align>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label>$ADDON[script.extendedinfo 32013]</label>
                         <aligny>center</aligny>
                         <visible>!IsEmpty(Window.Property(actor.Deathday))</visible>
@@ -107,6 +111,7 @@
                         <width>100%</width>
                         <height>25</height>
                         <font>semibold_Big</font>
+						<include>detail_Sub</include>
                         <label>21887</label>
                         <aligny>center</aligny>
                     </control>
@@ -126,6 +131,7 @@
                         <width>100%</width>
                         <height>25</height>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label>20342</label>
                         <aligny>center</aligny>
                         <visible>!Control.HasFocus(150)</visible>
@@ -145,6 +151,7 @@
                         <width>100%</width>
                         <height>25</height>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label>20343</label>
                         <aligny>center</aligny>
                         <visible>!Control.HasFocus(250)</visible>
@@ -164,6 +171,7 @@
                         <width>100%</width>
                         <height>25</height>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label>$ADDON[script.extendedinfo 32115]</label>
                         <aligny>center</aligny>
                         <visible>!Control.HasFocus(550)</visible>

@@ -135,7 +135,8 @@
         <width>400</width>
         <font>condensed_HomeSubSmall</font>
         <textcolor>White100</textcolor>
-        <texturefocus colordiffuse="White100" border="5">common/box.png</texturefocus>
+        <texturefocus colordiffuse="White100" border="2">common/box.png</texturefocus>
+		<bordertexture>white.png</bordertexture>
     </include>
 	<include name="global_Clock">
 		<control type="group">
@@ -254,46 +255,46 @@
 	<include name="detail_Header">
 		<height>32</height>
 		<font>light_Header</font>		
-		<selectedcolor>Selected</selectedcolor>
+		<textcolor>$VAR[ColorLabel]</textcolor>
 		</include>
 	<include name="detail_Title">
 		<height>28</height>
 		<aligny>center</aligny>
 		<font>semibold_Big-U</font>
-		<textcolor>Color1</textcolor>
+		<textcolor>$VAR[ColorLabel]</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<autoscroll delay="autoscroll_Delay" time="autoscroll_Time" repeat="2000">true</autoscroll>
 		</include>	
 	<include name="detail_Title_Huge">
 		<height>35</height>
-		<aligny>center</aligny>
+		<aligny>center</aligny>		
 		<font>black_huge</font>
-		<textcolor>Color1</textcolor>		
+		<textcolor>$VAR[ColorLabel]</textcolor>	
 	</include>
 	<include name="detail_Title_PVR">
 		<height>28</height>
 		<aligny>center</aligny>
 		<font>semibold_Small-U</font>
-		<textcolor>Color1</textcolor>
+		<textcolor>$VAR[ColorLabel]</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 	</include>
 	<include name="detail_Title_ART">
 		<height>25</height>
 		<aligny>center</aligny>
 		<font>semibold_Big-U</font>
-		<textcolor>Color1</textcolor>		
+		<textcolor>$VAR[ColorLabel]</textcolor>	
 	</include>
 	<include name="detail_Sub">
 		<height>25</height>
 		<aligny>center</aligny>
 		<scroll>true</scroll>
 		<font>semibold_Small-U</font>
-		<textcolor>Color2</textcolor>
+		<textcolor>$VAR[ColorLabel]</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<visible>!StringCompare(ListItem.Label,..)</visible>
 	</include>
 	<include name="detail_Text">
-		<textcolor>Color7</textcolor>
+		<textcolor>ffffffff</textcolor>
 		<font>regular</font>
 		<aligny>top</aligny>
 <!--use a numeric value for repeat here, change into constant again when xbmc bug is fixed-->
@@ -310,7 +311,7 @@
 		<height>40</height>
 		<font>regular_Bigger</font>
 		<aligny>center</aligny>
-		<textcolor>Color1</textcolor>
+		<textcolor>$VAR[ColorLabel]</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<scroll>false</scroll>
 	</include>
@@ -326,7 +327,7 @@
 		<height>40</height>
 		<font>regular_Small-U</font>
 		<aligny>center</aligny>
-		<textcolor>Color2</textcolor>
+		<textcolor>ffffffff</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<scroll>false</scroll>
 	</include>
@@ -340,7 +341,7 @@
 	<include name="container_Text">
 		<font>regular</font>
 		<aligny>top</aligny>
-		<textcolor>Color3</textcolor>
+		<textcolor>ffffffff</textcolor>
 	</include>
 	<include name="container_Text-focus">
 		<font>regular</font>
@@ -438,7 +439,7 @@
 		<align>left</align>
 		<textoffsety>4</textoffsety>
 		<textoffsetx>15</textoffsetx>
-		<textcolor>Color1</textcolor>
+		<textcolor>$VAR[ColorLabel]</textcolor>
 		<texturenofocus colordiffuse="column2"></texturenofocus>
 		<texturefocus colordiffuse="Color1">frames/frame-fo.png</texturefocus>
 		<alttexturenofocus colordiffuse="column2">frames/frame-fo.png</alttexturenofocus>
@@ -600,13 +601,7 @@
 		<texture>$VAR[pvr:Status]</texture>
 		<colordiffuse>Color4</colordiffuse>	
 	</include>
-	<!--watchedOverlayAlt-->
-	<include name="overlay_UnWatchedAlt">
-		<width>32</width>
-		<height>32</height>
-		<info>ListItem.Overlay</info>
-		<aspectratio align="right">keep</aspectratio>
-	</include>
+		
 	<include name="overlay_UnWatched">
 		<width>32</width>
 		<height>32</height>
@@ -775,7 +770,7 @@
 				<width>screen_Width</width>
 				<height>50</height>
 				<texture>white.png</texture>
-				<colordiffuse>accent_1</colordiffuse>
+				<colordiffuse>$VAR[ColorLabel]</colordiffuse>
 			</control>
 			<control type="group">
 				<left>100</left>

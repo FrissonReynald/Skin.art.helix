@@ -19,6 +19,20 @@
         <value condition="!IsEmpty(Skin.String(BackgroundColor.name))">$INFO[Skin.String(BackgroundColor.name)]</value>
         <value>ColorHome</value>
     </variable>	
+	<variable name="ColorLabel">
+        <value condition="!IsEmpty(Skin.String(LabelColor.name))">$INFO[Skin.String(LabelColor.name)]</value>
+        <value>ColorLabel</value>
+    </variable>	
+	<variable name="highlightcolor">
+        <value condition="!IsEmpty(Skin.String(highlightcolor.name))">$INFO[Skin.String(highlightcolor.name)]</value>
+        <value>highlightcolor</value>
+    </variable>	
+	<variable name="FrameHubColor">
+        <value condition="!IsEmpty(Skin.String(FrameHubColor.name))">$INFO[Skin.String(FrameHubColor.name)]</value>
+        <value>FrameHubColor</value>
+    </variable>	
+<!--WIDGETS-->
+	
 <!--WIDGETS-->
 	<variable name="widget_Content">
 	     <value condition="StringCompare(Container(9110).ListItem.Property(widget),Playlist)">$INFO[Container(9110).ListItem.Property(widgetPlaylist)]</value>
@@ -621,7 +635,7 @@
 		<value condition="StringCompare(Window(Home).Property(tvguide),nplus12)">$INFO[Window(home).Property(NextAired.213.Weekday)] $INFO[Window(home).Property(NextAired.213.Date)]</value>
 		<value condition="StringCompare(Window(Home).Property(tvguide),nplus13)">$INFO[Window(home).Property(NextAired.214.Weekday)] $INFO[Window(home).Property(NextAired.214.Date)]</value>
 		<value condition="StringCompare(Window(Home).Property(tvguide),nplus14)">$INFO[Window(home).Property(NextAired.215.Weekday)] $INFO[Window(home).Property(NextAired.215.Date)]</value>
-	</variable>
+		</variable>
 	<variable name="gallery_Header">
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(movies) + ListItem.IsFolder + SubString(Container.FolderPath,videodb) + !IsEmpty(ListItem.Title)">$INFO[ListItem.Year]</value><!--movie set-->

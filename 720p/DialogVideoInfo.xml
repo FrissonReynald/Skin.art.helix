@@ -11,19 +11,28 @@
         <control type="group">
             <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
             <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
-            <include>DefDialogInfoPanel</include>            
-             <control type="image">
+            <include>DefDialogInfoPanel</include>
+			 <control type="image">
 				<include>screen_Dimensions</include>
-				<texture background="true">$VAR[art:Container]</texture>
+				<texture background="true"diffuse="white.png">$VAR[art:Container]</texture>
 				<aspectratio>scale</aspectratio>
 				<animation type="WindowOpen">
-					<effect type="Fade" colordiffuse="$VAR[ColorHome]" time="transition_Open" start="0" end="50" />
+					<effect type="Fade" colordiffuse="ffffffff" time="transition_Open" start="0" end="20" />
 				</animation>			
 				<animation type="WindowClose">
-					<effect type="Fade" colordiffuse="$VAR[ColorHome]" time="transition_Close" start="50" end="0" />
+					<effect type="Fade" colordiffuse="ffffffff" time="transition_Close" start="20" end="0" />
 				</animation>
 				 <visible>!Control.HasFocus(50) + !Skin.HasSetting(fanart.global)</visible>
 			</control>
+ 	<control type="image">			
+				<top>5</top>
+				<left>20</left>
+				<width>460</width>
+				<height>690</height>
+               <texture background="true">black.png</texture>
+			    <aspectratio>stretch</aspectratio>			    
+			  	  		   
+			</control>	
 			<control type="image">			
 				<top>5</top>
 				<left>8</left>
@@ -141,6 +150,7 @@
                    <font>semibold_Big</font>
                     <label>20074</label>
                     <aligny>center</aligny>
+					<include>detail_Sub</include>
                 </control>
                 <control type="label">
 				<top>-10</top>
@@ -159,6 +169,7 @@
                     <height>35</height>
                     <align>right</align>
                     <font>semibold_Big</font>
+					<include>detail_Sub</include>
                     <label>2050</label>
                     <aligny>center</aligny>
                 </control>
@@ -179,6 +190,7 @@
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
+					<include>detail_Sub</include>
                     <label>20339</label>
                     <aligny>center</aligny>
                 </control>
@@ -198,6 +210,7 @@
                     <height>35</height>
                     <align>right</align>
                     <font>semibold_Big</font>
+					<include>detail_Sub</include>
                     <label>568</label>
                     <aligny>center</aligny>
                 </control>
@@ -218,6 +231,7 @@
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
+					<include>detail_Sub</include>
                     <label>20417</label>
                     <aligny>center</aligny>
                 </control>
@@ -237,6 +251,7 @@
                     <height>25</height>
                     <align>right</align>
                     <font>semibold_Big</font>
+					<include>detail_Sub</include>
                     <label>445</label>
                     <aligny>center</aligny>
                     <visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1))</visible>
@@ -259,6 +274,7 @@
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
+					<include>detail_Sub</include>
                     <label>515</label>
                     <aligny>center</aligny>
                 </control>
@@ -278,6 +294,7 @@
                     <height>25</height>
                     <align>right</align>
                     <font>semibold_Big</font>
+					<include>detail_Sub</include>
                     <label>287</label>
                     <aligny>center</aligny>
                     <visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.1))</visible>
@@ -300,6 +317,7 @@
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
+					<include>detail_Sub</include>
                     <label>572</label>
                     <aligny>center</aligny>
                 </control>
@@ -318,6 +336,7 @@
                     <width>100%</width>
                     <height>25</height>
                     <font>semibold_Big</font>
+					<include>detail_Sub</include>
                     <label>207</label>
                     <aligny>center</aligny>
                 </control>
@@ -328,8 +347,7 @@
                     <align>justify</align>
 					<autoscroll delay="autoscroll_Delay" time="autoscroll_Time" repeat="2000">true</autoscroll>
                 </control> 
-            </control>
-
+            </control>           
             <control type="grouplist" id="9000">				
                <posx>25</posx>
                 <width>450</width>
@@ -341,33 +359,29 @@
                 <onright condition="!Control.IsVisible(50)">SendClick(2003,5)</onright>
                 <onright condition="!IsEmpty(ListItem.Director)">52</onright>
                 <onright condition="IsEmpty(ListItem.Director)">51</onright>
-                <orientation>vertical</orientation>			
+                <orientation>vertical</orientation>				
                 <control type="button" id ="5">
                     <description>Plot/Cast</description>
                     <label>206</label>
                     <width>450</width>
                   <height>55</height>
 					<left>10</left>
-                   <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
-                <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
-                    <include>DefDialogButtons</include>
+              <textcolor>FFFFFFFF</textcolor>
+							<include>DefDialogButtons2</include>
+                
                 </control>
                 <control type="button" id ="8">
                     <description>Play</description>
                     <label>208</label>
                     <width>450</width>
                    <height>55</height>
-					<left>10</left>
-                    <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
-                <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
-                    <include>DefDialogButtons</include>
+					<left>10</left>             
+				<textcolor>FFFFFFFF</textcolor>
+							<include>DefDialogButtons2</include>
                 </control>                
                 <control type="button" id="53">
                     <width>450</width>
-                    <height>55</height>
-                   <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
-                <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
-                    <include>DefDialogButtons</include>
+                    <height>55</height>                
                     <label>$LOCALIZE[31206]</label>
                     <onclick>SetProperty(ExtDirector,$INFO[ListItem.Director],home)</onclick>
                     <onclick>SetProperty(ExtWriter,$INFO[ListItem.Writer],home)</onclick>
@@ -378,15 +392,15 @@
                     <onclick>Close</onclick>
                     <onclick>Dialog.Close(DialogVideoInfo.xml)</onclick>
                     <visible>!IsEmpty(ListItem.Director)</visible>
+					<include>DefDialogButtons2</include>
                 </control>                
                 <control type="button" id="11">
                     <description>Trailer button</description>
                     <label>20410</label>
                     <width>450</width>
                    <height>55</height>
-                   <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
-                <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
-                    <include>DefDialogButtons</include>
+              <textcolor>FFFFFFFF</textcolor>
+							<include>DefDialogButtons2</include>
 					<selectedcolor>White100</selectedcolor>
                     <visible>!IsEmpty(ListItem.Trailer)</visible>
                 </control>
@@ -396,9 +410,8 @@
                     <label>Home Theatre</label>
                     <width>450</width>
                     <height>55</height>
-                    <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
-                <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
-                    <include>DefDialogButtons</include>
+                   <textcolor>FFFFFFFF</textcolor>
+							<include>DefDialogButtons2</include>
                     <onclick>Dialog.Close(MovieInformation)</onclick>
                     <onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
                     <visible>system.hasaddon(script.cinema.experience) + Container.Content(movies)</visible>
@@ -409,9 +422,8 @@
                     <description>Extras</description>
                     <width>450</width>
                    <height>55</height>
-                    <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
-                <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
-                    <include>DefDialogButtons</include>
+				   <textcolor>FFFFFFFF</textcolor>
+							<include>DefDialogButtons2</include>
                     <label>31171</label>
                     <onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
                     <visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
@@ -422,9 +434,8 @@
                     <label>184</label>
                     <width>450</width>
                    <height>55</height>
-                    <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
-                <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
-                    <include>DefDialogButtons</include>
+                 <textcolor>FFFFFFFF</textcolor>
+							<include>DefDialogButtons2</include>
                     <visible>!Skin.HasSetting(global.kiosk)</visible>
                 </control>
 
@@ -433,23 +444,19 @@
                     <label>13405</label>
                     <width>450</width>
                     <height>55</height>
-                    <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
-                <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
-                    <include>DefDialogButtons</include>
+                 	<include>DefDialogButtons2</include>
                     <visible>!Skin.HasSetting(global.kiosk)</visible>
                 </control>
 
                 <control type="button" id="9001">
-                    <label>$LOCALIZE[31203]</label>
+                    <label>Get Artwork</label>
                     <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
                     <description>Get Artwork</description>
                     <width>450</width>
                    <height>55</height>
-                    <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
-                <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>	
-                    <include>DefDialogButtons</include>
+                    <include>DefDialogButtons2</include>
                     <visible>!Skin.HasSetting(global.kiosk)</visible>
                     <visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)] + system.hasaddon(script.artwork.downloader)</visible>
                 </control>
@@ -463,9 +470,9 @@
                 <left>485</left>
                 <right>30</right>
                 <ondown>51</ondown>
-                <label>$INFO[ListItem.Director,$LOCALIZE[31191] ,]</label>
+                <label>Director :$INFO[ListItem.Director,$LOCALIZE[31191] ,]</label>
                 <align>center</align>
-				<textcolor>FFFFFFFF</textcolor>
+				
                 <onleft condition="Control.IsVisible(50)">SendClick(2003,5)</onleft>
                 <onleft>9000</onleft>
                 <onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[ListItem.Director])</onclick>
@@ -473,7 +480,7 @@
                 <texturenofocus border="5" colordiffuse="Black30">common/box.png</texturenofocus>
                 <texturefocus border="5" colordiffuse="$VAR[ColorHome]">common/box.png</texturefocus>				
                 <visible>!IsEmpty(ListItem.Director)</visible>
-				<include>DefDialogButtons</include>
+				<include>column_ListButtonLabel</include>
             </control>
             <control type="list" id="50">
                 <description>Cast</description>                
@@ -488,13 +495,13 @@
                 <onleft condition="Control.IsVisible(50)">SendClick(2003,5)</onleft>
                 <onleft>9000</onleft>
                 <orientation>vertical</orientation>
-                <scrolltime>200</scrolltime>
-				<include>DefDialogButtons2</include>
+                <scrolltime>200</scrolltime>			
                 <itemlayout height="60" width="450">
                     <control type="image">
                         <width>100%</width>
                         <height>55</height>
-                        <texture border="5" colordiffuse="Black30">common/box.png</texture>
+                        <texture border="2" colordiffuse="Black30">common/box.png</texture>
+							
 						<include>DefDialogButtons2</include>
                     </control>
                     <control type="label">

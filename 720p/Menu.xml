@@ -7,7 +7,7 @@
 			<height>screen_Height</height>
 			<texture background="true">white.png</texture>
 			<animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
-			<colordiffuse>base_2</colordiffuse>
+			<colordiffuse>$VAR[ColorHome]</colordiffuse>
 		</control>
 		<control type="image" id="1">
 			<width>265</width>
@@ -72,8 +72,10 @@
 		<textoffsety>3</textoffsety>
 		<textoffsetx>15</textoffsetx>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus colordiffuse="column2">white.png</texturefocus>
-		<alttexturefocus colordiffuse="column2">white.png</alttexturefocus>
+		<texturefocus colordiffuse="$VAR[LabelColor]">view/frame_dialoginfo_back.png</texturefocus>
+		<alttexturefocus colordiffuse="$VAR[LabelColor]">view/frame_dialoginfo_back.png</alttexturefocus>
+		<bordertexture colordiffuse="Black100">white.png</bordertexture>
+		<bordersize>2</bordersize>
 		<alttexturenofocus>-</alttexturenofocus>
 		<onback condition="ControlGroup(6000).HasFocus()">50</onback>
 		<onback condition="ControlGroup(4000).HasFocus()">6000</onback>

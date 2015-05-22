@@ -194,7 +194,7 @@
                     <width>492</width> 
 					<label>Browse for Thumb</label>                 
                     <include>dialog_ControlCommons</include>
-                    <visible>stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub)</visible>
+                    <visible>StringCompare(Window.Property("groupname"),mainmenu) | stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub)</visible>
                 </control>
 					<!--edit sub-menu-->
 					<control type="button" id="405">

@@ -53,6 +53,8 @@
 						<width>540</width>
 						<height>94</height>
 						<include>art_Frame-fo</include>
+						<bordersize>2</bordersize>
+						<bordertexture colordiffuse="Black100">white.png</bordertexture>
 					</control>
 					<control type="image">
 						<left>7</left>
@@ -101,7 +103,7 @@
 						<onclick>ActivateWindow(MyMusicSettings)</onclick>
 					</item>
 					<item id="4">
-						<label>reFocus ART</label>
+						<label>ART Setting</label>
 						<label2>$LOCALIZE[31200] · $LOCALIZE[31202] · $LOCALIZE[20445]</label2>
 						<icon>icon/Art_Logo.png</icon>
 						<onclick>ActivateWindow(skinsettings)</onclick>

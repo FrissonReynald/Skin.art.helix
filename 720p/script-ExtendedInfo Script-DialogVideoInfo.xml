@@ -53,6 +53,7 @@
                         <width>100%</width>
                         <height>25</height>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label>20074</label>
                         <aligny>center</aligny>
                     </control>
@@ -70,6 +71,7 @@
                         <height>25</height>
                         <align>right</align>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label fallback="172">$INFO[Window.Property(movie.Status)]</label>
                         <aligny>center</aligny>
                     </control>
@@ -87,6 +89,7 @@
                         <width>100%</width>
                         <height>25</height>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label>563</label>
                         <aligny>center</aligny>
                     </control>
@@ -104,6 +107,7 @@
                         <height>25</height>
                         <align>right</align>
                       <font>semibold_Big</font>
+					  <include>detail_Sub</include>
                         <label>31139</label>
                         <aligny>center</aligny>
                         <visible>!IsEmpty(Window.Property(movie.Revenue)) | !IsEmpty(Window.Property(movie.Budget))</visible>
@@ -123,6 +127,7 @@
                         <width>100%</width>
                         <height>25</height>
                         <font>semibold_Big</font>
+						<include>detail_Sub</include>
                         <label>207</label>
                         <aligny>center</aligny>
                     </control>
@@ -141,6 +146,7 @@
                         <width>100%</width>
                         <height>25</height>
                        <font>semibold_Big</font>
+					   <include>detail_Sub</include>
                         <label>206</label>
                         <aligny>center</aligny>
                         <visible>!Control.HasFocus(1000)</visible>
@@ -160,6 +166,7 @@
                         <width>100%</width>
                         <height>25</height>
                          <font>semibold_Big</font>
+						 <include>detail_Sub</include>
                         <label>31141</label>
                         <aligny>center</aligny>
                         <visible>!Control.HasFocus(350)</visible>

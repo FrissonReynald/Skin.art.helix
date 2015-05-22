@@ -107,7 +107,7 @@
 						<top>0</top>
 						<width>320</width>
 						<height>49</height>
-						<texture colordiffuse="ffffffff">home/menuitemfo.png</texture>
+						<texture colordiffuse="$VAR[highlightcolor]">home/menuitemfo.png</texture>
 						<bordertexture colordiffuse="ffffffff"></bordertexture>
 					</control>
 					<control type="group">
@@ -140,15 +140,15 @@
 				<!--Submenu Vertical-->
 				
 				<control type="group" id="9113">
-				<left>-340</left>
-			<width>340</width>
+				<left>-330</left>
+			<width>330</width>
 			<animation type="Conditional" condition="Control.HasFocus(9115)">
 				<effect type="Slide" time="300" center="auto" start="-0" end="670" easing="In" tween="Quadratic"/>
 			</animation>
 			
 			
 			<control type="image">
-				<width>340</width>
+				<width>330</width>
 				<height>10</height>
 				<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
 				<colordiffuse>base_33</colordiffuse>				
@@ -156,8 +156,8 @@
 			</control>
 				<control type="list" id="9115">
 				<left></left>
-				<top>0</top>
-				<width>340</width>
+				<top>10</top>
+				<width>330</width>
 				<height min="50" max="screen_Height">auto</height>
 				<onback>9110</onback>
 				<onup>9115</onup>
@@ -178,19 +178,17 @@
 					</animation>
 			<animation type="Conditional" condition="!Control.HasFocus(9110)" reversible="false">
 				</animation>
-			<animation effect="fade" start="100" end="80" time="0" condition="Skin.HasSetting(opacitymenu.disable) + Skin.HasSetting(homemenu.compact)">Conditional</animation>
-						<visible>Skin.HasSetting(homemenu.compact)</visible>
+			<animation effect="fade" start="100" end="50" time="0" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
+						
 					</control>
 					<control type="group">
 						<left>10</left>						
 						<control type="image">
-							<width>320</width>
+							<width>330</width>
 							<height>49</height>
 							<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
-							<animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + Skin.HasSetting(homemenu.compact)">Conditional</animation>
-			                <animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + !Skin.HasSetting(homemenu.compact)">Conditional</animation>
-							<visible>!IsEmpty(ListItem.Property(isSubmenu))</visible>
-						</control>
+							<animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
+			                	</control>
 					</control>
 					<control type="group">
 						<left>25</left>
@@ -216,19 +214,18 @@
 				</itemlayout>
 				<focusedlayout width="340" height="50">
 					<control type="image">
-							<width>330</width>
+							<width>340</width>
 							<height>50</height>
 							<texture border="5" colordiffuse="$VAR[ColorHome]">white.png</texture>
-							<animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + Skin.HasSetting(homemenu.compact)">Conditional</animation>
-			                <animation effect="fade" start="100" end="20" time="0" condition="Skin.HasSetting(opacitymenu.disable) + !Skin.HasSetting(homemenu.compact)">Conditional</animation>
-							<visible>!IsEmpty(ListItem.Property(isSubmenu))</visible>
+							<animation effect="fade" start="100" end="90" time="0" condition="Skin.HasSetting(opacitymenu.disable) ">Conditional</animation>
+			              	<visible>!IsEmpty(ListItem.Property(isSubmenu))</visible>
 						</control>
 					
 					<control type="image">						
 						<top>0</top>
 						<width>330</width>
 						<height>49</height>
-						<texture colordiffuse="ffffffff">home/menuitemfo.png</texture>
+						<texture colordiffuse="$VAR[highlightcolor]">home/menuitemfo.png</texture>
 						<bordertexture colordiffuse="ffffffff"></bordertexture>
 					</control>
 					<control type="group">
@@ -281,10 +278,10 @@
 			</animation>			
 			<left>50</left>			
 			<control type="image">			
-			<top>-45</top>
+			<top>-55</top>
 			<left>-150</left>
 					<width>1920</width>
-					<height>115</height>
+					<height>120</height>
 					<aspectratio>stretch</aspectratio>						
 					<texture colordiffuse="$VAR[ColorHome]">home/panel2.png</texture>
 					<animation effect="fade" start="100" end="60" condition="Skin.HasSetting(opacitymenu.disable)">Conditional</animation>
@@ -299,10 +296,10 @@
 			<control type="group">
 				<include>transition_Home-horizontal</include>
 				<control type="fixedlist" id="9110">
-				<top>-10</top>
+				<top>-20</top>
 				<left>15</left>
 					<width>1182</width>
-					<height>70</height>
+					<height>140</height>
 					<onleft>9110</onleft>
 					<onright>9110</onright>
 					<onup condition="Skin.HasSetting(widgets.disable) + !IsEmpty(Container(9110).ListItem.Property(Widget))">9210</onup>
@@ -314,7 +311,7 @@
 					<include>global_ListScroll</include>
 					<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9000).NumItems,2)">Conditional</animation>
 						<animation effect="slide" start="0" end="-118" condition="StringCompare(Container(9000).NumItems,4)">Conditional</animation>
-						<itemlayout width="236" height="70">						
+						<itemlayout width="236" height="140">						
 							<control type="label">
 								<width>236</width>
 								<height>60</height>
@@ -322,9 +319,31 @@
 								<font>condensed_Home</font>
 								<align>center</align>
 								<textcolor>Color3</textcolor>
+								<visible>!Skin.HasSetting(SkinSettings,Homeicon)</visible>
 							</control>
+							<control type="label">
+							 <left>5</left>
+								<width>236</width>
+								<height>60</height>
+								 <top>29</top>  
+								<label>$INFO[ListItem.Label]</label>
+								<font>condensed_HomeSubSmall</font>
+								<align>center</align>
+								<textcolor>Color3</textcolor>
+								<visible>Skin.HasSetting(SkinSettings,Homeicon)</visible>
+							</control>
+							 <control type="image">
+							 <left>95</left>
+                                <width>55</width>
+                                <height>55</height>
+				                <top>0</top>   
+								 
+                                <texture colordiffuse="White100">$INFO[ListItem.Icon]</texture>
+                <visible>substring(ListItem.Icon,special://skin/extras/icons)</visible>
+				<visible>Skin.HasSetting(SkinSettings,Homeicon)</visible>
+                               </control>
 						</itemlayout>
-						<focusedlayout width="236" height="70">
+						<focusedlayout width="236" height="100">
 							<control type="group">
 								<visible>Control.HasFocus(9000)</visible>							
 								<control type="image">
@@ -333,6 +352,7 @@
 								<height>65</height>
 								<texture>white.png</texture>							
 								<bordersize>2</bordersize>
+								<visible>!Skin.HasSetting(SkinSettings,Homeicon)</visible>
 								</control>
 								<control type="label">
 									<width>236</width>
@@ -341,15 +361,27 @@
 									<font>condensed_Home</font>
 									<align>center</align>
 									<textcolor>Color5</textcolor>
+									<visible>!Skin.HasSetting(SkinSettings,Homeicon)</visible>
 								</control>
+								<control type="label">
+								<width>236</width>
+								<height>60</height>
+								 <top>25</top>  
+								<label>$INFO[ListItem.Label]</label>
+								<font>condensed_HomeSubSmall</font>
+								<align>center</align>
+								<textcolor>Color3</textcolor>
+								<visible>Skin.HasSetting(SkinSettings,Homeicon)</visible>
+							    </control>
 							</control>
 							<control type="group">
 								<visible>!Control.HasFocus(9000)</visible>
-									<control type="image">
+									<control type="image">									
 									<top>55</top>
 								<width>238</width>
 								<height>2</height>
-								<texture>white.png</texture>								
+								<texture>white.png</texture>	
+								<visible>!Skin.HasSetting(SkinSettings,Homeicon)</visible>
 							</control>
 								<control type="label">
 									<width>236</width>
@@ -358,14 +390,49 @@
 									<font>condensed_Home</font>
 									<align>center</align>
 									<textcolor>Color3</textcolor>
+									<visible>!Skin.HasSetting(SkinSettings,Homeicon)</visible>
 								</control>
+								<control type="label">
+								
+								 <left>5</left>
+								<width>236</width>
+								<height>60</height>
+								 <top>29</top>  
+								<label>$INFO[ListItem.Label]</label>
+								<font>condensed_HomeSubSmall</font>
+								<align>center</align>
+								<textcolor>Color3</textcolor>
+								<visible>Skin.HasSetting(SkinSettings,Homeicon)</visible>
+							</control>
+								 <control type="image">
+                               <top>75</top>
+							   <left>12</left>
+							   <width>90%</width>
+							   <height>3</height>
+							   <texture colordiffuse="$VAR[highlightcolor]">common/box.png</texture>
+							   <visible>Control.HasFocus(9110)</visible>
+							   <include>Animation.FadeIn</include>
+							   <include>Animation.FadeOut</include>
+				              <visible>Skin.HasSetting(SkinSettings,Homeicon)</visible>
+				              </control>
+								 <control type="image">
+								 
+								<left>95</left>
+                                <width>55</width>
+                                <height>55</height>
+				                <top>0</top>                 
+                                <texture colordiffuse="$VAR[highlightcolor]">$INFO[ListItem.Icon]</texture>
+								<visible>substring(ListItem.Icon,special://skin/extras/icons)</visible>
+				<visible>Skin.HasSetting(SkinSettings,Homeicon)</visible>
+				</control>
 							</control>
 							</focusedlayout>
 					<content>
 						 <include>skinshortcuts-mainmenu</include>
 					</content>
-				</control>
-			</control>	
+				</control>				
+			</control>				
+			
 				<!--SUB MENU-->					
 			<control type="group">	
 			<control type="image">			
