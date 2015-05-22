@@ -380,7 +380,7 @@
 									<top>55</top>
 								<width>238</width>
 								<height>2</height>
-								<texture>white.png</texture>	
+								<texture colordiffuse="$VAR[highlightcolor]">common/box.png</texture>
 								<visible>!Skin.HasSetting(SkinSettings,Homeicon)</visible>
 							</control>
 								<control type="label">

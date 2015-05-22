@@ -6,7 +6,7 @@
 		<system>1</system>
 		<left>290</left>
 		<top>104</top>
-	</coordinates>
+	</coordinates>		
 	<controls>
 	<include>transition_Dialog</include>	
 	<control type="image">
