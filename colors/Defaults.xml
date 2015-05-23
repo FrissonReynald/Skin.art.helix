@@ -44,7 +44,7 @@
     <color name="Blue">FF0000FF</color>
     <color name="Green">FF00FF00</color>
     
-    <color name="Highlight">ff0385b5</color>
+    <color name="highlight">ff0385b5</color>
     <color name="Highlight2">FFff4081</color>
     <color name="Selected">FFededed</color>
     <color name="Dark1">ff333333</color>
@@ -56,7 +56,8 @@
     <color name="Light3">4ddddddd</color>
     <color name="Light4">1fdddddd</color>
     
-    <color name="Background">ffdddddd</color>
+    <color name="background">ffdddddd</color>
+	<color name="Labelcolor">FFebebeb</color>
     <color name="FanartFade">2Fffffff</color>
     <color name="FloorFade">BBdddddd</color>
     

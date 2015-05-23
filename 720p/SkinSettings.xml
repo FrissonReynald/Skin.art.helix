@@ -764,28 +764,16 @@
                          <selected>Skin.HasSetting(base_color.40opacity.enable)</selected>
 		          <include>settings_Radiobutton</include>
                 </control>	
+				
+				 <control type="radiobutton" id="6040">      
+					<onclick>Skin.ToggleSetting(ColorCustomizer.Enabled)</onclick>
+						<selected>Skin.HasSetting(ColorCustomizer.Enabled)</selected>
+						<include>settings_Radiobutton</include>
+					</control>
 				 <control type="radiobutton" id="605">                      
                        <onclick>ActivateWindow(1107)</onclick>                        
-                        <label>Set Custom Colour background </label>
-                        <label2>$INFO[Skin.String(BackgroundColor.name)]</label2> 
-						<include>settings_Radiobutton</include>
-                    </control>	
-					 <control type="radiobutton" id="606">                      
-                       <onclick>ActivateWindow(1108)</onclick>                        
-                        <label>Set Custom Colour Text </label>
-                        <label2>$INFO[Skin.String(LabelColor.name,)]</label2> 
-						<include>settings_Radiobutton</include>
-                    </control>
-					 <control type="radiobutton" id="607">                      
-                       <onclick>ActivateWindow(1109)</onclick>                        
-                        <label>Set Custom Colour highlight</label>
-                        <label2>$INFO[Skin.String(highlightcolor.name,)]</label2> 
-						<include>settings_Radiobutton</include>
-                    </control>
-					 <control type="radiobutton" id="608">                      
-                       <onclick>ActivateWindow(1110)</onclick>                        
-                        <label>Set Custom Colour Frame HUB</label>
-                        <label2>$INFO[Skin.String(FrameHubColor.name,)]</label2> 
+                        <label>Set Custom Colour background </label>  
+						<enable>Skin.HasSetting(ColorCustomizer.Enabled)</enable>
 						<include>settings_Radiobutton</include>
                     </control>
 					

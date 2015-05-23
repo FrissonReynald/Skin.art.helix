@@ -255,46 +255,46 @@
 	<include name="detail_Header">
 		<height>32</height>
 		<font>light_Header</font>		
-		<textcolor>$VAR[ColorLabel]</textcolor>
+		<selectedcolor>Selected</selectedcolor>
 		</include>
 	<include name="detail_Title">
 		<height>28</height>
 		<aligny>center</aligny>
 		<font>semibold_Big-U</font>
-		<textcolor>$VAR[ColorLabel]</textcolor>
+		<textcolor>Color1</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<autoscroll delay="autoscroll_Delay" time="autoscroll_Time" repeat="2000">true</autoscroll>
-		</include>	
+		</include>
 	<include name="detail_Title_Huge">
 		<height>35</height>
-		<aligny>center</aligny>		
+		<aligny>center</aligny>
 		<font>black_huge</font>
-		<textcolor>$VAR[ColorLabel]</textcolor>	
+		<textcolor>Color1</textcolor>		
 	</include>
 	<include name="detail_Title_PVR">
 		<height>28</height>
 		<aligny>center</aligny>
 		<font>semibold_Small-U</font>
-		<textcolor>$VAR[ColorLabel]</textcolor>
+		<textcolor>Color1</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 	</include>
 	<include name="detail_Title_ART">
 		<height>25</height>
 		<aligny>center</aligny>
 		<font>semibold_Big-U</font>
-		<textcolor>$VAR[ColorLabel]</textcolor>	
+		<textcolor>Color1</textcolor>		
 	</include>
 	<include name="detail_Sub">
 		<height>25</height>
 		<aligny>center</aligny>
 		<scroll>true</scroll>
 		<font>semibold_Small-U</font>
-		<textcolor>$VAR[ColorLabel]</textcolor>
+		<textcolor>Color2</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<visible>!StringCompare(ListItem.Label,..)</visible>
 	</include>
 	<include name="detail_Text">
-		<textcolor>ffffffff</textcolor>
+		<textcolor>Color7</textcolor>
 		<font>regular</font>
 		<aligny>top</aligny>
 <!--use a numeric value for repeat here, change into constant again when xbmc bug is fixed-->
@@ -311,7 +311,7 @@
 		<height>40</height>
 		<font>regular_Bigger</font>
 		<aligny>center</aligny>
-		<textcolor>$VAR[ColorLabel]</textcolor>
+		<textcolor>Color1</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<scroll>false</scroll>
 	</include>
@@ -327,7 +327,7 @@
 		<height>40</height>
 		<font>regular_Small-U</font>
 		<aligny>center</aligny>
-		<textcolor>ffffffff</textcolor>
+		<textcolor>Color2</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<scroll>false</scroll>
 	</include>
@@ -341,7 +341,7 @@
 	<include name="container_Text">
 		<font>regular</font>
 		<aligny>top</aligny>
-		<textcolor>ffffffff</textcolor>
+		<textcolor>Color3</textcolor>
 	</include>
 	<include name="container_Text-focus">
 		<font>regular</font>
@@ -439,7 +439,7 @@
 		<align>left</align>
 		<textoffsety>4</textoffsety>
 		<textoffsetx>15</textoffsetx>
-		<textcolor>$VAR[ColorLabel]</textcolor>
+		<textcolor>Color1</textcolor>
 		<texturenofocus colordiffuse="column2"></texturenofocus>
 		<texturefocus colordiffuse="Color1">frames/frame-fo.png</texturefocus>
 		<alttexturenofocus colordiffuse="column2">frames/frame-fo.png</alttexturenofocus>
@@ -2437,9 +2437,6 @@
 			<include>windowTitle</include>
 		</control>
 	</include>
-	
-
-
 <!--DEBUG-->
 	<include name="debug_Label">
 		<font>semibold_Small</font>
