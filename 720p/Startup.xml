@@ -8,6 +8,9 @@
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + !Skin.HasSetting(nextaired.disable)">XBMC.RunScript(script.tv.show.next.aired,silent=True)</onload>
 	<onload condition="System.HasAddon(script.artistslideshow) + IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning)) + !Skin.HasSetting(artistslideshow.disable)">RunScript(script.artistslideshow, daemon=True)</onload>
 	<onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=20)</onload>
+	<onload condition="IsEmpty(Skin.String(backgroundColor.name))">Skin.SetString(backgroundColor.name,background)</onload>
+	<onload condition="IsEmpty(Skin.String(dialogcolor.name))">Skin.SetString(dialogcolor.name,dialog)</onload>
+	<onload condition="IsEmpty(Skin.String(highlightcolor.name))">Skin.SetString(highlightcolor.name,highlight)</onload>
 	
 	<onload>RunScript(script.skin.info.service, backend=true)</onload> 
 	<!--set alarm to prevent startup loop if fanart grabber is version 0.12.6 or lower-->

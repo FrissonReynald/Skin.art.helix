@@ -735,14 +735,14 @@
 				</control>
 				
 				<!--Background Opacity-->
-				   <control type="grouplist" id="600">
+				   <control type="grouplist" id="600">				  
 					<width>850</width>
 					<height>598</height>
 					<onleft>9001</onleft>
 					<onright>70</onright>
 					<onup>600</onup>
 					<ondown>600</ondown>
-					<itemgap>2</itemgap>
+					<itemgap>5</itemgap>
 					<pagecontrol>70</pagecontrol>
 					<visible>Skin.String(SkinSettings,BackgroundOpacity)</visible>			
 			     <!--global fanart-->
@@ -765,7 +765,8 @@
 		          <include>settings_Radiobutton</include>
                 </control>	
 				
-				 <control type="radiobutton" id="6040">      
+				 <control type="radiobutton" id="6040">   
+				 <label>Enable  Custom Colour</label>  
 					<onclick>Skin.ToggleSetting(ColorCustomizer.Enabled)</onclick>
 						<selected>Skin.HasSetting(ColorCustomizer.Enabled)</selected>
 						<include>settings_Radiobutton</include>
@@ -773,9 +774,56 @@
 				 <control type="radiobutton" id="605">                      
                        <onclick>ActivateWindow(1107)</onclick>                        
                         <label>Set Custom Colour background </label>  
+						<onclick>SetProperty(backgroundselect,1,home)</onclick>
 						<enable>Skin.HasSetting(ColorCustomizer.Enabled)</enable>
 						<include>settings_Radiobutton</include>
                     </control>
+						<control type="image" id="6050">						
+						<animation effect="fade" time="400" tween="" easing="" start="0" end="100">Visible</animation>
+					
+						
+						<width>150</width>
+						<height>49</height>
+					<texture colordiffuse="$VAR[ColorHome]">white.png</texture>
+					<bordertexture colordiffuse="ffffffff">white.png</bordertexture>
+					<bordersize>1</bordersize>
+							<enable>Skin.HasSetting(ColorCustomizer.Enabled)</enable>
+					</control>
+					 <control type="radiobutton" id="606">                      
+                       <onclick>ActivateWindow(1108)</onclick>                        
+                        <label>Set Custom Colour Dialog</label> 
+						<onclick>SetProperty(dialogselect,1,home)</onclick>						
+						<enable>Skin.HasSetting(ColorCustomizer.Enabled)</enable>
+							<include>settings_Radiobutton</include>
+					</control>
+						<control type="image" id="6060">						
+						<animation effect="fade" time="400" tween="" easing="" start="0" end="100">Visible</animation>
+					
+						<width>150</width>
+						<height>49</height>
+					<texture colordiffuse="$VAR[ColorDialogVar]">white.png</texture>
+					<bordersize>1</bordersize>
+					<bordertexture colordiffuse="ffffffff">white.png</bordertexture>
+							<enable>Skin.HasSetting(ColorCustomizer.Enabled)</enable>
+					</control>
+					
+					 <control type="radiobutton" id="607">                      
+                       <onclick>ActivateWindow(1109)</onclick>                        
+                        <label>Set Custom Colour Highlight</label> 
+						<onclick>SetProperty(highlightselect,1,home)</onclick>						
+						<enable>Skin.HasSetting(ColorCustomizer.Enabled)</enable>
+							<include>settings_Radiobutton</include>
+					</control>
+					<control type="image" id="6070">						
+						<animation effect="fade" time="400" tween="" easing="" start="0" end="100">Visible</animation>
+					
+						<width>150</width>
+						<height>49</height>
+					<texture colordiffuse="$VAR[ColorHighlightVar]">white.png</texture>
+					<bordersize>1</bordersize>
+					<bordertexture colordiffuse="ffffffff">white.png</bordertexture>
+							<enable>Skin.HasSetting(ColorCustomizer.Enabled)</enable>
+					</control>
 					
 				<control type="radiobutton" id="610">
 					    <label>overlays widget Refocus</label>					    
@@ -875,19 +923,8 @@
 					    <selected>Skin.HasSetting(MenuGuide)</selected>
 					    <include>settings_Radiobutton</include>
 				   </control>
-				    <control type="Label" id="732">
-			            <label>-- OPTIONS HOME MENU --</label>
-						<onclick>noop</onclick>
-						 <font>normal</font>
-						<textcolor>Color1</textcolor>
-						<include>settings_Radiobutton</include>
-					</control>	
-				   <control type="radiobutton" id="733">
-					    <label>Prefer Black_Huge Font for window Title</label>
-						<onclick>Skin.ToggleSetting(BlackFontTitle)</onclick>					   				    
-					    <selected>Skin.HasSetting(BlackFontTitle)</selected>
-					    <include>settings_Radiobutton</include>
-				   </control>
+				  	
+				 
 			 </control>		
 			<!--SKIN CREDITS-->			
 				<control type="grouplist" id="800">

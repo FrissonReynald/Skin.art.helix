@@ -25,15 +25,25 @@
                         
                         <include>screen_Dimensions</include>
                      
-                        <texture border="15" colordiffuse="$VAR[FrameHubColor]">common/rounded-shadow8.png</texture>
+                        <texture border="15" colordiffuse="ff000000">common/rounded-shadow8.png</texture>
+                    </control>                 
+					 <control type="image">
+                        <left>-8</left>
+                        <width>1138</width>
+						<height>653</height>
+                        <top>-8</top>
+                        <bottom>-8</bottom>
+                        <texture>frames/frame-nf.png</texture>
+						<bordertexture colordiffuse="$VAR[ColorHighlightVar]">white.png</bordertexture>
+						<bordersize>2</bordersize>
                     </control>
-                  <control type="image">
+					 <control type="image">
                         <left>-8</left>
                         <width>1138</width>
                         <top>-8</top>
                         <bottom>-8</bottom>
                         <texture border="15" colordiffuse="$VAR[ColorHome]">common/rounded-shadow8.png</texture>
-                    </control>
+						  </control>
                     <control type="image">
                         <left>0</left>
                         <width>1122</width>
@@ -41,7 +51,26 @@
                         <bottom>0</bottom>
                         <texture background="true" diffuse="diffuse/home-fanart.png">pvr/background.jpg</texture>
                         <visible>!IntegerGreaterThan(Container(9500).NumItems,0)</visible>
-                    </control>
+                    </control>					
+						<control type="image">
+                        <left>50</left>
+                        <width>750</width>
+						 <height>64</height>
+                        <top>30</top>
+                      
+                        <texture border="15" colordiffuse="Black100">common/white.png</texture>
+						  </control>
+						   <control type="label">
+                            <left>60</left>
+							<top>35</top>
+                            <width>auto</width>
+                            <aligny>center</aligny>
+                            <height>64</height>
+                            <font>condensed_HomeSubSmall</font>
+                            <textcolor>PanelWhite70</textcolor>
+                            <selectedcolor>PanelWhite70</selectedcolor>
+                            <label>$INFO[Container(9500).ListItem.Label]</label>
+                        </control>
                     <control type="list" id="9500">
                         <description>Widget</description>
                         <left>50</left>
@@ -87,7 +116,7 @@
                             <height>70</height>
                             <texture border="15" colordiffuse="df000000">common/white.png</texture>
                         </control>
-                        <control type="label">
+                       <control type="label">
                             <posx>30</posx>
                             <width>200</width>
                             <font>Small</font>
@@ -99,13 +128,15 @@
                         </control>
                         <control type="label">
                             <posx>120</posx>
-                            <width>auto</width>
+                            <width>400</width>
                             <aligny>center</aligny>
                             <height>64</height>
-                            <font>SmallBold</font>
+                           <font>condensed_HomeSubSmall</font>
                             <textcolor>PanelWhite70</textcolor>
                             <selectedcolor>PanelWhite70</selectedcolor>
-                            <label>$INFO[Container(9500).ListItem.Label]</label>
+                            <label>$INFO[Container(9500).ListItem.Tagline,,]</label>
+							<autoscroll delay="autoscroll_Delay" time="autoscroll_Time" repeat="1000">Skin.HasSetting(autoscroll.enable)</autoscroll>
+	
                         </control>
                         <control type="label">
                             <right>154</right>
@@ -113,10 +144,10 @@
                             <aligny>center</aligny>
                             <height>64</height>
                             <align>right</align>
-                            <font>Small</font>
+                           <font>condensed_HomeSubSmall</font>
                             <textcolor>PanelWhite70</textcolor>
                             <selectedcolor>PanelWhite70</selectedcolor>
-                            <label>$INFO[Container(9500).ListItem.Duration,, $LOCALIZE[31102]]</label>
+                            <label>$INFO[Container(9500).ListItem.Duration,, $LOCALIZE[31701]]</label>
                         </control>
                         <control type="image">
                             <centerright>110</centerright>
@@ -132,12 +163,13 @@
                             <aligny>center</aligny>
                             <height>64</height>
                             <align>right</align>
-                            <font>Small</font>
+                            <font>condensed_HomeSubSmall</font>
                             <textcolor>PanelWhite70</textcolor>
                             <selectedcolor>PanelWhite70</selectedcolor>
                             <label>$INFO[Container(9500).ListItem.Rating]</label>
-                        </control>
+                        </control>					
                     </control>
+					
                     <control type="image">
                       <left>50</left>
                         <width>750</width>
@@ -186,8 +218,14 @@
                         <focusedlayout width="350" height="80">
                             <control type="group">
                                 <visible>Control.HasFocus(9501)</visible>
-                                <control type="image">
-                                    <width>100%</width>
+                               <control type="image">
+                                    <width>77%</width>
+                                    <height>100%</height>
+                                    <texture border="15" colordiffuse="Dark1">common/box.png</texture>
+                                </control>
+								 <control type="image">
+								 <left>282</left>
+                                    <width>23%</width>
                                     <height>100%</height>
                                     <texture border="15" colordiffuse="Dark1">common/box.png</texture>
                                 </control>

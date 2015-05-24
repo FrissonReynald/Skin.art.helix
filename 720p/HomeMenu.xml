@@ -107,7 +107,7 @@
 						<top>0</top>
 						<width>320</width>
 						<height>49</height>
-						<texture colordiffuse="$VAR[highlightcolor]">home/menuitemfo.png</texture>
+						<texture colordiffuse="$VAR[ColorHighlightVar]">home/menuitemfo.png</texture>
 						<bordertexture colordiffuse="ffffffff"></bordertexture>
 					</control>
 					<control type="group">
@@ -126,7 +126,7 @@
 							<label>›</label>
 							<font>regular</font>
 							<align>right</align>
-							<textcolor>Color2</textcolor>
+							<textcolor>$VAR[ColorHighlightVar]</textcolor>
 							<visible>!IsEmpty(ListItem.Property(hasSubmenu))</visible>
 							<visible>!StringCompare(ListItem.Property("submenuVisibility"),Window(10000).Property("submenuVisibility") )</visible>
 						</control>
@@ -225,7 +225,7 @@
 						<top>0</top>
 						<width>330</width>
 						<height>49</height>
-						<texture colordiffuse="$VAR[highlightcolor]">home/menuitemfo.png</texture>
+						<texture colordiffuse="$VAR[ColorHighlightVar]">home/menuitemfo.png</texture>
 						<bordertexture colordiffuse="ffffffff"></bordertexture>
 					</control>
 					<control type="group">
@@ -380,7 +380,7 @@
 									<top>55</top>
 								<width>238</width>
 								<height>2</height>
-								<texture colordiffuse="$VAR[highlightcolor]">common/box.png</texture>
+								<texture colordiffuse="$VAR[ColorHighlightVar]">common/box.png</texture>
 								<visible>!Skin.HasSetting(SkinSettings,Homeicon)</visible>
 							</control>
 								<control type="label">
@@ -409,7 +409,7 @@
 							   <left>12</left>
 							   <width>90%</width>
 							   <height>3</height>
-							   <texture colordiffuse="$VAR[highlightcolor]">common/box.png</texture>
+							   <texture colordiffuse="$VAR[ColorHighlightVar]">common/box.png</texture>
 							   <visible>Control.HasFocus(9110)</visible>
 							   <include>Animation.FadeIn</include>
 							   <include>Animation.FadeOut</include>
@@ -421,7 +421,7 @@
                                 <width>55</width>
                                 <height>55</height>
 				                <top>0</top>                 
-                                <texture colordiffuse="$VAR[highlightcolor]">$INFO[ListItem.Icon]</texture>
+                                <texture colordiffuse="$VAR[ColorHighlightVar]">$INFO[ListItem.Icon]</texture>
 								<visible>substring(ListItem.Icon,special://skin/extras/icons)</visible>
 				<visible>Skin.HasSetting(SkinSettings,Homeicon)</visible>
 				</control>

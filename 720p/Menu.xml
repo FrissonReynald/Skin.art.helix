@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="menu_Commons">
-		<left>-262</left>
+		<left>-270</left>
 		<control type="image" id="1">
-			<width>270</width>
-			<height>screen_Height</height>
+		
+			<width>265</width>
+			<height>720</height>
+			<texture background="true">white.png</texture>
+			<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+			<colordiffuse>$VAR[ColorDialogVar]</colordiffuse>
+		</control>	
+		<control type="image" id="1">
+		
+			<width>260</width>
+			<height>720</height>
 			<texture background="true">white.png</texture>
 			<animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
 			<colordiffuse>$VAR[ColorHome]</colordiffuse>
 		</control>
-		<control type="image" id="1">
-			<width>265</width>
-			<height>screen_Height</height>
-			<texture background="true">frames/contentpanel.png</texture>
-			<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-			<colordiffuse>base_2</colordiffuse>
-		</control>	
+		
 		<control type="image">
 			<left>7</left>
 			<top>-655</top>
@@ -64,7 +67,7 @@
 		<textcolor>Color3</textcolor>
 	</include>
 	<include name="menu_Button">
-		<width>265</width>
+		<width>260</width>
 		<height>40</height>
 		<font>light_Menu</font>
 		<textcolor>Color3</textcolor>

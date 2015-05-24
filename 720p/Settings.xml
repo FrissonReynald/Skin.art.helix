@@ -45,7 +45,8 @@
 						<width>410</width>
 						<height>34</height>
 						<label>$INFO[ListItem.Label2]</label>
-						<include>detail_Sub</include>
+						<font>semibold_Small-U</font>
+						<textcolor>$VAR[ColorDialogVar]</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout width="550" height="100">

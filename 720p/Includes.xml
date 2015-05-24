@@ -261,7 +261,7 @@
 		<height>28</height>
 		<aligny>center</aligny>
 		<font>semibold_Big-U</font>
-		<textcolor>Color1</textcolor>
+		<textcolor>$VAR[ColorDialogVar]</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<autoscroll delay="autoscroll_Delay" time="autoscroll_Time" repeat="2000">true</autoscroll>
 		</include>
@@ -311,7 +311,7 @@
 		<height>40</height>
 		<font>regular_Bigger</font>
 		<aligny>center</aligny>
-		<textcolor>Color1</textcolor>
+		<textcolor>$VAR[ColorDialogVar]</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<scroll>false</scroll>
 	</include>
@@ -327,7 +327,7 @@
 		<height>40</height>
 		<font>regular_Small-U</font>
 		<aligny>center</aligny>
-		<textcolor>Color2</textcolor>
+		<textcolor>Color1</textcolor>
 		<selectedcolor>Selected</selectedcolor>
 		<scroll>false</scroll>
 	</include>
@@ -624,7 +624,7 @@
 		<font>regular_Small-U</font>
 		<align>right</align>
 		<aligny>center</aligny>
-		<textcolor>Color1</textcolor>
+		<textcolor>Color3</textcolor>
 		<include>transition_Toast</include>
 	</include>
 	<include name="toast_Bottom">
@@ -769,8 +769,8 @@
 			<control type="image">
 				<width>screen_Width</width>
 				<height>50</height>
-				<texture>white.png</texture>
-				<colordiffuse>$VAR[ColorLabel]</colordiffuse>
+				<texture>black.png</texture>
+				<colordiffuse>$VAR[ColorDialogVar]</colordiffuse>
 			</control>
 			<control type="group">
 				<left>100</left>
@@ -1242,8 +1242,8 @@
 		<top>18</top>
 		<width>800</width>
 		<aligny>center</aligny>
-		<font>black_huge</font>		
-		<textcolor>Color1</textcolor>		
+		<font>black_huge</font>
+		<textcolor>Color1</textcolor>	
 		<scroll>true</scroll>
 		<include>transition_WindowTitle</include>
 		<include>toggle_Menu</include>

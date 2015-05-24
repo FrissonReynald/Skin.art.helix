@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
 <!--main colors-->
+	<color name="base_2">ee2d2d2d</color><!--primary overlay / menu color-->
 
-	<color name="base_2">ff003957</color><!--primary overlay / menu color-->	
-	<color name="accent_1">ff0c2c40</color><!--primary accent color (seekbar)-->
-	<color name="accent_2">ff245678</color><!--secondary accent color (home submenu)-->
+	<color name="accent_1">ff232323</color><!--primary accent color (seekbar)-->
+	<color name="accent_2">ff494949</color><!--secondary accent color (home submenu)-->
 	<color name="accent_3">ff7e94a4</color><!--color  top title windows-->
-	<color name="accent_4">ff09233f</color><!--color supp -->
+	<color name="accent_4">ff2d2d2d</color><!--color supp -->
 	<color name="accent_5">aa000000</color><!--color overlays strip -->
-	
+
 <!--text-->
-    <color name="Color1">FFebebeb</color><!--Home textcolor-->	
-	<color name="Color2">FFebebeb</color><!--secondary textcolor-->
-	<color name="Color3">ffcacaca</color><!--tertiary textcolor-->
+	<color name="Color1">ffffffff</color><!--main textcolor-->
+	<color name="Color2">ffffc40d</color><!--secondary textcolor-->
+	<color name="Color3">ffffffff</color><!--tertiary textcolor-->
 	<color name="Color4">FF696a6c</color><!--primary dialog textcolor-->
 	<color name="Color5">FF000000</color><!--extra dark dialog textcolor-->
-	<color name="Color7">FFf1f7e2</color><!--description / plot textcolor-->
-	<color name="Color8">FFbcd4e6</color><!--description / plot textcolor-->
-	<color name="Color9">FFd1e0d6</color><!--description / plot textcolor-->
-	<color name="Color10">aa9c9c9c</color><!--OSD color info -->
-	<color name="Color11">ffffffff</color><!--main textcolor-->
+	<color name="Color7">FFebebeb</color><!--description / plot textcolor-->
 	<color name="Color13">ffffffff</color>
-	<color name="Color16">aa0991ee</color><!-- Setting focus-->
+	<color name="Color16">aaffc40d</color><!-- Setting focus-->
 	<color name="FocusSubmenu">ffffffff</color><!--Home textcolor-->
 
 <!--buttons / control states-->
@@ -32,19 +28,19 @@
 
 <!--columns / lists-->
 	<color name="column1">ffffffff</color><!--main columns text color-->
-	<color name="column2">ff185982</color><!--primary columns base color-->
-	<color name="column3">ff003957</color><!--secondary columns base color-->
+	<color name="column2">aaffc40f</color><!--primary columns base color-->
+	<color name="column3">ff505050</color><!--secondary columns base color-->
 	<!--pvr-->
 	<color name="rec1">ffFF1744</color><!--textcolor for unfocused recording items-->
 	<color name="rec2">ffB71C1C</color><!--textcolor for focused recording items-->
-<!--Views--> 	
+<!--Views-->	
 	<color name="Black">FF000000</color>
     <color name="White">FFFFFFFF</color>
     <color name="Red">FFFF0000</color>
     <color name="Blue">FF0000FF</color>
     <color name="Green">FF00FF00</color>
     
-    
+ 
     <color name="Highlight2">FFff4081</color>
     <color name="Selected">FFededed</color>
     <color name="Dark1">ff333333</color>
@@ -56,9 +52,7 @@
     <color name="Light3">4ddddddd</color>
     <color name="Light4">1fdddddd</color>
     
-	 <color name="highlight">ff0385b5</color>
-    <color name="background">FF003957</color>
-	<color name="dialog">FFebebeb</color>
+  
     <color name="FanartFade">2Fffffff</color>
     <color name="FloorFade">BBdddddd</color>
     
@@ -80,4 +74,9 @@
     <color name="Black70">F3000000</color>
     <color name="Black30">4D000000</color>
     <color name="Black12">2F000000</color>
+	
+		 <color name="highlight">ff0385b5</color>
+    <color name="background">FF000000</color>
+	<color name="dialog">FFebebeb</color>
+	
 </colors>
